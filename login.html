@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login | Fromage</title>
+    <!-- Tailwind CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#D4A373',
+                        secondary: '#F4A261',
+                        accent: '#E9C46A',
+                        darkBg: '#0F0F0F',
+                        lightBg: '#FFF8F0',
+                    }
+                }
+            }
+        }
+    </script>
+    <!-- AOS Animation -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="transition-colors duration-300 min-h-screen flex flex-col items-center justify-center bg-darkBg">
+
+    <div class="w-full max-w-md p-8 glass rounded-3xl" data-aos="zoom-in">
+        <div class="text-center mb-10">
+            <a href="index.html" class="flex items-center">
+                <img src="img/icon_logo.png" alt="Fromage Logo" class="navbar-logo">
+                <span class="navbar-brand-name">Fromage</span>
+            </a>
+            <h2 class="text-2xl font-serif font-bold mt-6">Welcome Back</h2>
+            <p class="text-gray-400">Please enter your details to sign in.</p>
+        </div>
+
+        <form>
+            <div class="mb-6">
+                <label class="block text-sm font-medium mb-2">Email Address</label>
+                <input type="email" class="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3 focus:border-primary outline-none transition-colors" placeholder="hello@example.com">
+            </div>
+            <div class="mb-6">
+                <label class="block text-sm font-medium mb-2">Password</label>
+                <input type="password" class="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3 focus:border-primary outline-none transition-colors" placeholder="••••••••">
+            </div>
+            <button type="submit" class="w-full bg-primary hover:bg-primary-hover text-white font-bold py-4 rounded-xl transition-all hover-lift">Sign In</button>
+        </form>
+
+        <div class="mt-8 text-center text-sm text-gray-400">
+            Don't have an account? <a href="signup.html" class="text-primary hover:underline font-bold">Sign Up</a>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="js/script.js"></script>
+</body>
+</html>
+
+

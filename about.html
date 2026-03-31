@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark" dir="ltr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us | Fromage</title>
+    <meta name="description"
+        content="Learn about our journey to bring the world's finest artisanal cheeses to your table.">
+    <!-- Tailwind CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#D4A373',
+                        secondary: '#F4A261',
+                        accent: '#E9C46A',
+                        darkBg: '#0F0F0F',
+                        lightBg: '#FFF8F0',
+                    }
+                }
+            }
+        }
+    </script>
+    <!-- AOS Animation -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body class="transition-colors duration-300">
+
+    <!-- Header Section -->
+    <header class="fixed w-full z-50 glass transition-all duration-300">
+        <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <!-- Logo -->
+            <a href="index.html" class="flex items-center">
+                <img src="img/icon_logo.png" alt="Fromage Logo" class="navbar-logo">
+                <span class="navbar-brand-name">Fromage</span>
+            </a>
+
+            <!-- Desktop Navigation -->
+            <ul id="desktop-nav"
+                class="hidden lg:flex items-center space-x-8 text-sm font-medium uppercase tracking-widest">
+                <li><a href="index.html" class="hover:text-primary transition-colors">Home 1</a></li>
+                <li><a href="home2.html" class="hover:text-primary transition-colors">Home 2</a></li>
+                <li><a href="about.html"
+                        class="text-primary font-bold transition-colors border-b-2 border-primary">About</a></li>
+                <li><a href="shop.html" class="hover:text-primary transition-colors">Shop</a></li>
+                <li><a href="subscription.html" class="hover:text-primary transition-colors">Subscription</a></li>
+                <li><a href="contact.html" class="hover:text-primary transition-colors">Contact</a></li>
+                <li><a href="dashboard.html"
+                        class="bg-primary text-white px-6 py-2 rounded-full font-bold hover:bg-primary-hover transition-all">Dashboard</a>
+                </li>
+            </ul>
+
+            <!-- Icons/Toggles -->
+            <div class="flex items-center space-x-6">
+                <!-- RTL Toggle -->
+                <button id="rtl-toggle" class="rtl-switch" title="Toggle RTL"><i class="fas fa-right-left"></i></button>
+
+                <!-- Theme Toggle -->
+                <button id="theme-toggle" class="text-xl hover:text-primary transition-colors">
+                    <i class="fas fa-circle-half-stroke"></i>
+                </button>
+
+                <!-- Cart Icon -->
+                <a href="cart.html" class="relative group">
+                    <i class="fas fa-shopping-bag text-xl"></i>
+                    <span
+                        class="absolute -top-2 -right-2 bg-primary text-white text-[10px] w-4 h-4 flex items-center justify-center rounded-full">3</span>
+                </a>
+
+                <!-- Sign Up Button -->
+                <a href="signup.html" class="hidden lg:block bg-primary text-white px-6 py-2 rounded-full font-bold hover:bg-primary-hover transition-all text-sm">Sign Up</a>
+
+                <!-- Hamburger Menu (Tablet & Mobile) -->
+                <button id="menu-btn" class="lg:hidden text-2xl">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+        </nav>
+
+        <!-- Mobile Menu (Drawer) -->
+        <div id="mobile-menu"
+            class="hidden lg:hidden fixed inset-y-0 right-0 w-64 glass z-50 p-10 flex flex-col space-y-6">
+            <a href="index.html" class="text-lg font-medium hover:text-primary border-b border-white/10 pb-2">Home 1</a>
+            <a href="home2.html" class="text-lg font-medium hover:text-primary border-b border-white/10 pb-2">Home 2</a>
+            <a href="about.html" class="text-lg font-medium hover:text-primary border-b border-white/10 pb-2">About</a>
+            <a href="shop.html" class="text-lg font-medium hover:text-primary border-b border-white/10 pb-2">Shop</a>
+            <a href="subscription.html"
+                class="text-lg font-medium hover:text-primary border-b border-white/10 pb-2">Subscription</a>
+            <a href="dashboard.html"
+                class="text-lg font-medium hover:text-primary border-b border-white/10 pb-2">Dashboard</a>
+            <a href="contact.html"
+                class="text-lg font-medium hover:text-primary border-b border-white/10 pb-2">Contact</a>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="relative h-[110vh] flex items-center justify-center overflow-hidden">
+        <!-- Background Image with Overlay -->
+        <div class="absolute inset-0 z-0">
+            <img src="https://images.unsplash.com/photo-1552767059-ce182ead6c1b?q=80&w=2070" alt="Limestone Cellars"
+                class="w-full h-full object-cover">
+            <div class="absolute inset-0 bg-darkBg/60 z-10"></div>
+            <div class="absolute inset-0 bg-gradient-to-b from-black/60 to-transparent z-20"></div>
+        </div>
+
+        <div class="container mx-auto px-6 text-center relative z-10" data-aos="fade-up">
+            <span class="text-primary uppercase tracking-[0.4em] font-bold mb-6 block text-sm">A Century of Craft</span>
+            <h1 class="text-6xl md:text-8xl font-serif font-bold mb-8 text-white leading-tight">Our Legacy.</h1>
+            <p class="text-xl md:text-2xl text-gray-300 max-w-2xl mx-auto italic border-y border-white/10 py-8 mb-10">
+                Preserving the whispered secrets of the mountain pastures and the limestone cellars of Europe.
+            </p>
+            <div class="flex justify-center">
+                <a href="#story"
+                    class="bg-primary hover:bg-primary-hover text-white px-12 py-4 rounded-full font-bold transition-all hover-lift shadow-2xl">Read
+                    Our Story</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Content Section -->
+    <section class="py-24">
+        <div class="container mx-auto px-6">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+                <div data-aos="fade-right">
+                    <h2 class="text-4xl font-serif font-bold mb-6">The Art of Cheesemaking</h2>
+                    <p class="text-gray-400 mb-6 leading-relaxed">Fromage was born from a passion for authentic flavors
+                        and traditional craftsmanship. We travel to the most remote villages in France, Italy, and
+                        beyond to find masters who have preserved their techniques for generations.</p>
+                    <p class="text-gray-400 mb-6 leading-relaxed">Every piece of cheese in our collection represents a
+                        legacy of time, patience, and meticulous attention to detail. We believe that the best cheese
+                        isn't just made; it is nurtured. From the first morning milking to the final month of affinage
+                        in our limestone cellars, we respect the natural rhythms of the seasons.</p>
+                    <p class="text-gray-400 mb-8 leading-relaxed">By partnering exclusively with family-owned farms, we
+                        ensure that every wheel supports the preservation of biodiversity and the survival of ancient
+                        methods that the modern world has nearly forgotten. This is our promise: a taste of the earth,
+                        delivered with integrity.</p>
+                </div>
+                <div class="relative" data-aos="zoom-in">
+                    <img src="https://images.pexels.com/photos/18325774/pexels-photo-18325774.jpeg"
+                        alt="Artisanal Cheesemaking" class="rounded-2xl shadow-2xl">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Mission & Vision -->
+    <section class="py-24 bg-white/5 border-y border-white/5">
+        <div class="container mx-auto px-6">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12 text-center">
+                <div data-aos="fade-up" data-aos-delay="100">
+                    <div class="text-4xl text-primary mb-6"><i class="fas fa-hand-holding-heart"></i></div>
+                    <h4 class="text-xl font-bold mb-4">Ethical Sourcing</h4>
+                    <p class="text-gray-500 text-sm leading-relaxed">We directly partner with small-scale family farms
+                        that prioritize the well-being of their herds and the health of their land.</p>
+                </div>
+                <div data-aos="fade-up" data-aos-delay="200">
+                    <div class="text-4xl text-primary mb-6"><i class="fas fa-microscope"></i></div>
+                    <h4 class="text-xl font-bold mb-4">Quality Assurance</h4>
+                    <p class="text-gray-500 text-sm leading-relaxed">Each wheel is rigorously tested in our Tasting Lab
+                        for aroma, texture, and flavor profile before ever reaching your table.</p>
+                </div>
+                <div data-aos="fade-up" data-aos-delay="300">
+                    <div class="text-4xl text-primary mb-6"><i class="fas fa-globe-europe"></i></div>
+                    <h4 class="text-xl font-bold mb-4">Heritage Preservation</h4>
+                    <p class="text-gray-500 text-sm leading-relaxed">By choosing Fromage, you are directly supporting
+                        the preservation of ancient cheesemaking traditions worldwide.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- The Tasting Lab Section -->
+    <section class="py-32 overflow-hidden bg-darkBg">
+        <div class="container mx-auto px-6">
+            <div class="flex flex-col lg:flex-row items-center gap-20">
+                <div class="w-full lg:w-1/2 order-2 lg:order-1" data-aos="fade-right">
+                    <img src="img/tasting.png" alt="The Tasting Lab"
+                        class="rounded-[40px] shadow-2xl skew-y-3 hover:skew-y-0 transition-transform duration-700">
+                </div>
+                <div class="w-full lg:w-1/2 order-1 lg:order-2" data-aos="fade-left">
+                    <span class="text-primary uppercase tracking-[0.4em] font-bold mb-4 block">Expertise</span>
+                    <h2 class="text-4xl md:text-6xl font-serif font-bold mb-8">Science Meets Pure Passion.</h2>
+                    <p class="text-gray-400 text-lg mb-10 leading-relaxed italic">"Affining is a delicate dance between
+                        micro-biology and instinct. We don't just sell cheese; we curate moments of perfection."</p>
+                    <div class="space-y-6">
+                        <div class="flex items-start space-x-4">
+                            <i class="fas fa-check-circle text-primary mt-1 text-xl"></i>
+                            <p class="text-gray-500"><span class="text-white font-bold">Climate Controlled
+                                    Cellars:</span> Maintaining the exact levels of humidity and temperature required
+                                for optimal aging.</p>
+                        </div>
+                        <div class="flex items-start space-x-4">
+                            <i class="fas fa-check-circle text-primary mt-1 text-xl"></i>
+                            <p class="text-gray-500"><span class="text-white font-bold">Flavor Profiling:</span> Each
+                                selection is assigned a detailed sensory map, helping you find your perfect match.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Our Partner Farms -->
+    <section class="py-24 text-center">
+        <div class="container mx-auto px-6">
+            <h2 class="text-4xl font-serif font-bold mb-4" data-aos="fade-up">Trusted Partner Farms</h2>
+            <p class="text-gray-400 mb-16" data-aos="fade-up" data-aos-delay="100">Across the continents, our partners
+                share our unwavering commitment to excellence.</p>
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-8 opacity-40 grayscale hover:grayscale-0 transition-all duration-700"
+                data-aos="zoom-in">
+                <div class="p-8 border border-white/10 rounded-xl"><i
+                        class="fas fa-mountain text-4xl mb-4"></i><br>Alpine Pastures</div>
+                <div class="p-8 border border-white/10 rounded-xl"><i class="fas fa-leaf text-4xl mb-4"></i><br>Normandy
+                    Green</div>
+                <div class="p-8 border border-white/10 rounded-xl"><i class="fas fa-sun text-4xl mb-4"></i><br>Tuscan
+                    Gold</div>
+                <div class="p-8 border border-white/10 rounded-xl"><i class="fas fa-wind text-4xl mb-4"></i><br>British
+                    Heritage</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Legendary Perspectives (Quotes) -->
+    <section class="py-32 bg-darkBg overflow-hidden border-t border-white/5">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-20" data-aos="fade-up">
+                <span class="text-primary uppercase tracking-[0.4em] font-bold mb-4 block underline-offset-8">Legendary
+                    Perspectives</span>
+                <h2 class="text-4xl md:text-5xl font-serif font-bold">The Wisdom of the Wheel</h2>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-20">
+                <div class="relative p-12 glass rounded-[60px] border-white/5" data-aos="fade-right">
+                    <i class="fas fa-quote-left text-primary/20 text-8xl absolute -top-10 -left-6"></i>
+                    <p class="text-2xl md:text-3xl font-serif italic mb-8 relative z-10 leading-relaxed text-white/90">
+                        "A meal without cheese is like a beautiful woman with only one eye."</p>
+                    <div class="flex items-center space-x-4 border-t border-white/10 pt-8">
+                        <div>
+                            <p class="text-primary font-bold uppercase tracking-widest text-sm">Jean Anthelme
+                                Brillat-Savarin</p>
+                            <p class="text-gray-500 text-xs italic">The Physiology of Taste, 1825</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="relative p-12 glass rounded-[60px] border-white/5 md:mt-24" data-aos="fade-left">
+                    <i class="fas fa-quote-left text-primary/20 text-8xl absolute -top-10 -left-6"></i>
+                    <p class="text-2xl md:text-3xl font-serif italic mb-8 relative z-10 leading-relaxed text-white/90">
+                        "How can you govern a country which has two hundred and forty-six varieties of cheese?"</p>
+                    <div class="flex items-center space-x-4 border-t border-white/10 pt-8">
+                        <div>
+                            <p class="text-primary font-bold uppercase tracking-widest text-sm">Charles de Gaulle</p>
+                            <p class="text-gray-500 text-xs italic">Former President of France</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="max-w-4xl mx-auto mt-32 text-center" data-aos="zoom-in">
+                <p class="text-gray-500 text-lg italic italic leading-relaxed">"At Fromage, we don't just agree with
+                    these legends—we live by their standards every day. Every wheel we source is a tribute to this rich,
+                    complex history."</p>
+                <div class="w-24 h-1 bg-primary mx-auto mt-10 rounded-full"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-20 text-current">
+        <div class="container mx-auto px-6 text-current">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-20 text-center lg:text-left">
+                <div class="flex flex-col items-center lg:items-start text-left">
+                    <div class="mb-6">
+                        <img src="img/icon_logo.png" alt="Fromage Logo" class="footer-logo mb-0">
+                    </div>
+                    <p class="text-gray-400 mb-8 max-w-sm">From the heart of the countryside to your doorstep. We
+                        deliver the finest artisanal cheeses from across the globe.</p>
+                    <div class="flex space-x-6">
+                        <a href="#" class="text-gray-400 hover:text-primary transition-colors"><i
+                                class="fab fa-instagram"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-primary transition-colors"><i
+                                class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-primary transition-colors"><i
+                                class="fab fa-pinterest-p"></i></a>
+                    </div>
+                </div>
+                <div>
+                    <h4 class="font-bold uppercase tracking-widest mb-6">Explore</h4>
+                    <ul class="space-y-4 text-gray-400">
+                        <li><a href="shop.html" class="hover:text-primary transition-colors">Our Collection</a></li>
+                        <li><a href="subscription.html" class="hover:text-primary transition-colors">Cheese Club</a>
+                        </li>
+                        <li><a href="about.html" class="hover:text-primary transition-colors">Our Story</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-bold uppercase tracking-widest mb-6">Support</h4>
+                    <ul class="space-y-4 text-gray-400">
+                        <li><a href="contact.html" class="hover:text-primary transition-colors">Contact Us</a></li>
+                        <li><a href="contact.html#faq" class="hover:text-primary transition-colors">FAQ</a></li>
+                        <li><a href="#" class="hover:text-primary transition-colors">Shipping Info</a></li>
+                        <li><a href="#" class="hover:text-primary transition-colors">Returns</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-bold uppercase tracking-widest mb-6">Visit Us</h4>
+                    <div class="space-y-4">
+                        <p class="text-gray-400 italic">The Tasting Lab,<br>42 Artisanal Way, Gourmet Hills</p>
+                        <p class="text-primary font-bold">hello@Fromage.com</p>
+                        <p class="text-gray-500 font-bold text-xs">+1 (555) 789 1234</p>
+                    </div>
+                </div>
+            </div>
+            <div class="border-t border-white/5 pt-10 text-center text-sm text-gray-500">
+                <p>&copy; 2026 Fromage. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="js/script.js"></script>
+</body>
+
+</html>
+

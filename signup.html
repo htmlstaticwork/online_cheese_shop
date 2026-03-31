@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create Your Fromage Account | Artisanal Experiences Await</title>
+    <meta name="description" content="Join Fromage to access exclusive artisanal cheese collections, curated subscription boxes, and masterclass pairings.">
+    <!-- Tailwind CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#D4A373',
+                        secondary: '#F4A261',
+                        accent: '#E9C46A',
+                        darkBg: '#0F0F0F',
+                        lightBg: '#FFF8F0',
+                    }
+                }
+            }
+        }
+    </script>
+    <!-- AOS Animation -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="transition-colors duration-300 min-h-screen flex items-center justify-center bg-darkBg relative overflow-hidden">
+
+    <!-- Decorative Elements -->
+    <div class="absolute top-[-10%] right-[-5%] w-[40%] h-[40%] bg-primary/10 blur-[120px] rounded-full"></div>
+    <div class="absolute bottom-[-10%] left-[-5%] w-[35%] h-[35%] bg-primary/5 blur-[100px] rounded-full"></div>
+
+    <main class="w-full max-w-xl mx-auto px-6 py-12 relative z-10" data-aos="fade-up">
+        <div class="glass rounded-[40px] p-8 md:p-12 shadow-2xl border border-white/5">
+            <!-- Brand Section -->
+            <div class="text-center mb-10">
+                <a href="index.html" class="flex items-center justify-center group mb-6">
+                    <img src="img/icon_logo.png" alt="Fromage Logo" class="navbar-logo transform group-hover:scale-110 transition-transform duration-500">
+                    <span class="navbar-brand-name">Fromage</span>
+                </a>
+                <h1 class="text-3xl md:text-4xl font-serif font-bold mb-3">Begin Your Journey</h1>
+                <p class="text-gray-400 italic">Access the world's most exclusive artisanal dairy craft.</p>
+            </div>
+
+            <!-- Signup Form -->
+            <form class="space-y-6">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div>
+                        <label class="block text-xs uppercase tracking-widest font-bold text-gray-400 mb-2 ml-4">First Name</label>
+                        <input type="text" required class="w-full bg-white/5 border border-white/10 rounded-full px-6 py-4 outline-none focus:border-primary transition-colors hover:bg-white/10" placeholder="Jean">
+                    </div>
+                    <div>
+                        <label class="block text-xs uppercase tracking-widest font-bold text-gray-400 mb-2 ml-4">Last Name</label>
+                        <input type="text" required class="w-full bg-white/5 border border-white/10 rounded-full px-6 py-4 outline-none focus:border-primary transition-colors hover:bg-white/10" placeholder="Dupont">
+                    </div>
+                </div>
+
+                <div>
+                    <label class="block text-xs uppercase tracking-widest font-bold text-gray-400 mb-2 ml-4">Email Address</label>
+                    <input type="email" required class="w-full bg-white/5 border border-white/10 rounded-full px-6 py-4 outline-none focus:border-primary transition-colors hover:bg-white/10" placeholder="jean@fromage.com">
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div>
+                        <label class="block text-xs uppercase tracking-widest font-bold text-gray-400 mb-2 ml-4">Password</label>
+                        <input type="password" required class="w-full bg-white/5 border border-white/10 rounded-full px-6 py-4 outline-none focus:border-primary transition-colors hover:bg-white/10" placeholder="••••••••">
+                    </div>
+                    <div>
+                        <label class="block text-xs uppercase tracking-widest font-bold text-gray-400 mb-2 ml-4">Confirm</label>
+                        <input type="password" required class="w-full bg-white/5 border border-white/10 rounded-full px-6 py-4 outline-none focus:border-primary transition-colors hover:bg-white/10" placeholder="••••••••">
+                    </div>
+                </div>
+
+                <div class="flex items-start space-x-3 ml-4 py-2">
+                    <input type="checkbox" id="terms" required class="mt-1 accent-primary">
+                    <label for="terms" class="text-sm text-gray-400">I agree to the <a href="#" class="text-primary hover:underline">Terms of Service</a> and <a href="#" class="text-primary hover:underline">Privacy Policy</a>.</label>
+                </div>
+
+                <button type="submit" class="w-full bg-primary hover:bg-primary-hover text-white py-5 rounded-full font-bold transition-all shadow-xl hover-lift uppercase tracking-[0.2em] text-xs">Create Free Account</button>
+            </form>
+
+            <!-- Social Signups -->
+            <div class="mt-10">
+                <div class="relative flex items-center justify-center mb-8">
+                    <div class="flex-grow border-t border-white/10"></div>
+                    <span class="flex-shrink mx-4 text-xs text-gray-500 uppercase tracking-widest">Or Continue With</span>
+                    <div class="flex-grow border-t border-white/10"></div>
+                </div>
+
+                <div class="grid grid-cols-2 gap-4">
+                    <button class="flex items-center justify-center space-x-3 bg-white/5 border border-white/10 hover:bg-white/10 py-4 rounded-full transition-all group">
+                        <i class="fab fa-google text-lg group-hover:text-primary transition-colors"></i>
+                        <span class="text-xs font-bold uppercase tracking-widest">Google</span>
+                    </button>
+                    <button class="flex items-center justify-center space-x-3 bg-white/5 border border-white/10 hover:bg-white/10 py-4 rounded-full transition-all group">
+                        <i class="fab fa-apple text-lg group-hover:text-primary transition-colors"></i>
+                        <span class="text-xs font-bold uppercase tracking-widest">Apple</span>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Login Link -->
+            <div class="mt-12 text-center text-sm text-gray-400">
+                Already part of the circle? <a href="login.html" class="text-primary font-bold hover:underline ml-1">Sign In Here</a>
+            </div>
+        </div>
+
+        <!-- Back to Home -->
+        <a href="index.html" class="flex items-center justify-center mt-10 text-gray-500 hover:text-primary transition-colors text-xs font-bold uppercase tracking-widest">
+            <i class="fas fa-arrow-left mr-2"></i> Return to Fromage Home
+        </a>
+    </main>
+
+    <!-- Scripts -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            duration: 1000,
+            once: true
+        });
+    </script>
+</body>
+</html>

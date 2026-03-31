@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Selection | Fromage</title>
+    <meta name="description" content="Review your artisanal selection and prepare for a gourmet experience.">
+    <!-- Tailwind CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#D4A373',
+                        secondary: '#F4A261',
+                        accent: '#E9C46A',
+                        darkBg: '#0F0F0F',
+                        lightBg: '#FFF8F0',
+                    }
+                }
+            }
+        }
+    </script>
+    <!-- AOS Animation -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="transition-colors duration-300">
+
+    <!-- Header Section -->
+    <header class="fixed w-full z-50 glass transition-all duration-300">
+        <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <!-- Logo -->
+            <a href="index.html" class="flex items-center">
+                <img src="img/icon_logo.png" alt="Fromage Logo" class="navbar-logo">
+                <span class="navbar-brand-name">Fromage</span>
+            </a>
+
+            <!-- Desktop Navigation -->
+            <ul id="desktop-nav" class="hidden lg:flex items-center space-x-8 text-sm font-medium uppercase tracking-widest">
+                <li><a href="index.html" class="hover:text-primary transition-colors">Home 1</a></li>
+                <li><a href="home2.html" class="hover:text-primary transition-colors">Home 2</a></li>
+                <li><a href="about.html" class="hover:text-primary transition-colors">About</a></li>
+                <li><a href="shop.html" class="hover:text-primary transition-colors">Shop</a></li>
+                <li><a href="subscription.html" class="hover:text-primary transition-colors">Subscription</a></li>
+                <li><a href="contact.html" class="hover:text-primary transition-colors">Contact</a></li>
+                <li><a href="dashboard.html" class="bg-primary text-white px-6 py-2 rounded-full font-bold hover:bg-primary-hover transition-all text-sm">Dashboard</a></li>
+            </ul>
+
+            <!-- Icons/Toggles -->
+            <div class="flex items-center space-x-6">
+                <!-- Theme Toggle -->
+                <button id="theme-toggle" class="text-xl hover:text-primary transition-colors">
+                    <i class="fas fa-circle-half-stroke"></i>
+                </button>
+                <!-- Cart Icon -->
+                <a href="cart.html" class="relative group">
+                    <i class="fas fa-shopping-bag text-xl text-primary"></i>
+                    <span class="absolute -top-2 -right-2 bg-primary text-white text-[10px] w-4 h-4 flex items-center justify-center rounded-full">3</span>
+                </a>
+            </div>
+        </nav>
+    </header>
+
+    <main class="pt-32 pb-24 min-h-screen bg-white/5">
+        <div class="container mx-auto px-6">
+            <h1 class="text-5xl font-serif font-bold mb-12" data-aos="fade-down">Your Selection</h1>
+            
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-16">
+                <!-- Cart Content -->
+                <div class="lg:col-span-2 space-y-8" data-aos="fade-right">
+                    <!-- Item 1 -->
+                    <div class="flex items-center justify-between p-8 glass rounded-3xl group border-white/5 hover:border-primary/20 transition-all">
+                        <div class="flex items-center space-x-8">
+                            <div class="w-24 h-24 rounded-2xl overflow-hidden shadow-xl">
+                                <img src="https://images.unsplash.com/photo-1634544713735-9856ccfa1193?q=80&w=1974" alt="Triple Cream Brie" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                            </div>
+                            <div>
+                                <h3 class="text-xl font-bold font-serif">Triple Cream Brie</h3>
+                                <p class="text-primary font-bold text-xs uppercase tracking-widest mt-1">Normandy, FR</p>
+                                <p class="text-gray-500 text-sm mt-2 italic">Quantity: 250g</p>
+                            </div>
+                        </div>
+                        <div class="flex items-center space-x-12">
+                            <div class="flex items-center space-x-4">
+                                <button class="w-8 h-8 rounded-full border border-white/10 flex items-center justify-center hover:bg-primary transition-colors">-</button>
+                                <span class="font-bold">1</span>
+                                <button class="w-8 h-8 rounded-full border border-white/10 flex items-center justify-center hover:bg-primary transition-colors">+</button>
+                            </div>
+                            <span class="text-xl font-bold text-primary">$18.50</span>
+                            <button class="text-gray-500 hover:text-red-500 transition-colors"><i class="fas fa-trash-alt"></i></button>
+                        </div>
+                    </div>
+
+                    <!-- Item 2 -->
+                    <div class="flex items-center justify-between p-8 glass rounded-3xl group border-white/5 hover:border-primary/20 transition-all">
+                        <div class="flex items-center space-x-8">
+                            <div class="w-24 h-24 rounded-2xl overflow-hidden shadow-xl">
+                                <img src="img/sub_box.png" alt="European Tasting Gift Box" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                            </div>
+                            <div>
+                                <h3 class="text-xl font-bold font-serif">Signature Gift Box</h3>
+                                <p class="text-primary font-bold text-xs uppercase tracking-widest mt-1">Limited Edition</p>
+                                <p class="text-gray-500 text-sm mt-2 italic">Artisanal Curation</p>
+                            </div>
+                        </div>
+                        <div class="flex items-center space-x-12">
+                            <div class="flex items-center space-x-4">
+                                <button class="w-8 h-8 rounded-full border border-white/10 flex items-center justify-center hover:bg-primary transition-colors">-</button>
+                                <span class="font-bold">1</span>
+                                <button class="w-8 h-8 rounded-full border border-white/10 flex items-center justify-center hover:bg-primary transition-colors">+</button>
+                            </div>
+                            <span class="text-xl font-bold text-primary">$85.00</span>
+                            <button class="text-gray-500 hover:text-red-500 transition-colors"><i class="fas fa-trash-alt"></i></button>
+                        </div>
+                    </div>
+
+                    <!-- Upsell Section -->
+                    <div class="mt-16 p-10 bg-primary/5 rounded-[40px] border border-primary/20">
+                        <h4 class="text-sm uppercase tracking-widest font-bold text-primary mb-6">Complete the Experience</h4>
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                            <div class="flex items-center space-x-4 p-4 glass rounded-2xl">
+                                <img src="https://images.unsplash.com/photo-1510812431401-41d2bd2722f3?q=80&w=2070" alt="Wine" class="w-16 h-16 rounded-xl object-cover">
+                                <div class="flex-1">
+                                    <h5 class="text-sm font-bold">Chardonnay Pairing</h5>
+                                    <p class="text-primary font-bold">$32.00</p>
+                                </div>
+                                <button class="text-primary hover:text-white transition-colors text-xl">+</button>
+                            </div>
+                            <div class="flex items-center space-x-4 p-4 glass rounded-2xl">
+                                <img src="https://images.unsplash.com/photo-1598214811900-503a5538af3e?q=80&w=2069" alt="Crackers" class="w-16 h-16 rounded-xl object-cover">
+                                <div class="flex-1">
+                                    <h5 class="text-sm font-bold">Sea Salt Crackers</h5>
+                                    <p class="text-primary font-bold">$8.50</p>
+                                </div>
+                                <button class="text-primary hover:text-white transition-colors text-xl">+</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Order Summary -->
+                <div class="lg:col-span-1" data-aos="fade-left">
+                    <div class="p-10 glass rounded-[40px] sticky top-32 border-white/5 shadow-2xl">
+                        <h2 class="text-2xl font-serif font-bold mb-8">Summary</h2>
+                        
+                        <div class="space-y-4 mb-8">
+                            <div class="flex justify-between text-gray-400">
+                                <span>Subtotal</span>
+                                <span class="text-white">$103.50</span>
+                            </div>
+                            <div class="flex justify-between text-gray-400">
+                                <span>Sustainable Packaging</span>
+                                <span class="text-white">$5.00</span>
+                            </div>
+                            <div class="flex justify-between text-gray-400">
+                                <span>Premium Shipping</span>
+                                <span class="text-primary font-bold">FREE</span>
+                            </div>
+                            <div class="pt-4 border-t border-white/10 flex justify-between text-2xl font-serif font-bold">
+                                <span>Total</span>
+                                <span class="text-primary">$108.50</span>
+                            </div>
+                        </div>
+
+                        <div class="mb-8">
+                            <p class="text-[10px] uppercase tracking-widest text-gray-400 mb-4 font-bold">Shipping Progress</p>
+                            <div class="w-full bg-white/5 h-1 rounded-full overflow-hidden">
+                                <div class="bg-primary h-full" style="width: 75%"></div>
+                            </div>
+                            <p class="text-[9px] text-primary mt-2 italic">$41.50 more for a Gourmet Gift Set</p>
+                        </div>
+
+                        <button class="w-full bg-primary hover:bg-primary-hover text-white py-5 rounded-full font-bold transition-all shadow-xl hover-lift uppercase tracking-widest text-xs mb-4">Complete Taste Profile</button>
+                        <a href="shop.html" class="flex items-center justify-center w-full text-gray-400 hover:text-primary transition-colors text-xs font-bold uppercase tracking-widest">
+                            <i class="fas fa-arrow-left mr-2"></i> Continue Exploring
+                        </a>
+
+                        <div class="mt-10 flex justify-center space-x-6 text-2xl text-gray-400">
+                            <i class="fab fa-cc-mastercard"></i>
+                            <i class="fab fa-cc-visa"></i>
+                            <i class="fab fa-apple-pay"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="py-20 text-current">
+        <div class="container mx-auto px-6 text-current">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-20 text-center lg:text-left">
+                <div class="flex flex-col items-center lg:items-start text-left">
+                    <div class="mb-6">
+                        <img src="img/icon_logo.png" alt="Fromage Logo" class="footer-logo mb-0">
+                    </div>
+                    <p class="text-gray-400 mb-8 max-w-sm">From the heart of the countryside to your doorstep. We deliver the finest artisanal cheeses from across the globe.</p>
+                    <div class="flex space-x-6">
+                        <a href="#" class="text-gray-400 hover:text-primary transition-colors"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-primary transition-colors"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-primary transition-colors"><i class="fab fa-pinterest-p"></i></a>
+                    </div>
+                </div>
+                <div>
+                    <h4 class="font-bold uppercase tracking-widest mb-6">Explore</h4>
+                    <ul class="space-y-4 text-gray-400">
+                        <li><a href="shop.html" class="hover:text-primary transition-colors">Our Collection</a></li>
+                        <li><a href="subscription.html" class="hover:text-primary transition-colors">Cheese Club</a></li>
+                        <li><a href="about.html" class="hover:text-primary transition-colors">Our Story</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-bold uppercase tracking-widest mb-6">Support</h4>
+                    <ul class="space-y-4 text-gray-400">
+                        <li><a href="contact.html" class="hover:text-primary transition-colors">Contact Us</a></li>
+                        <li><a href="contact.html#faq" class="hover:text-primary transition-colors">FAQ</a></li>
+                        <li><a href="#" class="hover:text-primary transition-colors">Shipping Info</a></li>
+                        <li><a href="#" class="hover:text-primary transition-colors">Returns</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-bold uppercase tracking-widest mb-6">Visit Us</h4>
+                    <div class="space-y-4">
+                        <p class="text-gray-400 italic">The Tasting Lab,<br>42 Artisanal Way, Gourmet Hills</p>
+                        <p class="text-primary font-bold">hello@Fromage.com</p>
+                        <p class="text-gray-500 font-bold text-xs">+1 (555) 789 1234</p>
+                    </div>
+                </div>
+            </div>
+            <div class="border-t border-white/5 pt-10 text-center text-sm text-gray-500">
+                <p>&copy; 2026 Fromage. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="js/script.js"></script>
+</body>
+</html>
+
+
