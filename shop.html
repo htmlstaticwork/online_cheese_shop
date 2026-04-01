@@ -37,18 +37,23 @@
 
 <body class="transition-colors duration-300">
 
+    <!-- Scroll to Top -->
+    <button id="scroll-to-top" class="bg-primary text-white p-3 rounded-full shadow-lg hover-lift">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
     <!-- Header Section -->
     <header class="fixed w-full z-50 glass transition-all duration-300">
         <nav class="container mx-auto px-2 md:px-6 py-3 flex justify-between items-center text-current">
             <!-- Logo -->
             <a href="index.html" class="flex items-center group">
                 <img src="img/logo_primary.svg" alt="Fromage Logo" class="navbar-logo">
-                <span class="navbar-brand-name">Fromage</span>
+                <span class="navbar-brand-name hidden sm:block">Fromage</span>
             </a>
 
             <!-- Desktop Navigation -->
             <ul id="desktop-nav"
-                class="hidden lg:flex items-center space-x-8 text-sm font-medium uppercase tracking-widest">
+                class="hidden xl:flex items-center space-x-8 text-sm font-medium uppercase tracking-widest">
                 <li><a href="index.html" class="hover:text-primary transition-colors">Home 1</a></li>
                 <li><a href="home2.html" class="hover:text-primary transition-colors">Home 2</a></li>
                 <li><a href="about.html" class="hover:text-primary transition-colors">About</a></li>
@@ -63,7 +68,8 @@
             <!-- Icons/Toggles -->
             <div class="flex items-center space-x-3 md:space-x-6">
                 <!-- RTL Toggle -->
-                <button id="rtl-toggle" class="rtl-switch" title="Toggle RTL"><i class="fas fa-right-left"></i></button>
+                <button id="rtl-toggle" class="rtl-switch" title="Toggle RTL"><i
+                        class="fas fa-right-left"></i></button>
 
                 <!-- Theme Toggle -->
                 <button id="theme-toggle" class="text-xl hover:text-primary transition-colors">
@@ -78,12 +84,10 @@
                 </a>
 
                 <!-- Sign Up Button -->
-                <a href="signup.html"
-                    class="hidden lg:block bg-primary text-white px-6 py-2 rounded-full font-bold hover:bg-primary-hover transition-all text-sm">Sign
-                    Up</a>
+                <a href="signup.html" class="hidden xl:block bg-primary text-white px-6 py-2 rounded-full font-bold hover:bg-primary-hover transition-all text-sm">Sign Up</a>
 
                 <!-- Hamburger Menu (Tablet & Mobile) -->
-                <button id="menu-btn" class="lg:hidden text-2xl">
+                <button id="menu-btn" class="xl:hidden text-2xl">
                     <i class="fas fa-bars"></i>
                 </button>
             </div>
@@ -91,42 +95,54 @@
 
         <!-- Mobile Menu (Drawer) -->
         <div id="mobile-menu"
-            class="hidden lg:hidden fixed inset-y-0 right-0 w-64 bg-lightBg dark:bg-darkBg z-50 p-10 flex flex-col space-y-6 shadow-2xl transition-colors duration-300">
-            <a href="index.html" class="text-lg font-medium hover:text-primary border-b border-black/10 dark:border-white/10 pb-2">Home 1</a>
-            <a href="home2.html" class="text-lg font-medium hover:text-primary border-b border-black/10 dark:border-white/10 pb-2">Home 2</a>
-            <a href="about.html" class="text-lg font-medium hover:text-primary border-b border-black/10 dark:border-white/10 pb-2">About</a>
-            <a href="shop.html" class="text-lg font-medium hover:text-primary border-b border-black/10 dark:border-white/10 pb-2">Shop</a>
+            class="hidden xl:hidden fixed inset-y-0 right-0 w-64 bg-lightBg dark:bg-darkBg z-50 p-10 flex flex-col space-y-6 shadow-2xl transition-colors duration-300">
+            <a href="index.html"
+                class="text-lg font-medium hover:text-primary border-b border-black/10 dark:border-white/10 pb-2">Home
+                1</a>
+            <a href="home2.html"
+                class="text-lg font-medium hover:text-primary border-b border-black/10 dark:border-white/10 pb-2">Home
+                2</a>
+            <a href="about.html"
+                class="text-lg font-medium hover:text-primary border-b border-black/10 dark:border-white/10 pb-2">About</a>
+            <a href="shop.html"
+                class="text-lg font-medium hover:text-primary border-b border-black/10 dark:border-white/10 pb-2">Shop</a>
             <a href="subscription.html"
                 class="text-lg font-medium hover:text-primary border-b border-black/10 dark:border-white/10 pb-2">Subscription</a>
             <a href="dashboard.html"
                 class="text-lg font-medium hover:text-primary border-b border-black/10 dark:border-white/10 pb-2">Dashboard</a>
             <a href="contact.html"
                 class="text-lg font-medium hover:text-primary border-b border-black/10 dark:border-white/10 pb-2">Contact</a>
+            <a href="signup.html"
+                class="bg-primary text-white text-center rounded-full py-3 px-8 font-bold hover:bg-primary-hover transition-all shadow-lg shadow-primary/20 mt-6 block">Sign
+                Up</a>
         </div>
     </header>
 
     <!-- Hero Section -->
     <section class="relative min-h-screen flex items-center justify-center overflow-hidden pt-32 md:pt-0">
-        <div class="absolute inset-0 z-0 bg-darkBg">
-            <!-- Cinema Image -->
-            <div class="absolute inset-0 w-full h-full bg-cover bg-center active transition-opacity duration-1000"
-                style="background-image: url('https://images.unsplash.com/photo-1596450514735-300407f354f9?q=80&w=1974');">
-            </div>
+        <div class="hero-slider absolute inset-0 z-0">
+            <div class="hero-slide active" style="background-image: url('img/hero1.png');"></div>
+            <div class="hero-slide" style="background-image: url('img/hero2.png');"></div>
+            <div class="hero-slide" style="background-image: url('img/hero3.png');"></div>
 
             <div class="absolute inset-0 bg-black/40 z-10"></div>
             <div class="absolute inset-0 bg-gradient-to-b from-black/60 to-transparent z-20"></div>
         </div>
 
         <div class="container mx-auto px-6 relative z-10 text-center" data-aos="fade-up">
-            <span class="text-primary uppercase tracking-[0.4em] font-bold mb-4 block">Direct Selection</span>
-            <h1 class="text-5xl md:text-8xl font-serif font-bold text-white mb-6 leading-tight">The Boutique.</h1>
+            <span class="text-primary uppercase tracking-[0.4em] font-bold mb-4 block">Gourmet Selection</span>
+            <h1 class="text-5xl md:text-8xl font-serif font-bold text-white mb-4 leading-tight">Crafted
+                Cheese.<br>Curated Experience.</h1>
             <p class="text-lg md:text-2xl text-gray-300 max-w-2xl mx-auto mb-6 italic">
-                Directly from the affinage cellars to your doorstep, a curated selection of the world's finest.
+                From the lush pastures of artisanal farms to your table. Experience cheese like never before.
             </p>
-            <div class="flex justify-center">
+            <div class="flex flex-col sm:flex-row justify-center items-center space-y-4 sm:space-y-0 sm:space-x-6">
                 <a href="#featured"
-                    class="bg-primary hover:bg-primary-hover text-white px-12 py-4 rounded-full font-bold transition-all hover-lift shadow-2xl">Start
-                    Tasting</a>
+                    class="bg-primary hover:bg-primary-hover text-white px-12 py-4 rounded-full font-bold transition-all hover-lift w-full sm:w-auto shadow-2xl">Shop
+                    Collection</a>
+                <a href="subscription.html"
+                    class="border border-white/30 hover:bg-white/10 text-white px-12 py-4 rounded-full font-bold backdrop-blur-md transition-all hover-lift w-full sm:w-auto">Explore
+                    Club Plans</a>
             </div>
         </div>
     </section>
@@ -134,68 +150,80 @@
     <!-- Shop Main Area -->
     <section class="py-12">
         <div class="container mx-auto px-6">
-            <div class="flex flex-col lg:flex-row gap-8">
-                <!-- Sidebar Filters -->
-                <aside class="w-full lg:w-1/4" data-aos="fade-right">
-                    <div class="glass p-8 rounded-3xl sticky top-32">
-                        <h4 class="font-bold uppercase tracking-widest mb-8 border-b border-white/10 pb-4">Filter by
-                            Texture</h4>
-                        <ul class="space-y-4 text-gray-400">
-                            <li><a href="#" class="hover:text-primary transition-colors flex justify-between"><span>Hard
-                                        Cheese</span><span class="text-xs opacity-50">12</span></a></li>
-                            <li><a href="#"
-                                    class="hover:text-primary transition-colors flex justify-between text-primary font-bold"><span>Soft
-                                        & Creamy</span><span class="text-xs opacity-50">8</span></a></li>
-                            <li><a href="#" class="hover:text-primary transition-colors flex justify-between"><span>Blue
-                                        & Bold</span><span class="text-xs opacity-50">5</span></a></li>
-                            <li><a href="#" class="hover:text-primary transition-colors flex justify-between"><span>Aged
-                                        Reserve</span><span class="text-xs opacity-50">15</span></a></li>
-                            <li><a href="#"
-                                    class="hover:text-primary transition-colors flex justify-between"><span>Vegan</span><span
-                                        class="text-xs opacity-50">4</span></a></li>
-                        </ul>
-
-                        <h4 class="font-bold uppercase tracking-widest my-8 border-b border-white/10 pb-4">Origin</h4>
-                        <div class="flex flex-wrap gap-2">
-                            <span
-                                class="px-4 py-2 rounded-full border border-white/10 text-xs hover:border-primary cursor-pointer transition-all">France</span>
-                            <span
-                                class="px-4 py-2 rounded-full border border-white/10 text-xs hover:border-primary cursor-pointer transition-all">Italy</span>
-                            <span
-                                class="px-4 py-2 rounded-full border border-white/10 text-xs hover:border-primary cursor-pointer transition-all">Switzerland</span>
-                            <span
-                                class="px-4 py-2 rounded-full border border-white/10 text-xs hover:border-primary cursor-pointer transition-all">UK</span>
-                        </div>
-                    </div>
-                </aside>
-
-                <!-- Product Grid -->
-                <main class="w-full lg:w-3/4">
-                    <div class="flex justify-between items-center mb-6 text-sm text-gray-400">
-                        <p>Showing <span class="text-white font-bold">6</span> premium selections</p>
+                <!-- Product Grid (Full Width) -->
+                <main class="w-full">
+                    <div class="flex justify-between items-center mb-10 text-sm text-gray-400">
+                        <p>Showing <span class="text-white font-bold">8</span> premium selections</p>
                         <div class="flex items-center space-x-4">
                             <span>Sort By:</span>
-                            <select class="bg-transparent border-none outline-none text-primary font-bold">
-                                <option>Most Popular</option>
-                                <option>Price: Low to High</option>
-                                <option>Price: High to Low</option>
+                            <select id="price-sort"
+                                class="bg-transparent border-none outline-none text-primary font-bold cursor-pointer">
+                                <option value="popular">Most Popular</option>
+                                <option value="low">Price: Low to High</option>
+                                <option value="high">Price: High to Low</option>
                             </select>
                         </div>
                     </div>
 
-                    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <div id="product-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                        <!-- Product Card: Herb-Crusted Goat Log (Moved) -->
+                        <div class="group grid-balance product-item flex flex-col items-center text-center" data-price="14.50" data-aos="fade-up" data-aos-delay="100">
+                            <div class="relative overflow-hidden rounded-2xl aspect-square mb-6 img-zoom shadow-2xl shrink-0">
+                                <img src="https://images.pexels.com/photos/36570893/pexels-photo-36570893.jpeg" alt="Goat Cheese" class="w-full h-full object-cover">
+                                <div class="absolute bottom-4 right-4 translate-y-10 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all">
+                                    <a href="cart.html" class="bg-white text-darkBg p-4 rounded-full hover:bg-primary hover:text-white transition-colors shadow-xl">
+                                        <i class="fas fa-cart-plus"></i>
+                                    </a>
+                                </div>
+                            </div>
+                            <span class="text-primary text-[10px] uppercase font-bold tracking-widest">Valencia, ES</span>
+                            <h3 class="text-xl font-serif font-bold mt-1">Herb-Crusted Goat Log</h3>
+                            <p class="text-gray-500 text-[10px] mt-2 italic">Notes: Earthy, Fresh, Lemony.</p>
+                            <div class="flex items-center justify-center space-x-2 mt-4 text-[10px] text-gray-400 mb-4">
+                                <i class="fas fa-wine-glass"></i><span>Sauvignon Blanc</span>
+                                <i class="fas fa-leaf pl-2"></i><span>Wild Arugula</span>
+                            </div>
+                            <p class="text-2xl font-bold text-primary mt-auto">$14.50 <span class="text-xs text-gray-500 font-normal">/ 250g</span></p>
+                        </div>
+                        <!-- Product Card 1 (Moved) -->
+                        <div class="group grid-balance product-item flex flex-col items-center text-center" data-price="15.50" data-aos="fade-up"
+                            data-aos-delay="100">
+                            <div
+                                class="relative overflow-hidden rounded-2xl aspect-square mb-6 img-zoom shadow-2xl shrink-0">
+                                <img src="https://images.pexels.com/photos/4187779/pexels-photo-4187779.jpeg"
+                                    alt="Gorgonzola Dolce" class="w-full h-full object-cover">
+                                <div
+                                    class="absolute bottom-4 right-4 translate-y-10 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all">
+                                    <a href="cart.html"
+                                        class="bg-white text-darkBg p-4 rounded-full hover:bg-primary hover:text-white transition-colors shadow-xl">
+                                        <i class="fas fa-cart-plus"></i>
+                                    </a>
+                                </div>
+                            </div>
+                            <span class="text-primary text-[10px] uppercase font-bold tracking-widest">Lombardy,
+                                IT</span>
+                            <h3 class="text-xl font-serif font-bold mt-1">Gorgonzola Dolce DOP</h3>
+                            <p class="text-gray-500 text-[10px] mt-2 italic">Notes: Sweet, Creamy, Blue Veined.</p>
+                            <div class="flex items-center justify-center space-x-2 mt-4 text-[10px] text-gray-400 mb-4">
+                                <i class="fas fa-wine-glass"></i><span>Marsala</span>
+                                <i class="fas fa-seedling pl-2"></i><span>Honeyed Walnuts</span>
+                            </div>
+                            <p class="text-2xl font-bold text-primary mt-auto">$15.50 <span
+                                    class="text-xs text-gray-500 font-normal">/ 250g</span></p>
+                        </div>
                         <!-- Product Card 1 -->
-                        <div class="group grid-balance" data-aos="fade-up" data-aos-delay="100">
+                        <div class="group grid-balance product-item flex flex-col items-center text-center" data-price="18.50" data-aos="fade-up"
+                            data-aos-delay="100">
                             <div
                                 class="relative overflow-hidden rounded-2xl aspect-square mb-6 img-zoom shadow-2xl shrink-0">
                                 <img src="https://images.pexels.com/photos/9952306/pexels-photo-9952306.jpeg"
                                     alt="Triple Cream Brie" class="w-full h-full object-cover">
                                 <div
                                     class="absolute bottom-4 right-4 translate-y-10 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all">
-                                    <button
+                                    <a href="cart.html"
                                         class="bg-white text-darkBg p-4 rounded-full hover:bg-primary hover:text-white transition-colors shadow-xl">
                                         <i class="fas fa-cart-plus"></i>
-                                    </button>
+                                    </a>
                                 </div>
                             </div>
                             <span class="text-primary text-[10px] uppercase font-bold tracking-widest">Normandy,
@@ -203,7 +231,7 @@
                             <h3 class="text-xl font-serif font-bold mt-1">Triple Cream Brie</h3>
                             <p class="text-gray-500 text-[10px] mt-2 italic">Notes: Buttery, Velvety, Hazelnut finish.
                             </p>
-                            <div class="flex items-center space-x-2 mt-4 text-[10px] text-gray-400 mb-4">
+                            <div class="flex items-center justify-center space-x-2 mt-4 text-[10px] text-gray-400 mb-4">
                                 <i class="fas fa-wine-glass"></i><span>Champagne</span>
                                 <i class="fas fa-bread-slice pl-2"></i><span>Baguette</span>
                             </div>
@@ -212,24 +240,25 @@
                         </div>
 
                         <!-- Product Card 2 -->
-                        <div class="group grid-balance" data-aos="fade-up" data-aos-delay="200">
+                        <div class="group grid-balance product-item flex flex-col items-center text-center" data-price="22.00" data-aos="fade-up"
+                            data-aos-delay="200">
                             <div
                                 class="relative overflow-hidden rounded-2xl aspect-square mb-6 img-zoom shadow-2xl shrink-0">
                                 <img src="https://images.pexels.com/photos/16134592/pexels-photo-16134592.jpeg"
                                     alt="Vintage Cheddar" class="w-full h-full object-cover">
                                 <div
                                     class="absolute bottom-4 right-4 translate-y-10 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all">
-                                    <button
+                                    <a href="cart.html"
                                         class="bg-white text-darkBg p-4 rounded-full hover:bg-primary hover:text-white transition-colors shadow-xl">
                                         <i class="fas fa-cart-plus"></i>
-                                    </button>
+                                    </a>
                                 </div>
                             </div>
                             <span class="text-primary text-[10px] uppercase font-bold tracking-widest">Somerset,
                                 UK</span>
                             <h3 class="text-xl font-serif font-bold mt-1">24-Month Vintage Cheddar</h3>
                             <p class="text-gray-500 text-[10px] mt-2 italic">Notes: Sharp, Crystalline, Tangy.</p>
-                            <div class="flex items-center space-x-2 mt-4 text-[10px] text-gray-400 mb-4">
+                            <div class="flex items-center justify-center space-x-2 mt-4 text-[10px] text-gray-400 mb-4">
                                 <i class="fas fa-wine-glass"></i><span>Cabernet Sauvignon</span>
                                 <i class="fas fa-apple-whole pl-2"></i><span>Green Apples</span>
                             </div>
@@ -238,7 +267,8 @@
                         </div>
 
                         <!-- Product Card 3 - Gift Box -->
-                        <div class="group grid-balance" data-aos="fade-up" data-aos-delay="300">
+                        <div class="group grid-balance product-item flex flex-col items-center text-center" data-price="85.00" data-aos="fade-up"
+                            data-aos-delay="300">
                             <div
                                 class="relative overflow-hidden rounded-2xl aspect-square mb-6 img-zoom shadow-2xl shrink-0">
                                 <img src="img/sub_box.png" alt="Signature Tasting Box"
@@ -248,10 +278,10 @@
                                     Gift</span>
                                 <div
                                     class="absolute bottom-4 right-4 translate-y-10 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all">
-                                    <button
+                                    <a href="cart.html"
                                         class="bg-white text-darkBg p-4 rounded-full hover:bg-primary hover:text-white transition-colors shadow-xl">
                                         <i class="fas fa-gift"></i>
-                                    </button>
+                                    </a>
                                 </div>
                             </div>
                             <span class="text-primary text-[10px] uppercase font-bold tracking-widest">Limited
@@ -266,24 +296,52 @@
                             <p class="text-2xl font-bold text-primary mt-auto">$85.00</p>
                         </div>
 
-                        <!-- Product Card 4 -->
-                        <div class="group grid-balance" data-aos="fade-up" data-aos-delay="100">
+                        <!-- Product Card 4 (Moved) -->
+                        <div class="group grid-balance product-item flex flex-col items-center text-center" data-price="21.00" data-aos="fade-up"
+                            data-aos-delay="200">
+                            <div
+                                class="relative overflow-hidden rounded-2xl aspect-square mb-6 img-zoom shadow-2xl shrink-0">
+                                <img src="https://images.pexels.com/photos/773252/pexels-photo-773252.jpeg"
+                                    alt="Manchego Reserve" class="w-full h-full object-cover">
+                                <div
+                                    class="absolute bottom-4 right-4 translate-y-10 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all">
+                                    <a href="cart.html"
+                                        class="bg-white text-darkBg p-4 rounded-full hover:bg-primary hover:text-white transition-colors shadow-xl">
+                                        <i class="fas fa-cart-plus"></i>
+                                    </a>
+                                </div>
+                            </div>
+                            <span class="text-primary text-[10px] uppercase font-bold tracking-widest">La Mancha,
+                                ES</span>
+                            <h3 class="text-xl font-serif font-bold mt-1">12-Month Manchego Reserve</h3>
+                            <p class="text-gray-500 text-[10px] mt-2 italic">Notes: Nutty, Firm, Piquant.</p>
+                            <div class="flex items-center justify-center space-x-2 mt-4 text-[10px] text-gray-400 mb-4">
+                                <i class="fas fa-wine-glass"></i><span>Tempranillo</span>
+                                <i class="fas fa-utensils pl-2"></i><span>Membrillo (Quince Paste)</span>
+                            </div>
+                            <p class="text-2xl font-bold text-primary mt-auto">$21.00 <span
+                                    class="text-xs text-gray-500 font-normal">/ 250g</span></p>
+                        </div>
+
+                        <!-- Product Card 5 -->
+                        <div class="group grid-balance product-item flex flex-col items-center text-center" data-price="19.80" data-aos="fade-up"
+                            data-aos-delay="100">
                             <div
                                 class="relative overflow-hidden rounded-2xl aspect-square mb-6 img-zoom shadow-2xl shrink-0">
                                 <img src="https://images.pexels.com/photos/21938198/pexels-photo-21938198.jpeg"
                                     alt="Gruyere" class="w-full h-full object-cover">
                                 <div
                                     class="absolute bottom-4 right-4 translate-y-10 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all">
-                                    <button
+                                    <a href="cart.html"
                                         class="bg-white text-darkBg p-4 rounded-full hover:bg-primary hover:text-white transition-colors shadow-xl">
                                         <i class="fas fa-cart-plus"></i>
-                                    </button>
+                                    </a>
                                 </div>
                             </div>
                             <span class="text-primary text-[10px] uppercase font-bold tracking-widest">Alps, CH</span>
                             <h3 class="text-xl font-serif font-bold mt-1">Alpine Reserve Gruyère</h3>
                             <p class="text-gray-500 text-[10px] mt-2 italic">Notes: Nutty, Sweet, Dense.</p>
-                            <div class="flex items-center space-x-2 mt-4 text-[10px] text-gray-400 mb-4">
+                            <div class="flex items-center justify-center space-x-2 mt-4 text-[10px] text-gray-400 mb-4">
                                 <i class="fas fa-wine-glass"></i><span>Chardonnay</span>
                                 <i class="fas fa-utensils pl-2"></i><span>Fondue Set</span>
                             </div>
@@ -291,44 +349,21 @@
                                     class="text-xs text-gray-500 font-normal">/ 250g</span></p>
                         </div>
 
-                        <!-- Product Card 5 -->
-                        <div class="group grid-balance" data-aos="fade-up" data-aos-delay="200">
-                            <div
-                                class="relative overflow-hidden rounded-2xl aspect-square mb-6 img-zoom shadow-2xl shrink-0">
-                                <img src="https://images.pexels.com/photos/36570893/pexels-photo-36570893.jpeg"
-                                    alt="Goat Cheese" class="w-full h-full object-cover">
-                                <div
-                                    class="absolute bottom-4 right-4 translate-y-10 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all">
-                                    <button
-                                        class="bg-white text-darkBg p-4 rounded-full hover:bg-primary hover:text-white transition-colors shadow-xl">
-                                        <i class="fas fa-cart-plus"></i>
-                                    </button>
-                                </div>
-                            </div>
-                            <span class="text-primary text-[10px] uppercase font-bold tracking-widest">Valencia,
-                                ES</span>
-                            <h3 class="text-xl font-serif font-bold mt-1">Herb-Crusted Goat Log</h3>
-                            <p class="text-gray-500 text-[10px] mt-2 italic">Notes: Earthy, Fresh, Lemony.</p>
-                            <div class="flex items-center space-x-2 mt-4 text-[10px] text-gray-400 mb-4">
-                                <i class="fas fa-wine-glass"></i><span>Sauvignon Blanc</span>
-                                <i class="fas fa-leaf pl-2"></i><span>Wild Arugula</span>
-                            </div>
-                            <p class="text-2xl font-bold text-primary mt-auto">$14.50 <span
-                                    class="text-xs text-gray-500 font-normal">/ 250g</span></p>
-                        </div>
+
 
                         <!-- Product Card 6 -->
-                        <div class="group grid-balance" data-aos="fade-up" data-aos-delay="300">
+                        <div class="group grid-balance product-item flex flex-col items-center text-center" data-price="16.00" data-aos="fade-up"
+                            data-aos-delay="300">
                             <div
                                 class="relative overflow-hidden rounded-2xl aspect-square mb-6 img-zoom shadow-2xl shrink-0">
                                 <img src="https://images.pexels.com/photos/10805998/pexels-photo-10805998.jpeg"
                                     alt="Vegan Nut Cheese" class="w-full h-full object-cover">
                                 <div
                                     class="absolute bottom-4 right-4 translate-y-10 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all">
-                                    <button
+                                    <a href="cart.html"
                                         class="bg-white text-darkBg p-4 rounded-full hover:bg-primary hover:text-white transition-colors shadow-xl">
                                         <i class="fas fa-cart-plus"></i>
-                                    </button>
+                                    </a>
                                 </div>
                             </div>
                             <span class="text-primary text-[10px] uppercase font-bold tracking-widest">Artisan Vegan,
@@ -338,6 +373,7 @@
                             <p class="text-2xl font-bold text-primary mt-auto">$16.00 <span
                                     class="text-xs text-gray-500 font-normal">/ 250g</span></p>
                         </div>
+
                     </div>
                 </main>
             </div>
@@ -345,36 +381,91 @@
     </section>
 
     <!-- Subscription Box Highlight -->
-    <section class="py-10 bg-darkBg overflow-hidden text-current border-t border-white/5">
+    <section class="py-10 bg-white dark:bg-darkBg overflow-hidden text-current border-t border-white/5">
         <div class="container mx-auto px-6">
             <div class="flex flex-col lg:flex-row items-center gap-10">
                 <!-- Full Image Showcase -->
                 <div class="w-full lg:w-1/2" data-aos="fade-right">
                     <div class="relative overflow-hidden rounded-[40px] shadow-2xl group border-8 border-white/5">
-                        <img src="https://images.unsplash.com/photo-1596450514735-300407f354f9?q=80&w=2000" alt="Curated Selection" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
-                        <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-60"></div>
+                        <img src="https://images.pexels.com/photos/14326683/pexels-photo-14326683.jpeg"
+                            alt="Curated Selection"
+                            class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
+                        <div
+                            class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-60">
+                        </div>
                     </div>
                 </div>
                 <div class="w-full lg:w-1/2" data-aos="fade-left">
-                    <span class="text-primary uppercase tracking-[0.4em] font-bold mb-4 block underline underline-offset-8 decoration-white/20">The Club Experience</span>
-                    <h2 class="text-3xl md:text-5xl font-serif font-bold mb-4 leading-tight">Every Month, A New Discovery.</h2>
-                    <p class="text-gray-400 text-lg mb-6 leading-relaxed italic">"We don't just send cheese; we send a story of origin, craft, and time."</p>
+                    <span
+                        class="text-primary uppercase tracking-[0.4em] font-bold mb-4 block underline underline-offset-8 decoration-black/10 dark:decoration-white/20">The
+                        Club Experience</span>
+                    <h2 class="text-3xl md:text-5xl font-serif font-bold mb-4 leading-tight text-black dark:text-white">Every Month, A New
+                        Discovery.</h2>
+                    <p class="text-black/60 dark:text-gray-400 text-lg mb-6 leading-relaxed italic">"We don't just send cheese; we send a
+                        story of origin, craft, and time."</p>
                     <div class="space-y-4">
-                        <div class="flex items-center space-x-6 bg-white/5 p-6 rounded-2xl border border-white/5 hover:border-primary/30 transition-all">
-                            <span class="w-12 h-12 rounded-full bg-primary flex items-center justify-center font-bold text-white shrink-0 shadow-lg">1</span>
-                            <p class="text-gray-400"><span class="text-white font-bold">Curated:</span> Our affineurs select 3-5 rare cheeses each month.</p>
+                        <div
+                            class="flex items-center space-x-6 bg-white dark:bg-white/5 p-6 rounded-2xl border border-black/5 dark:border-white/5 shadow-xl dark:shadow-none hover:border-primary/30 transition-all">
+                            <span
+                                class="w-12 h-12 rounded-full bg-primary flex items-center justify-center font-bold text-white shrink-0 shadow-lg">1</span>
+                            <p class="text-black/60 dark:text-gray-400"><span class="text-black dark:text-white font-bold">Curated:</span> Our affineurs
+                                select 3-5 rare cheeses each month.</p>
                         </div>
-                        <div class="flex items-center space-x-6 bg-white/5 p-6 rounded-2xl border border-white/5 hover:border-primary/30 transition-all">
-                            <span class="w-12 h-12 rounded-full bg-primary flex items-center justify-center font-bold text-white shrink-0 shadow-lg">2</span>
-                            <p class="text-gray-400"><span class="text-white font-bold">Crafted:</span> Paired with artisanal crackers, honeys, or jams.</p>
+                        <div
+                            class="flex items-center space-x-6 bg-white dark:bg-white/5 p-6 rounded-2xl border border-black/5 dark:border-white/5 shadow-xl dark:shadow-none hover:border-primary/30 transition-all">
+                            <span
+                                class="w-12 h-12 rounded-full bg-primary flex items-center justify-center font-bold text-white shrink-0 shadow-lg">2</span>
+                            <p class="text-black/60 dark:text-gray-400"><span class="text-black dark:text-white font-bold">Crafted:</span> Paired with
+                                artisanal crackers, honeys, or jams.</p>
                         </div>
-                        <div class="flex items-center space-x-6 bg-white/5 p-6 rounded-2xl border border-white/5 hover:border-primary/30 transition-all">
-                            <span class="w-12 h-12 rounded-full bg-primary flex items-center justify-center font-bold text-white shrink-0 shadow-lg">3</span>
-                            <p class="text-gray-400"><span class="text-white font-bold">Delivered:</span> Shipped in climate-smart, eco-friendly wooden boxes.</p>
+                        <div
+                            class="flex items-center space-x-6 bg-white dark:bg-white/5 p-6 rounded-2xl border border-black/5 dark:border-white/5 shadow-xl dark:shadow-none hover:border-primary/30 transition-all">
+                            <span
+                                class="w-12 h-12 rounded-full bg-primary flex items-center justify-center font-bold text-white shrink-0 shadow-lg">3</span>
+                            <p class="text-black/60 dark:text-gray-400"><span class="text-black dark:text-white font-bold">Delivered:</span> Shipped in
+                                climate-smart, eco-friendly wooden boxes.</p>
                         </div>
                     </div>
-                    <div class="mt-8">
-                        <a href="subscription.html" class="inline-block bg-primary hover:bg-primary-hover text-white px-10 py-4 rounded-full font-bold transition-all hover-lift shadow-xl uppercase tracking-widest text-xs">Explore Club Plans</a>
+                    <div class="mt-8 text-center">
+                        <a href="subscription.html"
+                            class="inline-block bg-primary hover:bg-primary-hover text-white px-10 py-4 rounded-full font-bold transition-all hover-lift shadow-xl uppercase tracking-widest text-xs">Explore
+                            Club Plans</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Unified Filters Section -->
+    <section class="py-16 bg-white/5 border-t border-white/5">
+        <div class="container mx-auto px-6">
+            <div class="max-w-4xl mx-auto flex flex-col md:flex-row gap-8">
+                <!-- Texture Filter Card -->
+                <div class="glass p-8 rounded-3xl flex-1 bg-white/40 dark:bg-white/5" data-aos="fade-up">
+                    <h4 class="font-bold uppercase tracking-widest mb-8 border-b border-black/20 dark:border-white/10 pb-4 text-black dark:text-white text-center">Explore by Texture</h4>
+                    <ul class="grid grid-cols-1 sm:grid-cols-2 gap-x-8 gap-y-4 text-black/70 dark:text-gray-400">
+                        <li><a href="#" class="hover:text-primary transition-colors flex justify-between items-center"><span>Hard Cheese</span><span class="text-xs opacity-50">12</span></a></li>
+                        <li><a href="#" class="hover:text-primary transition-colors flex justify-between items-center text-primary font-bold"><span>Soft & Creamy</span><span class="text-xs opacity-50">8</span></a></li>
+                        <li><a href="#" class="hover:text-primary transition-colors flex justify-between items-center"><span>Blue & Bold</span><span class="text-xs opacity-50">5</span></a></li>
+                        <li><a href="#" class="hover:text-primary transition-colors flex justify-between items-center"><span>Aged Reserve</span><span class="text-xs opacity-50">15</span></a></li>
+                        <li><a href="#" class="hover:text-primary transition-colors flex justify-between items-center"><span>Vegan</span><span class="text-xs opacity-50">4</span></a></li>
+                        <li><a href="#" class="hover:text-primary transition-colors flex justify-between items-center"><span>Goat & Sheep</span><span class="text-xs opacity-50">7</span></a></li>
+                        <li class="sm:col-span-2 md:col-span-1"><a href="#" class="hover:text-primary transition-colors flex justify-between items-center"><span>Smoked Selection</span><span class="text-xs opacity-50">3</span></a></li>
+                    </ul>
+                </div>
+
+                <!-- Origin Filter Card -->
+                <div class="glass p-8 rounded-3xl flex-1 bg-white/40 dark:bg-white/5" data-aos="fade-up" data-aos-delay="200">
+                    <h4 class="font-bold uppercase tracking-widest mb-8 border-b border-black/20 dark:border-white/10 pb-4 text-black dark:text-white text-center">Origin Hub</h4>
+                    <div class="grid grid-cols-2 sm:grid-cols-2 md:flex md:flex-wrap gap-3 text-black/70 dark:text-gray-400">
+                        <span class="px-4 py-3 rounded-xl border border-black/20 dark:border-white/10 text-[10px] hover:border-primary cursor-pointer transition-all text-center flex items-center justify-center">France</span>
+                        <span class="px-4 py-3 rounded-xl border border-black/20 dark:border-white/10 text-[10px] hover:border-primary cursor-pointer transition-all text-center flex items-center justify-center">Italy</span>
+                        <span class="px-4 py-3 rounded-xl border border-black/20 dark:border-white/10 text-[10px] hover:border-primary cursor-pointer transition-all text-center flex items-center justify-center">Switzerland</span>
+                        <span class="px-4 py-3 rounded-xl border border-black/20 dark:border-white/10 text-[10px] hover:border-primary cursor-pointer transition-all text-center flex items-center justify-center">UK</span>
+                        <span class="px-4 py-3 rounded-xl border border-black/20 dark:border-white/10 text-[10px] hover:border-primary cursor-pointer transition-all text-center flex items-center justify-center">Spain</span>
+                        <span class="px-4 py-3 rounded-xl border border-black/20 dark:border-white/10 text-[10px] hover:border-primary cursor-pointer transition-all text-center flex items-center justify-center">USA</span>
+                        <span class="px-4 py-3 rounded-xl border border-black/20 dark:border-white/10 text-[10px] hover:border-primary cursor-pointer transition-all text-center flex items-center justify-center">Germany</span>
+                        <span class="px-4 py-3 rounded-xl border border-black/20 dark:border-white/10 text-[10px] hover:border-primary cursor-pointer transition-all text-center flex items-center justify-center">Netherlands</span>
                     </div>
                 </div>
             </div>
@@ -391,7 +482,7 @@
                     </p>
                     <span class="text-primary uppercase tracking-[0.4em] font-bold">— Clifton Fadiman</span>
                 </div>
-                <div class="text-center md:text-right border-t md:border-t-0 md:border-l border-white/10 pt-12 md:pt-0 md:pl-20"
+                <div class="text-center md:text-left border-t md:border-t-0 md:border-l border-white/10 pt-12 md:pt-0 md:pl-20"
                     data-aos="fade-left">
                     <i class="fas fa-quote-left text-primary text-4xl mb-6 md:hidden"></i>
                     <p class="text-2xl md:text-3xl font-serif italic mb-6">"Age is of no importance unless you are a
@@ -403,68 +494,81 @@
     </section>
 
     <!-- Footer -->
-    <footer class="py-10 border-t border-white/5">
+    <footer class="py-20 border-t border-black/5 dark:border-white/5 bg-lightBg dark:bg-darkBg transition-colors duration-300">
         <div class="container mx-auto px-6">
-            <div
-                class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 lg:gap-16 mb-8 text-center lg:text-left items-stretch">
-                <!-- Column 1: Brand & Desc -->
-                <div class="flex flex-col h-full">
-                    <div class="mb-8">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-16 mb-16 text-center lg:text-left items-stretch">
+                <!-- Column 1: Brand Identity -->
+                <div class="flex flex-col h-full space-y-8">
+                    <div>
                         <a href="index.html" class="flex items-center group justify-center lg:justify-start">
                             <img src="img/logo_primary.svg" alt="Fromage Logo" class="navbar-logo">
                             <span class="navbar-brand-name">Fromage</span>
                         </a>
                     </div>
-                    <p class="text-gray-400 text-sm leading-relaxed max-w-xs mx-auto lg:mx-0 mb-8">
-                        From the heart of the countryside to your doorstep. We deliver the finest artisanal cheeses from
-                        across the globe.
+                    <p class="text-black/60 dark:text-gray-400 text-sm leading-relaxed max-w-xs mx-auto lg:mx-0">
+                        From the heart of the countryside to your table. We celebrate the ancient art of cheesemaking with every curated selection.
                     </p>
-                    <div class="flex space-x-6 text-xl justify-center lg:justify-start mt-auto pt-4">
-                        <a href="#" class="text-gray-400 hover:text-primary transition-colors hover-lift"><i
-                                class="fab fa-instagram"></i></a>
-                        <a href="#" class="text-gray-400 hover:text-primary transition-colors hover-lift"><i
-                                class="fab fa-facebook-f"></i></a>
-                        <a href="#" class="text-gray-400 hover:text-primary transition-colors hover-lift"><i
-                                class="fab fa-pinterest-p"></i></a>
+                    <div class="flex space-x-4 justify-center lg:justify-start mt-auto">
+                        <a href="#" class="w-10 h-10 rounded-full flex items-center justify-center bg-black/5 dark:bg-white/5 text-black/60 dark:text-gray-400 hover:bg-primary hover:text-white transition-all hover-lift">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 rounded-full flex items-center justify-center bg-black/5 dark:bg-white/5 text-black/60 dark:text-gray-400 hover:bg-primary hover:text-white transition-all hover-lift">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 rounded-full flex items-center justify-center bg-black/5 dark:bg-white/5 text-black/60 dark:text-gray-400 hover:bg-primary hover:text-white transition-all hover-lift">
+                            <i class="fab fa-pinterest-p"></i>
+                        </a>
                     </div>
                 </div>
 
                 <!-- Column 2: Explore -->
-                <div class="flex flex-col h-full">
-                    <h4 class="font-bold uppercase tracking-widest mb-8 text-sm">Explore</h4>
-                    <ul class="space-y-4 text-gray-400 text-sm">
-                        <li><a href="shop.html">Our Collection</a></li>
-                        <li><a href="subscription.html">Cheese Club</a></li>
-                        <li><a href="about.html">Our Story</a></li>
+                <div class="flex flex-col h-full space-y-8">
+                    <h4 class="font-bold uppercase tracking-widest text-xs text-primary border-b border-black/5 dark:border-white/10 pb-4">Explore</h4>
+                    <ul class="space-y-4 text-black/60 dark:text-gray-400 text-sm mt-auto">
+                        <li><a href="shop.html" class="hover:text-primary transition-colors hover:translate-x-1 inline-block">Our Collection</a></li>
+                        <li><a href="subscription.html" class="hover:text-primary transition-colors hover:translate-x-1 inline-block">The Cheese Club</a></li>
+                        <li><a href="about.html" class="hover:text-primary transition-colors hover:translate-x-1 inline-block">Our Heritage</a></li>
+                        <li><a href="home2.html" class="hover:text-primary transition-colors hover:translate-x-1 inline-block">Experience Gallery</a></li>
                     </ul>
                 </div>
 
-                <!-- Column 3: Support -->
-                <div class="flex flex-col h-full">
-                    <h4 class="font-bold uppercase tracking-widest mb-8 text-sm">Support</h4>
-                    <ul class="space-y-4 text-gray-400 text-sm">
-                        <li><a href="contact.html">Contact Us</a></li>
-                        <li><a href="contact.html#faq">FAQ</a></li>
-                        <li><a href="#">Shipping Info</a></li>
-                        <li><a href="#">Returns</a></li>
-                    </ul>
+                <!-- Column 3: Contact & Tasting -->
+                <div class="flex flex-col h-full space-y-8">
+                    <h4 class="font-bold uppercase tracking-widest text-xs text-primary border-b border-black/5 dark:border-white/10 pb-4">Connect</h4>
+                    <div class="flex flex-col items-start w-fit mx-auto lg:mx-0 space-y-6 text-black/60 dark:text-gray-400 text-sm mt-auto">
+                        <div class="flex items-start space-x-4">
+                            <i class="fas fa-map-marker-alt text-primary mt-1 w-5 text-center"></i>
+                            <p class="italic">The Tasting Lab,<br>42 Artisanal Way, Gourmet Hills</p>
+                        </div>
+                        <div class="flex items-center space-x-4">
+                            <i class="fas fa-envelope text-primary w-5 text-center"></i>
+                            <p class="font-bold">hello@Fromage.com</p>
+                        </div>
+                        <div class="flex items-center space-x-4">
+                            <i class="fas fa-phone text-primary w-5 text-center"></i>
+                            <p class="font-bold text-black/40 dark:text-gray-500">+1 (555) 789 1234</p>
+                        </div>
+                    </div>
                 </div>
 
-                <!-- Column 4: Visit Us -->
-                <div class="flex flex-col h-full">
-                    <h4 class="font-bold uppercase tracking-widest mb-8 text-sm">Visit Us</h4>
-                    <div class="space-y-4 text-gray-400 text-sm">
-                        <p class="italic leading-relaxed">The Tasting Lab,<br>42 Artisanal Way, Gourmet Hills</p>
-                    </div>
-                    <div class="mt-auto pt-4 space-y-2 text-sm">
-                        <p class="text-primary font-bold">hello@Fromage.com</p>
-                        <p class="text-gray-500 font-bold">+1 (555) 789 1234</p>
-                    </div>
+                <!-- Column 4: Newsletter -->
+                <div class="flex flex-col h-full space-y-8">
+                    <h4 class="font-bold uppercase tracking-widest text-xs text-primary border-b border-black/5 dark:border-white/10 pb-4">Savor the Story</h4>
+                    <p class="text-black/60 dark:text-gray-400 text-sm italic">Join our circle for exclusive pairings and early access to rare wheels.</p>
+                    <form class="space-y-4 mt-auto">
+                        <div class="relative">
+                            <input type="email" placeholder="Email Address" 
+                                class="w-full bg-black/5 dark:bg-white/5 border border-black/10 dark:border-white/10 rounded-full px-6 py-3 text-sm focus:outline-none focus:border-primary transition-all text-black dark:text-white">
+                            <button type="submit" class="absolute right-2 top-1/2 -translate-y-1/2 text-primary hover:text-white transition-colors">
+                                <i class="fas fa-arrow-right"></i>
+                            </button>
+                        </div>
+                    </form>
                 </div>
             </div>
 
-            <!-- Bottom Bar: Legal -->
-            <div class="border-t border-white/5 pt-10 text-center text-xs text-gray-500">
+            <!-- Bottom Legal Bar -->
+            <div class="border-t border-black/5 dark:border-white/5 pt-10 flex justify-center items-center text-[10px] text-black/40 dark:text-gray-500 uppercase tracking-widest">
                 <p>&copy; 2026 Fromage Artisanal Cheesemongers. All Rights Reserved.</p>
             </div>
         </div>

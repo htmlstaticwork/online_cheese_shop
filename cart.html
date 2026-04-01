@@ -35,19 +35,23 @@
 </head>
 
 <body class="transition-colors duration-300">
+    <!-- Scroll to Top -->
+    <button id="scroll-to-top" class="bg-primary text-white p-3 rounded-full shadow-lg hover-lift">
+        <i class="fas fa-arrow-up"></i>
+    </button>
 
     <!-- Header Section -->
     <header class="fixed w-full z-50 glass transition-all duration-300">
-        <nav class="container mx-auto px-2 md:px-6 py-3 flex justify-between items-center">
+        <nav class="container mx-auto px-2 md:px-6 py-3 flex justify-between items-center text-current">
             <!-- Logo -->
             <a href="index.html" class="flex items-center group">
                 <img src="img/logo_primary.svg" alt="Fromage Logo" class="navbar-logo">
-                <span class="navbar-brand-name">Fromage</span>
+                <span class="navbar-brand-name hidden sm:block">Fromage</span>
             </a>
 
             <!-- Desktop Navigation -->
             <ul id="desktop-nav"
-                class="hidden lg:flex items-center space-x-8 text-sm font-medium uppercase tracking-widest">
+                class="hidden xl:flex items-center space-x-8 text-sm font-medium uppercase tracking-widest">
                 <li><a href="index.html" class="hover:text-primary transition-colors">Home 1</a></li>
                 <li><a href="home2.html" class="hover:text-primary transition-colors">Home 2</a></li>
                 <li><a href="about.html" class="hover:text-primary transition-colors">About</a></li>
@@ -62,7 +66,8 @@
             <!-- Icons/Toggles -->
             <div class="flex items-center space-x-3 md:space-x-6">
                 <!-- RTL Toggle -->
-                <button id="rtl-toggle" class="rtl-switch" title="Toggle RTL"><i class="fas fa-right-left"></i></button>
+                <button id="rtl-toggle" class="rtl-switch" title="Toggle RTL"><i
+                        class="fas fa-right-left"></i></button>
 
                 <!-- Theme Toggle -->
                 <button id="theme-toggle" class="text-xl hover:text-primary transition-colors">
@@ -76,8 +81,13 @@
                         class="absolute -top-2 -right-2 bg-primary text-white text-[10px] w-4 h-4 flex items-center justify-center rounded-full">3</span>
                 </a>
 
+                <!-- Sign Up Button -->
+                <a href="signup.html"
+                    class="hidden xl:block bg-primary text-white px-6 py-2 rounded-full font-bold hover:bg-primary-hover transition-all text-sm">Sign
+                    Up</a>
+
                 <!-- Hamburger Menu (Tablet & Mobile) -->
-                <button id="menu-btn" class="lg:hidden text-2xl">
+                <button id="menu-btn" class="xl:hidden text-2xl">
                     <i class="fas fa-bars"></i>
                 </button>
             </div>
@@ -85,7 +95,7 @@
 
         <!-- Mobile Menu (Drawer) -->
         <div id="mobile-menu"
-            class="hidden lg:hidden fixed inset-y-0 right-0 w-64 bg-lightBg dark:bg-darkBg z-50 p-10 flex flex-col space-y-6 shadow-2xl transition-colors duration-300">
+            class="hidden xl:hidden fixed inset-y-0 right-0 w-64 bg-lightBg dark:bg-darkBg z-50 p-10 flex flex-col space-y-6 shadow-2xl transition-colors duration-300">
             <a href="index.html"
                 class="text-lg font-medium hover:text-primary border-b border-black/10 dark:border-white/10 pb-2">Home
                 1</a>
@@ -102,6 +112,9 @@
                 class="text-lg font-medium hover:text-primary border-b border-black/10 dark:border-white/10 pb-2">Dashboard</a>
             <a href="contact.html"
                 class="text-lg font-medium hover:text-primary border-b border-black/10 dark:border-white/10 pb-2">Contact</a>
+            <a href="signup.html"
+                class="bg-primary text-white text-center rounded-full py-3 px-8 font-bold hover:bg-primary-hover transition-all shadow-lg shadow-primary/20 mt-6 block">Sign
+                Up</a>
         </div>
     </header>
 
@@ -114,20 +127,22 @@
                 <div class="lg:col-span-2 space-y-4" data-aos="fade-right">
                     <!-- Item 1 -->
                     <div
-                        class="flex items-center justify-between p-8 glass rounded-3xl group border-white/5 hover:border-primary/20 transition-all">
-                        <div class="flex items-center space-x-8">
-                            <div class="w-24 h-24 rounded-2xl overflow-hidden shadow-xl">
-                                <img src="https://images.unsplash.com/photo-1634544713735-9856ccfa1193?q=80&w=1974"
+                        class="flex flex-col md:flex-row md:items-center justify-between p-6 md:p-8 glass rounded-3xl group border-white/5 hover:border-primary/20 transition-all gap-6">
+                        <div class="flex items-center space-x-4 md:space-x-8">
+                            <div class="w-20 h-20 md:w-24 md:h-24 rounded-2xl overflow-hidden shadow-xl flex-shrink-0">
+                                <img src="https://images.pexels.com/photos/8250343/pexels-photo-8250343.jpeg"
                                     alt="Triple Cream Brie"
                                     class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
                             </div>
                             <div>
-                                <h3 class="text-xl font-bold font-serif">Triple Cream Brie</h3>
-                                <p class="text-primary font-bold text-xs uppercase tracking-widest mt-1">Normandy, FR</p>
-                                <p class="text-gray-500 text-sm mt-2 italic">Quantity: 250g</p>
+                                <h3 class="text-lg md:text-xl font-bold font-serif">Triple Cream Brie</h3>
+                                <p class="text-primary font-bold text-[10px] md:text-xs uppercase tracking-widest mt-1">
+                                    Normandy, FR</p>
+                                <p class="text-gray-500 text-xs md:text-sm mt-2 italic">Quantity: 250g</p>
                             </div>
                         </div>
-                        <div class="flex items-center space-x-12">
+                        <div
+                            class="flex items-center justify-between md:justify-end md:space-x-12 border-t border-white/5 md:border-none pt-4 md:pt-0">
                             <div class="flex items-center space-x-4">
                                 <button
                                     class="w-8 h-8 rounded-full border border-white/10 flex items-center justify-center hover:bg-primary transition-colors">-</button>
@@ -135,28 +150,32 @@
                                 <button
                                     class="w-8 h-8 rounded-full border border-white/10 flex items-center justify-center hover:bg-primary transition-colors">+</button>
                             </div>
-                            <span class="text-xl font-bold text-primary">$18.50</span>
-                            <button class="text-gray-500 hover:text-red-500 transition-colors"><i
-                                    class="fas fa-trash-alt"></i></button>
+                            <div class="flex items-center space-x-6">
+                                <span class="text-lg md:text-xl font-bold text-primary">$18.50</span>
+                                <button class="text-gray-500 hover:text-red-500 transition-colors"><i
+                                        class="fas fa-trash-alt"></i></button>
+                            </div>
                         </div>
                     </div>
 
                     <!-- Item 2 -->
                     <div
-                        class="flex items-center justify-between p-8 glass rounded-3xl group border-white/5 hover:border-primary/20 transition-all">
-                        <div class="flex items-center space-x-8">
-                            <div class="w-24 h-24 rounded-2xl overflow-hidden shadow-xl">
+                        class="flex flex-col md:flex-row md:items-center justify-between p-6 md:p-8 glass rounded-3xl group border-white/5 hover:border-primary/20 transition-all gap-6">
+                        <div class="flex items-center space-x-4 md:space-x-8">
+                            <div class="w-20 h-20 md:w-24 md:h-24 rounded-2xl overflow-hidden shadow-xl flex-shrink-0">
                                 <img src="img/sub_box.png" alt="European Tasting Gift Box"
                                     class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
                             </div>
                             <div>
-                                <h3 class="text-xl font-bold font-serif">Signature Gift Box</h3>
-                                <p class="text-primary font-bold text-xs uppercase tracking-widest mt-1">Limited Edition
+                                <h3 class="text-lg md:text-xl font-bold font-serif">Signature Gift Box</h3>
+                                <p class="text-primary font-bold text-[10px] md:text-xs uppercase tracking-widest mt-1">
+                                    Limited Edition
                                 </p>
-                                <p class="text-gray-500 text-sm mt-2 italic">Artisanal Curation</p>
+                                <p class="text-gray-500 text-xs md:text-sm mt-2 italic">Artisanal Curation</p>
                             </div>
                         </div>
-                        <div class="flex items-center space-x-12">
+                        <div
+                            class="flex items-center justify-between md:justify-end md:space-x-12 border-t border-white/5 md:border-none pt-4 md:pt-0">
                             <div class="flex items-center space-x-4">
                                 <button
                                     class="w-8 h-8 rounded-full border border-white/10 flex items-center justify-center hover:bg-primary transition-colors">-</button>
@@ -164,15 +183,18 @@
                                 <button
                                     class="w-8 h-8 rounded-full border border-white/10 flex items-center justify-center hover:bg-primary transition-colors">+</button>
                             </div>
-                            <span class="text-xl font-bold text-primary">$85.00</span>
-                            <button class="text-gray-500 hover:text-red-500 transition-colors"><i
-                                    class="fas fa-trash-alt"></i></button>
+                            <div class="flex items-center space-x-6">
+                                <span class="text-lg md:text-xl font-bold text-primary">$85.00</span>
+                                <button class="text-gray-500 hover:text-red-500 transition-colors"><i
+                                        class="fas fa-trash-alt"></i></button>
+                            </div>
                         </div>
                     </div>
 
                     <!-- Upsell Section -->
                     <div class="mt-8 p-10 bg-primary/5 rounded-[40px] border border-primary/20">
-                        <h4 class="text-sm uppercase tracking-widest font-bold text-primary mb-6">Complete the Experience
+                        <h4 class="text-sm uppercase tracking-widest font-bold text-primary mb-6">Complete the
+                            Experience
                         </h4>
                         <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
                             <div class="flex items-center space-x-4 p-4 glass rounded-2xl">
@@ -185,7 +207,7 @@
                                 <button class="text-primary hover:text-white transition-colors text-xl">+</button>
                             </div>
                             <div class="flex items-center space-x-4 p-4 glass rounded-2xl">
-                                <img src="https://images.unsplash.com/photo-1598214811900-503a5538af3e?q=80&w=2069"
+                                <img src="https://images.pexels.com/photos/5317244/pexels-photo-5317244.jpeg"
                                     alt="Crackers" class="w-16 h-16 rounded-xl object-cover">
                                 <div class="flex-1">
                                     <h5 class="text-sm font-bold">Sea Salt Crackers</h5>
@@ -199,32 +221,33 @@
 
                 <!-- Order Summary -->
                 <div class="lg:col-span-1" data-aos="fade-left">
-                    <div class="p-10 glass rounded-[40px] sticky top-32 border-white/5 shadow-2xl">
+                    <div class="p-6 md:p-10 glass rounded-[40px] sticky top-32 border-white/5 shadow-2xl">
                         <h2 class="text-2xl font-serif font-bold mb-8">Summary</h2>
 
                         <div class="space-y-4 mb-8">
-                            <div class="flex justify-between text-gray-400">
+                            <div class="flex justify-between text-black/60 dark:text-gray-400">
                                 <span>Subtotal</span>
-                                <span class="text-white">$103.50</span>
+                                <span class="text-black dark:text-white font-bold">$103.50</span>
                             </div>
-                            <div class="flex justify-between text-gray-400">
+                            <div class="flex justify-between text-black/60 dark:text-gray-400">
                                 <span>Sustainable Packaging</span>
-                                <span class="text-white">$5.00</span>
+                                <span class="text-black dark:text-white font-bold">$5.00</span>
                             </div>
-                            <div class="flex justify-between text-gray-400">
+                            <div class="flex justify-between text-black/60 dark:text-gray-400">
                                 <span>Premium Shipping</span>
                                 <span class="text-primary font-bold">FREE</span>
                             </div>
-                            <div class="pt-4 border-t border-white/10 flex justify-between text-2xl font-serif font-bold">
-                                <span>Total</span>
+                            <div
+                                class="pt-4 border-t border-black/10 dark:border-white/10 flex justify-between text-2xl font-serif font-bold">
+                                <span class="text-black dark:text-white">Total</span>
                                 <span class="text-primary">$108.50</span>
                             </div>
                         </div>
 
                         <div class="mb-8">
-                            <p class="text-[10px] uppercase tracking-widest text-gray-400 mb-4 font-bold">Shipping
+                            <p class="text-[10px] uppercase tracking-widest text-black/40 dark:text-gray-400 mb-4 font-bold">Shipping
                                 Progress</p>
-                            <div class="w-full bg-white/5 h-1 rounded-full overflow-hidden">
+                            <div class="w-full bg-black/5 dark:bg-white/5 h-1 rounded-full overflow-hidden">
                                 <div class="bg-primary h-full" style="width: 75%"></div>
                             </div>
                             <p class="text-[9px] text-primary mt-2 italic">$41.50 more for a Gourmet Gift Set</p>
@@ -250,68 +273,105 @@
     </main>
 
     <!-- Footer -->
-    <footer class="py-10 border-t border-white/5">
+    <footer
+        class="py-20 border-t border-black/5 dark:border-white/5 bg-lightBg dark:bg-darkBg transition-colors duration-300">
         <div class="container mx-auto px-6">
             <div
-                class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 lg:gap-16 mb-8 text-center lg:text-left items-start">
-                <!-- Column 1: Brand & Desc -->
-                <div class="flex flex-col h-full">
-                    <div class="mb-4">
+                class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-16 mb-16 text-center lg:text-left items-stretch">
+                <!-- Column 1: Brand Identity -->
+                <div class="flex flex-col h-full space-y-8">
+                    <div>
                         <a href="index.html" class="flex items-center group justify-center lg:justify-start">
                             <img src="img/logo_primary.svg" alt="Fromage Logo" class="navbar-logo">
                             <span class="navbar-brand-name">Fromage</span>
                         </a>
                     </div>
-                    <p class="text-gray-400 text-sm leading-relaxed max-w-xs mx-auto lg:mx-0 mb-4">
-                        From the heart of the countryside to your doorstep. We deliver the finest artisanal cheeses from
-                        across the globe.
+                    <p class="text-black/60 dark:text-gray-400 text-sm leading-relaxed max-w-xs mx-auto lg:mx-0">
+                        From the heart of the countryside to your table. We celebrate the ancient art of cheesemaking
+                        with every curated selection.
                     </p>
-                    <div class="flex space-x-6 text-xl justify-center lg:justify-start pt-4">
-                        <a href="#" class="text-gray-400 hover:text-primary transition-colors hover-lift"><i
-                                class="fab fa-instagram"></i></a>
-                        <a href="#" class="text-gray-400 hover:text-primary transition-colors hover-lift"><i
-                                class="fab fa-facebook-f"></i></a>
-                        <a href="#" class="text-gray-400 hover:text-primary transition-colors hover-lift"><i
-                                class="fab fa-pinterest-p"></i></a>
+                    <div class="flex space-x-4 justify-center lg:justify-start mt-auto">
+                        <a href="#"
+                            class="w-10 h-10 rounded-full flex items-center justify-center bg-black/5 dark:bg-white/5 text-black/60 dark:text-gray-400 hover:bg-primary hover:text-white transition-all hover-lift">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="#"
+                            class="w-10 h-10 rounded-full flex items-center justify-center bg-black/5 dark:bg-white/5 text-black/60 dark:text-gray-400 hover:bg-primary hover:text-white transition-all hover-lift">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="#"
+                            class="w-10 h-10 rounded-full flex items-center justify-center bg-black/5 dark:bg-white/5 text-black/60 dark:text-gray-400 hover:bg-primary hover:text-white transition-all hover-lift">
+                            <i class="fab fa-pinterest-p"></i>
+                        </a>
                     </div>
                 </div>
 
                 <!-- Column 2: Explore -->
-                <div class="flex flex-col">
-                    <h4 class="font-bold uppercase tracking-widest mb-4 text-sm">Explore</h4>
-                    <ul class="space-y-4 text-gray-400 text-sm">
-                        <li><a href="shop.html">Our Collection</a></li>
-                        <li><a href="subscription.html">Cheese Club</a></li>
-                        <li><a href="about.html">Our Story</a></li>
+                <div class="flex flex-col h-full space-y-8">
+                    <h4
+                        class="font-bold uppercase tracking-widest text-xs text-primary border-b border-black/5 dark:border-white/10 pb-4">
+                        Explore</h4>
+                    <ul class="space-y-4 text-black/60 dark:text-gray-400 text-sm mt-auto">
+                        <li><a href="shop.html"
+                                class="hover:text-primary transition-colors hover:translate-x-1 inline-block">Our
+                                Collection</a></li>
+                        <li><a href="subscription.html"
+                                class="hover:text-primary transition-colors hover:translate-x-1 inline-block">The Cheese
+                                Club</a></li>
+                        <li><a href="about.html"
+                                class="hover:text-primary transition-colors hover:translate-x-1 inline-block">Our
+                                Heritage</a></li>
+                        <li><a href="home2.html"
+                                class="hover:text-primary transition-colors hover:translate-x-1 inline-block">Experience
+                                Gallery</a></li>
                     </ul>
                 </div>
 
-                <!-- Column 3: Support -->
-                <div class="flex flex-col">
-                    <h4 class="font-bold uppercase tracking-widest mb-4 text-sm">Support</h4>
-                    <ul class="space-y-4 text-gray-400 text-sm">
-                        <li><a href="contact.html">Contact Us</a></li>
-                        <li><a href="contact.html#faq">FAQ</a></li>
-                        <li><a href="#">Shipping Info</a></li>
-                        <li><a href="#">Returns</a></li>
-                    </ul>
+                <!-- Column 3: Contact & Tasting -->
+                <div class="flex flex-col h-full space-y-8">
+                    <h4
+                        class="font-bold uppercase tracking-widest text-xs text-primary border-b border-black/5 dark:border-white/10 pb-4">
+                        Connect</h4>
+                    <div
+                        class="flex flex-col items-start w-fit mx-auto lg:mx-0 space-y-6 text-black/60 dark:text-gray-400 text-sm mt-auto">
+                        <div class="flex items-start space-x-4">
+                            <i class="fas fa-map-marker-alt text-primary mt-1 w-5 text-center"></i>
+                            <p class="italic">The Tasting Lab,<br>42 Artisanal Way, Gourmet Hills</p>
+                        </div>
+                        <div class="flex items-center space-x-4">
+                            <i class="fas fa-envelope text-primary w-5 text-center"></i>
+                            <p class="font-bold">hello@Fromage.com</p>
+                        </div>
+                        <div class="flex items-center space-x-4">
+                            <i class="fas fa-phone text-primary w-5 text-center"></i>
+                            <p class="font-bold text-black/40 dark:text-gray-500">+1 (555) 789 1234</p>
+                        </div>
+                    </div>
                 </div>
 
-                <!-- Column 4: Visit Us -->
-                <div class="flex flex-col">
-                    <h4 class="font-bold uppercase tracking-widest mb-4 text-sm">Visit Us</h4>
-                    <div class="space-y-4 text-gray-400 text-sm">
-                        <p class="italic leading-relaxed">The Tasting Lab,<br>42 Artisanal Way, Gourmet Hills</p>
-                    </div>
-                    <div class="pt-4 space-y-2 text-sm">
-                        <p class="text-primary font-bold">hello@Fromage.com</p>
-                        <p class="text-gray-500 font-bold">+1 (555) 789 1234</p>
-                    </div>
+                <!-- Column 4: Newsletter -->
+                <div class="flex flex-col h-full space-y-8">
+                    <h4
+                        class="font-bold uppercase tracking-widest text-xs text-primary border-b border-black/5 dark:border-white/10 pb-4">
+                        Savor the Story</h4>
+                    <p class="text-black/60 dark:text-gray-400 text-sm italic">Join our circle for exclusive pairings
+                        and early access to rare wheels.</p>
+                    <form class="space-y-4 mt-auto">
+                        <div class="relative">
+                            <input type="email" placeholder="Email Address"
+                                class="w-full bg-black/5 dark:bg-white/5 border border-black/10 dark:border-white/10 rounded-full px-6 py-3 text-sm focus:outline-none focus:border-primary transition-all text-black dark:text-white">
+                            <button type="submit"
+                                class="absolute right-2 top-1/2 -translate-y-1/2 text-primary hover:text-white transition-colors">
+                                <i class="fas fa-arrow-right"></i>
+                            </button>
+                        </div>
+                    </form>
                 </div>
             </div>
 
-            <!-- Bottom Bar: Legal -->
-            <div class="border-t border-white/5 pt-10 text-center text-xs text-gray-500">
+            <!-- Bottom Legal Bar -->
+            <div
+                class="border-t border-black/5 dark:border-white/5 pt-10 flex justify-center items-center text-[10px] text-black/40 dark:text-gray-500 uppercase tracking-widest">
                 <p>&copy; 2026 Fromage Artisanal Cheesemongers. All Rights Reserved.</p>
             </div>
         </div>

@@ -30,11 +30,27 @@
     <link rel="icon" type="image/png" href="img/logo_primary.svg">
     <link rel="stylesheet" href="css/style.css">
 </head>
-<body class="transition-colors duration-300 min-h-screen flex items-center justify-center bg-lightBg dark:bg-darkBg text-current relative overflow-x-hidden py-10">
+<body class="transition-colors duration-300 min-h-screen bg-lightBg dark:bg-darkBg text-current relative overflow-x-hidden py-10 flex items-start md:items-center justify-center">
+    <!-- RTL & Theme Toggles -->
+    <div class="fixed top-6 right-6 z-50 flex items-center space-x-4">
+        <button id="rtl-toggle" class="rtl-switch glass w-10 h-10 rounded-full flex items-center justify-center hover:text-primary transition-all shadow-lg" title="Toggle RTL">
+            <i class="fas fa-right-left"></i>
+        </button>
+        <button id="theme-toggle" class="w-10 h-10 rounded-full glass flex items-center justify-center hover:text-primary transition-all shadow-lg" title="Toggle Theme">
+            <i class="fas fa-circle-half-stroke"></i>
+        </button>
+    </div>
 
-    <!-- Decorative Elements -->
-    <div class="absolute top-[-10%] right-[-5%] w-[40%] h-[40%] bg-primary/10 blur-[120px] rounded-full"></div>
-    <div class="absolute bottom-[-10%] left-[-5%] w-[35%] h-[35%] bg-primary/5 blur-[100px] rounded-full"></div>
+    <!-- Scroll to Top -->
+    <button id="scroll-to-top" class="bg-primary text-white p-3 rounded-full shadow-lg hover-lift">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <!-- Decorative Elements (Overflow Prevention Container) -->
+    <div class="fixed inset-0 pointer-events-none overflow-hidden z-0">
+        <div class="absolute top-[-10%] right-0 translate-x-1/2 w-[40%] h-[40%] bg-primary/10 blur-[120px] rounded-full"></div>
+        <div class="absolute bottom-[-10%] left-0 -translate-x-1/2 w-[35%] h-[35%] bg-primary/5 blur-[100px] rounded-full"></div>
+    </div>
 
     <div class="w-full max-w-md p-8 bg-white dark:bg-white/5 rounded-3xl shadow-2xl border border-black/5 dark:border-white/5 relative z-10" data-aos="zoom-in">
         <div class="text-center mb-6">
@@ -119,5 +135,8 @@
             });
         });
     </script>
+    <!-- Scripts -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="js/script.js"></script>
 </body>
 </html>
