@@ -28,6 +28,8 @@
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <!-- Custom CSS -->
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="img/logo_primary.svg">
     <link rel="stylesheet" href="css/style.css">
 </head>
 
@@ -35,16 +37,15 @@
 
     <!-- Header Section -->
     <header class="fixed w-full z-50 glass transition-all duration-300">
-        <nav class="container mx-auto px-6 py-4 flex justify-between items-center text-current">
-            <a href="index.html" class="flex items-center">
-                <img src="img/icon_logo.png" alt="Fromage Logo" class="navbar-logo">
+        <nav class="container mx-auto px-6 py-3 flex justify-between items-center text-current">
+            <a href="index.html" class="flex items-center group">
+                <img src="img/logo_primary.svg" alt="Fromage Logo" class="navbar-logo">
                 <span class="navbar-brand-name">Fromage</span>
             </a>
             <ul id="desktop-nav"
                 class="hidden lg:flex items-center space-x-8 text-sm font-medium uppercase tracking-widest">
                 <li><a href="index.html" class="hover:text-primary transition-colors">Home 1</a></li>
-                <li><a href="home2.html" class="text-primary font-bold transition-colors border-b-2 border-primary">Home
-                        2</a></li>
+                <li><a href="home2.html" class="nav-link-active hover:text-primary transition-colors">Home 2</a></li>
                 <li><a href="about.html" class="hover:text-primary transition-colors">About</a></li>
                 <li><a href="shop.html" class="hover:text-primary transition-colors">Shop</a></li>
                 <li><a href="subscription.html" class="hover:text-primary transition-colors">Subscription</a></li>
@@ -70,7 +71,9 @@
                 </a>
 
                 <!-- Sign Up Button -->
-                <a href="signup.html" class="hidden lg:block bg-primary text-white px-6 py-2 rounded-full font-bold hover:bg-primary-hover transition-all text-sm">Sign Up</a>
+                <a href="signup.html"
+                    class="hidden lg:block bg-primary text-white px-6 py-2 rounded-full font-bold hover:bg-primary-hover transition-all text-sm">Sign
+                    Up</a>
 
                 <!-- Hamburger Menu (Tablet & Mobile) -->
                 <button id="menu-btn" class="lg:hidden text-2xl">
@@ -97,13 +100,13 @@
     <!-- Hero Section (New Side-by-Side Style) -->
     <section class="min-h-screen flex items-center pt-20 overflow-hidden bg-white/5">
         <div class="container mx-auto px-6">
-            <div class="flex flex-col lg:flex-row items-center gap-16">
+            <div class="flex flex-col lg:flex-row items-center gap-10">
                 <div class="w-full lg:w-1/2" data-aos="fade-right">
                     <span class="text-primary uppercase tracking-[0.5em] font-bold mb-6 block text-sm">Est. 2012
                         Paris</span>
-                    <h1 class="text-6xl md:text-8xl font-serif font-bold mb-8 leading-tight">Mastered by Time.<br>Loved
+                    <h1 class="text-6xl md:text-8xl font-serif font-bold mb-4 leading-tight">Mastered by Time.<br>Loved
                         by Many.</h1>
-                    <p class="text-xl text-gray-400 mb-12 italic max-w-lg">Our curations represent the pinnacle of
+                    <p class="text-xl text-gray-400 mb-6 italic max-w-lg">Our curations represent the pinnacle of
                         artisanal heritage—brought straight from the limestone cellars of Europe to your table.</p>
                     <div class="flex flex-col sm:flex-row gap-6">
                         <a href="shop.html"
@@ -126,22 +129,22 @@
     </section>
 
     <!-- Big Spotlight Section -->
-    <section class="py-32 overflow-hidden border-b border-white/5">
+    <section class="py-10 overflow-hidden border-b border-white/5">
         <div class="container mx-auto px-6">
-            <div class="grid grid-cols-1 lg:grid-cols-2 gap-24 items-center">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
                 <div data-aos="fade-right">
-                    <h2 class="text-4xl md:text-6xl font-serif font-bold mb-8">Texture & Tone</h2>
-                    <p class="text-gray-400 text-lg mb-12 italic">Whether you prefer the crumbly sharpness of a 24-month
+                    <h2 class="text-4xl md:text-6xl font-serif font-bold mb-4">Texture & Tone</h2>
+                    <p class="text-gray-400 text-lg mb-6 italic leading-relaxed">Whether you prefer the crumbly sharpness of a 24-month
                         cheddar or the gooey, buttery richness of a fresh camembert, our selection is scientifically
-                        curated for the perfect mouthfeel.</p>
+                        curated for the perfect mouthfeel. Each wedge is hand-selected to ensure it has the correct elasticity and structural integrity, from the dense, crystal-filled paste of a mountain Gruyère to the delicate, bloom-covered rind of a triple-cream brie. We believe that the experience of tasting is as much about the physical sensation on the tongue as it is about the flavor profile itself. Our experts analyze the fat content, moisture levels, and aging conditions to guarantee that every bite offers a complex and harmonious journey through the art of European cheesemaking heritage.</p>
                 </div>
                 <div class="grid grid-cols-2 gap-6" data-aos="fade-left">
                     <div class="space-y-6 pt-12">
                         <div class="rounded-2xl overflow-hidden shadow-2xl hover-lift"><img
-                                src="https://images.unsplash.com/photo-1634544713735-9856ccfa1193?q=80&w=1974"
+                                src="https://images.pexels.com/photos/12664810/pexels-photo-12664810.jpeg"
                                 alt="Soft Cheese" class="w-full h-64 object-cover"></div>
                         <div class="rounded-2xl overflow-hidden shadow-2xl hover-lift"><img
-                                src="https://images.unsplash.com/photo-1533633271781-4221a4f004ba?q=80&w=2070"
+                                src="https://images.pexels.com/photos/11065341/pexels-photo-11065341.jpeg"
                                 alt="Blue Cheese" class="w-full h-80 object-cover"></div>
                     </div>
                     <div class="space-y-6">
@@ -149,7 +152,7 @@
                                 src="https://images.unsplash.com/photo-1452195100486-9cc805987862?q=80&w=2069"
                                 alt="Hard Cheese" class="w-full h-80 object-cover"></div>
                         <div class="rounded-2xl overflow-hidden shadow-2xl hover-lift"><img
-                                src="https://images.unsplash.com/photo-1626967739505-8e10036da324?q=80&w=2072"
+                                src="https://images.pexels.com/photos/8287401/pexels-photo-8287401.jpeg"
                                 alt="Aged Cheese" class="w-full h-64 object-cover"></div>
                     </div>
                 </div>
@@ -158,14 +161,14 @@
     </section>
 
     <!-- The Master's Touch Section -->
-    <section class="py-32 bg-darkBg overflow-hidden">
+    <section class="py-10 bg-darkBg overflow-hidden">
         <div class="container mx-auto px-6">
-            <div class="flex flex-col lg:flex-row items-center gap-20">
+            <div class="flex flex-col lg:flex-row items-center gap-10">
                 <div class="w-full lg:w-1/2" data-aos="fade-right">
                     <span class="text-primary uppercase tracking-[0.4em] font-bold mb-4 block">Our Philosophy</span>
-                    <h2 class="text-4xl md:text-6xl font-serif font-bold mb-8">Crafted by Hand,<br>Perfected by Nature.
+                    <h2 class="text-4xl md:text-6xl font-serif font-bold mb-4">Crafted by Hand,<br>Perfected by Nature.
                     </h2>
-                    <p class="text-gray-400 text-lg mb-10 leading-relaxed italic">"Behind every wedge is a story of a
+                    <p class="text-gray-400 text-lg mb-6 leading-relaxed italic">"Behind every wedge is a story of a
                         thousand mornings in the pasture, and a master who knows exactly when time has done its work." —
                         Master Affineur Jacques P.</p>
                     <div class="grid grid-cols-2 gap-8 mb-12">
@@ -193,9 +196,9 @@
     </section>
 
     <!-- Global Selection Showcase -->
-    <section class="py-24 border-y border-white/5 bg-white/5">
+    <section class="py-10 border-y border-white/5 bg-white/5">
         <div class="container mx-auto px-6">
-            <div class="text-center mb-16" data-aos="fade-up">
+            <div class="text-center mb-6" data-aos="fade-up">
                 <h2 class="text-4xl font-serif font-bold mb-4">The Global Heritage</h2>
                 <p class="text-gray-400">Our curations represent the pinnacle of regional excellence.</p>
             </div>
@@ -223,53 +226,69 @@
     </section>
 
     <!-- Footer -->
-    <footer class="py-20 text-current">
-        <div class="container mx-auto px-6 text-current">
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-20 text-center lg:text-left">
-                <div class="flex flex-col items-center lg:items-start text-left">
-                    <div class="mb-6">
-                        <img src="img/icon_logo.png" alt="Fromage Logo" class="footer-logo mb-0">
+    <footer class="py-10 border-t border-white/5">
+        <div class="container mx-auto px-6">
+            <div
+                class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 lg:gap-16 mb-8 text-center lg:text-left items-stretch">
+                <!-- Column 1: Brand & Desc -->
+                <div class="flex flex-col h-full">
+                    <div class="mb-8">
+                        <a href="index.html" class="flex items-center group justify-center lg:justify-start">
+                            <img src="img/logo_primary.svg" alt="Fromage Logo" class="navbar-logo">
+                            <span class="navbar-brand-name">Fromage</span>
+                        </a>
                     </div>
-                    <p class="text-gray-400 mb-8 max-w-sm">From the heart of the countryside to your doorstep. We
-                        deliver the finest artisanal cheeses from across the globe.</p>
-                    <div class="flex space-x-6">
-                        <a href="#" class="text-gray-400 hover:text-primary transition-colors"><i
+                    <p class="text-gray-400 text-sm leading-relaxed max-w-xs mx-auto lg:mx-0 mb-8">
+                        From the heart of the countryside to your doorstep. We deliver the finest artisanal cheeses from
+                        across the globe.
+                    </p>
+                    <div class="flex space-x-6 text-xl justify-center lg:justify-start mt-auto pt-4">
+                        <a href="#" class="text-gray-400 hover:text-primary transition-colors hover-lift"><i
                                 class="fab fa-instagram"></i></a>
-                        <a href="#" class="text-gray-400 hover:text-primary transition-colors"><i
+                        <a href="#" class="text-gray-400 hover:text-primary transition-colors hover-lift"><i
                                 class="fab fa-facebook-f"></i></a>
-                        <a href="#" class="text-gray-400 hover:text-primary transition-colors"><i
+                        <a href="#" class="text-gray-400 hover:text-primary transition-colors hover-lift"><i
                                 class="fab fa-pinterest-p"></i></a>
                     </div>
                 </div>
-                <div>
-                    <h4 class="font-bold uppercase tracking-widest mb-6">Explore</h4>
-                    <ul class="space-y-4 text-gray-400">
-                        <li><a href="shop.html" class="hover:text-primary transition-colors">Our Collection</a></li>
-                        <li><a href="subscription.html" class="hover:text-primary transition-colors">Cheese Club</a>
-                        </li>
-                        <li><a href="about.html" class="hover:text-primary transition-colors">Our Story</a></li>
+
+                <!-- Column 2: Explore -->
+                <div class="flex flex-col h-full">
+                    <h4 class="font-bold uppercase tracking-widest mb-8 text-sm">Explore</h4>
+                    <ul class="space-y-4 text-gray-400 text-sm">
+                        <li><a href="shop.html">Our Collection</a></li>
+                        <li><a href="subscription.html">Cheese Club</a></li>
+                        <li><a href="about.html">Our Story</a></li>
                     </ul>
                 </div>
-                <div>
-                    <h4 class="font-bold uppercase tracking-widest mb-6">Support</h4>
-                    <ul class="space-y-4 text-gray-400">
-                        <li><a href="contact.html" class="hover:text-primary transition-colors">Contact Us</a></li>
-                        <li><a href="#" class="hover:text-primary transition-colors">FAQ</a></li>
-                        <li><a href="#" class="hover:text-primary transition-colors">Shipping Info</a></li>
-                        <li><a href="#" class="hover:text-primary transition-colors">Returns</a></li>
+
+                <!-- Column 3: Support -->
+                <div class="flex flex-col h-full">
+                    <h4 class="font-bold uppercase tracking-widest mb-8 text-sm">Support</h4>
+                    <ul class="space-y-4 text-gray-400 text-sm">
+                        <li><a href="contact.html">Contact Us</a></li>
+                        <li><a href="contact.html#faq">FAQ</a></li>
+                        <li><a href="#">Shipping Info</a></li>
+                        <li><a href="#">Returns</a></li>
                     </ul>
                 </div>
-                <div>
-                    <h4 class="font-bold uppercase tracking-widest mb-6">Visit Us</h4>
-                    <div class="space-y-4">
-                        <p class="text-gray-400 italic">The Tasting Lab,<br>42 Artisanal Way, Gourmet Hills</p>
+
+                <!-- Column 4: Visit Us -->
+                <div class="flex flex-col h-full">
+                    <h4 class="font-bold uppercase tracking-widest mb-8 text-sm">Visit Us</h4>
+                    <div class="space-y-4 text-gray-400 text-sm">
+                        <p class="italic leading-relaxed">The Tasting Lab,<br>42 Artisanal Way, Gourmet Hills</p>
+                    </div>
+                    <div class="mt-auto pt-4 space-y-2 text-sm">
                         <p class="text-primary font-bold">hello@Fromage.com</p>
-                        <p class="text-gray-500 font-bold text-xs">+1 (555) 789 1234</p>
+                        <p class="text-gray-500 font-bold">+1 (555) 789 1234</p>
                     </div>
                 </div>
             </div>
-            <div class="border-t border-white/5 pt-10 text-center text-sm text-gray-500">
-                <p>&copy; 2026 Fromage. All Rights Reserved.</p>
+
+            <!-- Bottom Bar: Legal -->
+            <div class="border-t border-white/5 pt-10 text-center text-xs text-gray-500">
+                <p>&copy; 2026 Fromage Artisanal Cheesemongers. All Rights Reserved.</p>
             </div>
         </div>
     </footer>
@@ -280,5 +299,3 @@
 </body>
 
 </html>
-
-

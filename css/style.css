@@ -148,21 +148,35 @@ h1, h2, h3, h4, .font-serif {
 
 /* Logo Styling */
 .navbar-logo, .footer-logo {
-    height: 65px;
+    height: 42px;
     width: auto;
     object-fit: contain;
+    transition: var(--transition);
+}
+
+.flex.items-center.group:hover .navbar-logo,
+.flex.items-center.group:hover .navbar-brand-name {
+    transform: scale(1.05);
 }
 
 /* Brand Name Styling */
 .navbar-brand-name {
     font-family: 'Playfair Display', serif;
-    font-weight: 700; /* Max available weight for Playfair Display */
+    font-weight: 900;
     color: var(--primary);
-    font-size: 1.8rem;
+    font-size: 2.1rem;
+    height: 42px;
+    line-height: 1;
     margin-left: 0.75rem;
-    letter-spacing: 0.01em;
-    display: inline-block;
+    display: flex;
+    align-items: center;
     transition: var(--transition);
+}
+
+.nav-link-active {
+    color: var(--primary) !important;
+    font-weight: 700 !important;
+    border-bottom: 2px solid var(--primary);
 }
 
 @media (max-width: 640px) {
@@ -192,35 +206,59 @@ footer {
     transition: var(--transition);
 }
 
-footer .grid > div {
-    display: flex !important;
-    flex-direction: column !important;
-    height: 100% !important;
-}
-
-footer .grid > div > *:last-child {
-    margin-top: auto !important;
-}
-
 [data-theme="light"] footer {
-    background-color: #F9F4EF !important;
-    color: #1A1A1A !important;
+    background-color: #f9f6f2 !important;
+    color: #2c2c2c !important;
     border-top: 1px solid rgba(0,0,0,0.05) !important;
+}
+
+[data-theme="light"] footer h4 {
+    color: #1a1a1a !important;
 }
 
 [data-theme="light"] footer p,
 [data-theme="light"] footer a {
-    color: #4A4A4A !important;
-}
-
-[data-theme="light"] footer a:hover {
-    color: var(--primary) !important;
+    color: #555555 !important;
 }
 
 [data-theme="dark"] footer {
-    background-color: var(--bg-dark) !important;
-    color: var(--text-light) !important;
+    background-color: #0c0c0c !important;
+    color: #e5e5e5 !important;
     border-top: 1px solid rgba(255,255,255,0.05) !important;
+}
+
+footer h4 {
+    letter-spacing: 0.2em;
+}
+
+footer ul li a {
+    position: relative;
+    display: inline-block;
+    transition: var(--transition);
+}
+
+footer ul li a::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 0;
+    height: 1px;
+    background: var(--primary);
+    transition: var(--transition);
+}
+
+footer ul li a:hover {
+    color: var(--primary) !important;
+}
+
+footer ul li a:hover::after {
+    width: 100%;
+}
+
+footer .footer-logo {
+    height: 60px;
+    filter: drop-shadow(0 0 10px rgba(0,0,0,0.1));
 }
 
 

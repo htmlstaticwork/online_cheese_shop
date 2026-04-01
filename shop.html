@@ -28,25 +28,27 @@
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <!-- Custom CSS -->
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="img/logo_primary.svg">
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body class="transition-colors duration-300">
 
     <!-- Header Section -->
     <header class="fixed w-full z-50 glass transition-all duration-300">
-        <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
+        <nav class="container mx-auto px-6 py-3 flex justify-between items-center">
             <!-- Logo -->
-            <a href="index.html" class="flex items-center">
-                <img src="img/icon_logo.png" alt="Fromage Logo" class="navbar-logo">
-                <span class="navbar-brand-name">Fromage</span>
-            </a>
+            <a href="index.html" class="flex items-center group">
+                                <img src="img/logo_primary.svg" alt="Fromage Logo" class="navbar-logo">
+                                <span class="navbar-brand-name">Fromage</span>
+                            </a>
 
             <!-- Desktop Navigation -->
             <ul id="desktop-nav" class="hidden lg:flex items-center space-x-8 text-sm font-medium uppercase tracking-widest">
                 <li><a href="index.html" class="hover:text-primary transition-colors">Home 1</a></li>
                 <li><a href="home2.html" class="hover:text-primary transition-colors">Home 2</a></li>
                 <li><a href="about.html" class="hover:text-primary transition-colors">About</a></li>
-                <li><a href="shop.html" class="text-primary font-bold transition-colors border-b-2 border-primary">Shop</a></li>
+                <li><a href="shop.html" class="nav-link-active hover:text-primary transition-colors">Shop</a></li>
                 <li><a href="subscription.html" class="hover:text-primary transition-colors">Subscription</a></li>
                 <li><a href="contact.html" class="hover:text-primary transition-colors">Contact</a></li>
                 <li><a href="dashboard.html" class="bg-primary text-white px-6 py-2 rounded-full font-bold hover:bg-primary-hover transition-all text-sm">Dashboard</a></li>
@@ -91,7 +93,7 @@
     </header>
 
     <!-- Hero Section -->
-    <section class="relative h-[110vh] flex items-center justify-center overflow-hidden">
+    <section class="relative h-[100vh] flex items-center justify-center overflow-hidden">
         <div class="absolute inset-0 z-0 bg-darkBg">
             <!-- Cinema Image -->
             <div class="absolute inset-0 w-full h-full bg-cover bg-center active transition-opacity duration-1000" style="background-image: url('https://images.unsplash.com/photo-1596450514735-300407f354f9?q=80&w=1974');"></div>
@@ -103,7 +105,7 @@
         <div class="container mx-auto px-6 relative z-10 text-center" data-aos="fade-up">
             <span class="text-primary uppercase tracking-[0.4em] font-bold mb-4 block">Direct Selection</span>
             <h1 class="text-5xl md:text-8xl font-serif font-bold text-white mb-6 leading-tight">The Boutique.</h1>
-            <p class="text-lg md:text-2xl text-gray-300 max-w-2xl mx-auto mb-10 italic">
+            <p class="text-lg md:text-2xl text-gray-300 max-w-2xl mx-auto mb-6 italic">
                 Directly from the affinage cellars to your doorstep, a curated selection of the world's finest.
             </p>
             <div class="flex justify-center">
@@ -113,9 +115,9 @@
     </section>
 
     <!-- Shop Main Area -->
-    <section class="py-20">
+    <section class="py-12">
         <div class="container mx-auto px-6">
-            <div class="flex flex-col lg:flex-row gap-12">
+            <div class="flex flex-col lg:flex-row gap-8">
                 <!-- Sidebar Filters -->
                 <aside class="w-full lg:w-1/4" data-aos="fade-right">
                     <div class="glass p-8 rounded-3xl sticky top-32">
@@ -140,7 +142,7 @@
 
                 <!-- Product Grid -->
                 <main class="w-full lg:w-3/4">
-                    <div class="flex justify-between items-center mb-10 text-sm text-gray-400">
+                    <div class="flex justify-between items-center mb-6 text-sm text-gray-400">
                         <p>Showing <span class="text-white font-bold">6</span> premium selections</p>
                         <div class="flex items-center space-x-4">
                             <span>Sort By:</span>
@@ -275,9 +277,9 @@
     </section>
 
     <!-- Cheese Lore Quotes Section -->
-    <section class="py-32 bg-white/5 border-t border-white/5">
+    <section class="py-10 bg-white/5 border-t border-white/5">
         <div class="container mx-auto px-6">
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-20 items-center">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6 items-center">
                 <div class="text-center md:text-left" data-aos="fade-right">
                     <i class="fas fa-quote-left text-primary text-4xl mb-6"></i>
                     <p class="text-3xl md:text-4xl font-serif italic mb-6">"Cheese is milk’s leap toward immortality."</p>
@@ -292,49 +294,65 @@
         </div>
     </section>
 
-    <!-- Footer -->
-    <footer class="py-20 text-current">
-        <div class="container mx-auto px-6 text-current">
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-20 text-center lg:text-left">
-                <div class="flex flex-col items-center lg:items-start text-left">
-                    <div class="mb-6">
-                        <img src="img/icon_logo.png" alt="Fromage Logo" class="footer-logo mb-0">
+                        <!-- Footer -->
+    <footer class="py-10 border-t border-white/5">
+        <div class="container mx-auto px-6">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 lg:gap-16 mb-8 text-center lg:text-left items-stretch">
+                <!-- Column 1: Brand & Desc -->
+                <div class="flex flex-col h-full">
+                    <div class="mb-8">
+                        <a href="index.html" class="flex items-center group justify-center lg:justify-start">
+                            <img src="img/logo_primary.svg" alt="Fromage Logo" class="navbar-logo">
+                            <span class="navbar-brand-name">Fromage</span>
+                        </a>
                     </div>
-                    <p class="text-gray-400 mb-8 max-w-sm">From the heart of the countryside to your doorstep. We deliver the finest artisanal cheeses from across the globe.</p>
-                    <div class="flex space-x-6">
-                        <a href="#" class="text-gray-400 hover:text-primary transition-colors"><i class="fab fa-instagram"></i></a>
-                        <a href="#" class="text-gray-400 hover:text-primary transition-colors"><i class="fab fa-facebook-f"></i></a>
-                        <a href="#" class="text-gray-400 hover:text-primary transition-colors"><i class="fab fa-pinterest-p"></i></a>
+                    <p class="text-gray-400 text-sm leading-relaxed max-w-xs mx-auto lg:mx-0 mb-8">
+                        From the heart of the countryside to your doorstep. We deliver the finest artisanal cheeses from across the globe.
+                    </p>
+                    <div class="flex space-x-6 text-xl justify-center lg:justify-start mt-auto pt-4">
+                        <a href="#" class="text-gray-400 hover:text-primary transition-colors hover-lift"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-primary transition-colors hover-lift"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-primary transition-colors hover-lift"><i class="fab fa-pinterest-p"></i></a>
                     </div>
                 </div>
-                <div>
-                    <h4 class="font-bold uppercase tracking-widest mb-6">Explore</h4>
-                    <ul class="space-y-4 text-gray-400">
-                        <li><a href="shop.html" class="hover:text-primary transition-colors">Our Collection</a></li>
-                        <li><a href="subscription.html" class="hover:text-primary transition-colors">Cheese Club</a></li>
-                        <li><a href="about.html" class="hover:text-primary transition-colors">Our Story</a></li>
+
+                <!-- Column 2: Explore -->
+                <div class="flex flex-col h-full">
+                    <h4 class="font-bold uppercase tracking-widest mb-8 text-sm">Explore</h4>
+                    <ul class="space-y-4 text-gray-400 text-sm">
+                        <li><a href="shop.html">Our Collection</a></li>
+                        <li><a href="subscription.html">Cheese Club</a></li>
+                        <li><a href="about.html">Our Story</a></li>
                     </ul>
                 </div>
-                <div>
-                    <h4 class="font-bold uppercase tracking-widest mb-6">Support</h4>
-                    <ul class="space-y-4 text-gray-400">
-                        <li><a href="contact.html" class="hover:text-primary transition-colors">Contact Us</a></li>
-                        <li><a href="contact.html#faq" class="hover:text-primary transition-colors">FAQ</a></li>
-                        <li><a href="#" class="hover:text-primary transition-colors">Shipping Info</a></li>
-                        <li><a href="#" class="hover:text-primary transition-colors">Returns</a></li>
+
+                <!-- Column 3: Support -->
+                <div class="flex flex-col h-full">
+                    <h4 class="font-bold uppercase tracking-widest mb-8 text-sm">Support</h4>
+                    <ul class="space-y-4 text-gray-400 text-sm">
+                        <li><a href="contact.html">Contact Us</a></li>
+                        <li><a href="contact.html#faq">FAQ</a></li>
+                        <li><a href="#">Shipping Info</a></li>
+                        <li><a href="#">Returns</a></li>
                     </ul>
                 </div>
-                <div>
-                    <h4 class="font-bold uppercase tracking-widest mb-6">Visit Us</h4>
-                    <div class="space-y-4">
-                        <p class="text-gray-400 italic">The Tasting Lab,<br>42 Artisanal Way, Gourmet Hills</p>
+
+                <!-- Column 4: Visit Us -->
+                <div class="flex flex-col h-full">
+                    <h4 class="font-bold uppercase tracking-widest mb-8 text-sm">Visit Us</h4>
+                    <div class="space-y-4 text-gray-400 text-sm">
+                        <p class="italic leading-relaxed">The Tasting Lab,<br>42 Artisanal Way, Gourmet Hills</p>
+                    </div>
+                    <div class="mt-auto pt-4 space-y-2 text-sm">
                         <p class="text-primary font-bold">hello@Fromage.com</p>
-                        <p class="text-gray-500 font-bold text-xs">+1 (555) 789 1234</p>
+                        <p class="text-gray-500 font-bold">+1 (555) 789 1234</p>
                     </div>
                 </div>
             </div>
-            <div class="border-t border-white/5 pt-10 text-center text-sm text-gray-500">
-                <p>&copy; 2026 Fromage. All Rights Reserved.</p>
+
+            <!-- Bottom Bar: Legal -->
+            <div class="border-t border-white/5 pt-10 text-center text-xs text-gray-500">
+                <p>&copy; 2026 Fromage Artisanal Cheesemongers. All Rights Reserved.</p>
             </div>
         </div>
     </footer>
@@ -344,5 +362,16 @@
     <script src="js/script.js"></script>
 </body>
 </html>
+
+
+
+
+
+
+
+
+
+
+
 
 
