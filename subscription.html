@@ -1,10 +1,12 @@
 <!DOCTYPE html>
 <html lang="en" data-theme="dark" dir="ltr">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cheese Club | Fromage</title>
-    <meta name="description" content="Join our exclusive cheese club for monthly curated selections and artisanal pairings.">
+    <meta name="description"
+        content="Join our exclusive cheese club for monthly curated selections and artisanal pairings.">
     <!-- Tailwind CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
@@ -32,33 +34,38 @@
     <link rel="icon" type="image/png" href="img/logo_primary.svg">
     <link rel="stylesheet" href="css/style.css">
 </head>
+
 <body class="transition-colors duration-300">
 
     <!-- Header Section -->
     <header class="fixed w-full z-50 glass transition-all duration-300">
-        <nav class="container mx-auto px-6 py-3 flex justify-between items-center">
+        <nav class="container mx-auto px-2 md:px-6 py-3 flex justify-between items-center">
             <!-- Logo -->
             <a href="index.html" class="flex items-center group">
-                                <img src="img/logo_primary.svg" alt="Fromage Logo" class="navbar-logo">
-                                <span class="navbar-brand-name">Fromage</span>
-                            </a>
+                <img src="img/logo_primary.svg" alt="Fromage Logo" class="navbar-logo">
+                <span class="navbar-brand-name">Fromage</span>
+            </a>
 
             <!-- Desktop Navigation -->
-            <ul id="desktop-nav" class="hidden lg:flex items-center space-x-8 text-sm font-medium uppercase tracking-widest">
+            <ul id="desktop-nav"
+                class="hidden lg:flex items-center space-x-8 text-sm font-medium uppercase tracking-widest">
                 <li><a href="index.html" class="hover:text-primary transition-colors">Home 1</a></li>
                 <li><a href="home2.html" class="hover:text-primary transition-colors">Home 2</a></li>
                 <li><a href="about.html" class="hover:text-primary transition-colors">About</a></li>
                 <li><a href="shop.html" class="hover:text-primary transition-colors">Shop</a></li>
-                <li><a href="subscription.html" class="nav-link-active hover:text-primary transition-colors">Subscription</a></li>
+                <li><a href="subscription.html"
+                        class="nav-link-active hover:text-primary transition-colors">Subscription</a></li>
                 <li><a href="contact.html" class="hover:text-primary transition-colors">Contact</a></li>
-                <li><a href="dashboard.html" class="bg-primary text-white px-6 py-2 rounded-full font-bold hover:bg-primary-hover transition-all text-sm">Dashboard</a></li>
+                <li><a href="dashboard.html"
+                        class="bg-primary text-white px-6 py-2 rounded-full font-bold hover:bg-primary-hover transition-all text-sm">Dashboard</a>
+                </li>
             </ul>
 
             <!-- Icons/Toggles -->
-            <div class="flex items-center space-x-6">
+            <div class="flex items-center space-x-3 md:space-x-6">
                 <!-- RTL Toggle -->
                 <button id="rtl-toggle" class="rtl-switch" title="Toggle RTL"><i class="fas fa-right-left"></i></button>
-                
+
                 <!-- Theme Toggle -->
                 <button id="theme-toggle" class="text-xl hover:text-primary transition-colors">
                     <i class="fas fa-circle-half-stroke"></i>
@@ -67,11 +74,14 @@
                 <!-- Cart Icon -->
                 <a href="cart.html" class="relative group">
                     <i class="fas fa-shopping-bag text-xl"></i>
-                    <span class="absolute -top-2 -right-2 bg-primary text-white text-[10px] w-4 h-4 flex items-center justify-center rounded-full">3</span>
+                    <span
+                        class="absolute -top-2 -right-2 bg-primary text-white text-[10px] w-4 h-4 flex items-center justify-center rounded-full">3</span>
                 </a>
 
                 <!-- Sign Up Button -->
-                <a href="signup.html" class="hidden lg:block bg-primary text-white px-6 py-2 rounded-full font-bold hover:bg-primary-hover transition-all text-sm">Sign Up</a>
+                <a href="signup.html"
+                    class="hidden lg:block bg-primary text-white px-6 py-2 rounded-full font-bold hover:bg-primary-hover transition-all text-sm">Sign
+                    Up</a>
 
                 <!-- Hamburger Menu (Tablet & Mobile) -->
                 <button id="menu-btn" class="lg:hidden text-2xl">
@@ -81,61 +91,88 @@
         </nav>
 
         <!-- Mobile Menu (Drawer) -->
-        <div id="mobile-menu" class="hidden lg:hidden fixed inset-y-0 right-0 w-64 glass z-50 p-10 flex flex-col space-y-6">
-            <a href="index.html" class="text-lg font-medium hover:text-primary border-b border-white/10 pb-2">Home 1</a>
-            <a href="home2.html" class="text-lg font-medium hover:text-primary border-b border-white/10 pb-2">Home 2</a>
-            <a href="about.html" class="text-lg font-medium hover:text-primary border-b border-white/10 pb-2">About</a>
-            <a href="shop.html" class="text-lg font-medium hover:text-primary border-b border-white/10 pb-2">Shop</a>
-            <a href="subscription.html" class="text-lg font-medium hover:text-primary border-b border-white/10 pb-2">Subscription</a>
-            <a href="dashboard.html" class="text-lg font-medium hover:text-primary border-b border-white/10 pb-2">Dashboard</a>
-            <a href="contact.html" class="text-lg font-medium hover:text-primary border-b border-white/10 pb-2">Contact</a>
+        <div id="mobile-menu"
+            class="hidden lg:hidden fixed inset-y-0 right-0 w-64 bg-lightBg dark:bg-darkBg z-50 p-10 flex flex-col space-y-6 shadow-2xl transition-colors duration-300">
+            <a href="index.html" class="text-lg font-medium hover:text-primary border-b border-black/10 dark:border-white/10 pb-2">Home 1</a>
+            <a href="home2.html" class="text-lg font-medium hover:text-primary border-b border-black/10 dark:border-white/10 pb-2">Home 2</a>
+            <a href="about.html" class="text-lg font-medium hover:text-primary border-b border-black/10 dark:border-white/10 pb-2">About</a>
+            <a href="shop.html" class="text-lg font-medium hover:text-primary border-b border-black/10 dark:border-white/10 pb-2">Shop</a>
+            <a href="subscription.html"
+                class="text-lg font-medium hover:text-primary border-b border-black/10 dark:border-white/10 pb-2">Subscription</a>
+            <a href="dashboard.html"
+                class="text-lg font-medium hover:text-primary border-b border-black/10 dark:border-white/10 pb-2">Dashboard</a>
+            <a href="contact.html"
+                class="text-lg font-medium hover:text-primary border-b border-black/10 dark:border-white/10 pb-2">Contact</a>
         </div>
     </header>
 
     <!-- Hero Section -->
-    <section class="relative h-[100vh] flex items-center justify-center overflow-hidden">
+    <section class="relative min-h-screen flex items-center justify-center overflow-hidden pt-32 md:pt-0">
         <!-- Background Image with Overlay -->
         <div class="absolute inset-0 z-0">
-            <img src="https://images.unsplash.com/photo-1452195100486-9cc805987862?q=80&w=2069" alt="The Cheese Club" class="w-full h-full object-cover">
+            <img src="https://images.unsplash.com/photo-1452195100486-9cc805987862?q=80&w=2069" alt="The Cheese Club"
+                class="w-full h-full object-cover">
             <div class="absolute inset-0 bg-darkBg/60 z-10"></div>
             <div class="absolute inset-0 bg-gradient-to-b from-black/60 to-transparent z-20"></div>
         </div>
-        
+
         <div class="container mx-auto px-6 text-center relative z-10" data-aos="fade-up">
             <span class="text-primary uppercase tracking-[0.4em] font-bold mb-6 block text-sm">Members Only</span>
             <h1 class="text-6xl md:text-8xl font-serif font-bold mb-6 text-white leading-tight">The Cheese Club.</h1>
-            <p class="text-xl md:text-2xl text-gray-300 max-w-2xl mx-auto italic underline decoration-white/20 decoration-1 underline-offset-8 mb-6">
+            <p
+                class="text-xl md:text-2xl text-gray-300 max-w-2xl mx-auto italic underline decoration-white/20 decoration-1 underline-offset-8 mb-6">
                 A curated journey through the world's most exquisite pastures, delivered monthly.
             </p>
             <div class="flex justify-center">
-                <a href="#plans" class="bg-primary hover:bg-primary-hover text-white px-12 py-4 rounded-full font-bold transition-all hover-lift shadow-2xl">Join the Club</a>
+                <a href="#plans"
+                    class="bg-primary hover:bg-primary-hover text-white px-12 py-4 rounded-full font-bold transition-all hover-lift shadow-2xl">Join
+                    the Club</a>
             </div>
         </div>
     </section>
 
     <!-- Subscription Box Showcase -->
-    <section class="py-10 bg-darkBg overflow-hidden text-current">
+    <section class="py-10 bg-lightBg dark:bg-darkBg overflow-hidden text-current">
         <div class="container mx-auto px-6">
             <div class="flex flex-col lg:flex-row items-center gap-10">
+                <!-- Full Image Showcase -->
                 <div class="w-full lg:w-1/2" data-aos="fade-right">
-                    <img src="https://images.unsplash.com/photo-1634544713735-9856ccfa1193?q=80&w=1974" alt="Fromage Subscription Box" class="rounded-[40px] shadow-2xl skew-y-2 hover:skew-y-0 transition-all duration-1000 border-8 border-white/5 relative z-10">
+                    <div class="relative overflow-hidden rounded-[40px] shadow-2xl group border-8 border-white/5">
+                        <img src="https://images.pexels.com/photos/35469102/pexels-photo-35469102.jpeg"
+                            alt="Curated Selection"
+                            class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
+                        <div
+                            class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-60">
+                        </div>
+                    </div>
                 </div>
                 <div class="w-full lg:w-1/2" data-aos="fade-left">
                     <span class="text-primary uppercase tracking-[0.4em] font-bold mb-4 block">The Experience</span>
-                    <h2 class="text-3xl md:text-5xl font-serif font-bold mb-4 leading-tight">Every Month, A New Discovery.</h2>
-                    <p class="text-gray-400 text-lg mb-6 leading-relaxed italic">"We don't just send cheese; we send a story of origin, craft, and time."</p>
+                    <h2 class="text-3xl md:text-5xl font-serif font-bold mb-4 leading-tight">Every Month, A New
+                        Discovery.</h2>
+                    <p class="text-gray-400 text-lg mb-6 leading-relaxed italic">"We don't just send cheese; we send a
+                        story of origin, craft, and time."</p>
                     <div class="space-y-4">
-                        <div class="flex items-center space-x-6 bg-white/5 p-6 rounded-2xl border border-white/5 hover:border-primary/30 transition-all">
-                            <span class="w-12 h-12 rounded-full bg-primary flex items-center justify-center font-bold text-white shrink-0">1</span>
-                            <p class="text-gray-400"><span class="text-white font-bold text-current">Curated:</span> Our affineurs select 3-5 rare cheeses each month.</p>
+                        <div
+                            class="flex items-center space-x-6 bg-white/5 p-6 rounded-2xl border border-white/5 hover:border-primary/30 transition-all">
+                            <span
+                                class="w-12 h-12 rounded-full bg-primary flex items-center justify-center font-bold text-white shrink-0">1</span>
+                            <p class="text-gray-400"><span class="text-white font-bold text-current">Curated:</span> Our
+                                affineurs select 3-5 rare cheeses each month.</p>
                         </div>
-                        <div class="flex items-center space-x-6 bg-white/5 p-6 rounded-2xl border border-white/5 hover:border-primary/30 transition-all">
-                            <span class="w-12 h-12 rounded-full bg-primary flex items-center justify-center font-bold text-white shrink-0">2</span>
-                            <p class="text-gray-400"><span class="text-white font-bold text-current">Crafted:</span> Paired with artisanal crackers, honeys, or jams.</p>
+                        <div
+                            class="flex items-center space-x-6 bg-white/5 p-6 rounded-2xl border border-white/5 hover:border-primary/30 transition-all">
+                            <span
+                                class="w-12 h-12 rounded-full bg-primary flex items-center justify-center font-bold text-white shrink-0">2</span>
+                            <p class="text-gray-400"><span class="text-white font-bold text-current">Crafted:</span>
+                                Paired with artisanal crackers, honeys, or jams.</p>
                         </div>
-                        <div class="flex items-center space-x-6 bg-white/5 p-6 rounded-2xl border border-white/5 hover:border-primary/30 transition-all">
-                            <span class="w-12 h-12 rounded-full bg-primary flex items-center justify-center font-bold text-white shrink-0">3</span>
-                            <p class="text-gray-400"><span class="text-white font-bold text-current">Delivered:</span> Shipped in climate-smart, eco-friendly wooden boxes.</p>
+                        <div
+                            class="flex items-center space-x-6 bg-white/5 p-6 rounded-2xl border border-white/5 hover:border-primary/30 transition-all">
+                            <span
+                                class="w-12 h-12 rounded-full bg-primary flex items-center justify-center font-bold text-white shrink-0">3</span>
+                            <p class="text-gray-400"><span class="text-white font-bold text-current">Delivered:</span>
+                                Shipped in climate-smart, eco-friendly wooden boxes.</p>
                         </div>
                     </div>
                 </div>
@@ -144,80 +181,103 @@
     </section>
 
     <!-- Pricing Tiers -->
-    <section id="plans" class="py-10 bg-white/5">
+    <section id="plans" class="py-10 bg-black/5 dark:bg-white/5">
         <div class="container mx-auto px-6 text-center">
-            <h2 class="text-4xl md:text-5xl font-serif font-bold mb-6" data-aos="fade-up">Choose Your Journey</h2>
+            <h2 class="text-4xl md:text-5xl font-serif font-bold mb-6 text-current" data-aos="fade-up">Choose Your Journey</h2>
             <div class="grid grid-cols-1 md:grid-cols-3 gap-10">
                 <!-- Tier 1 -->
-                <div class="glass p-12 rounded-[40px] flex flex-col items-center hover-lift border-white/10 h-full" data-aos="fade-up" data-aos-delay="100">
+                <div class="glass p-12 rounded-[40px] flex flex-col items-center hover-lift border-white/10 h-full"
+                    data-aos="fade-up" data-aos-delay="100">
                     <h3 class="text-2xl font-serif font-bold mb-2">The Explorer</h3>
-                    <span class="text-primary font-bold text-sm uppercase tracking-widest mb-6">Perfect for Starters</span>
-                    <p class="text-4xl font-bold text-white mb-8">$45 <span class="text-xs text-gray-400 font-normal">/ Month</span></p>
-                    <ul class="text-gray-400 text-sm space-y-4 mb-12 text-left w-full border-t border-white/10 pt-8">
+                    <span class="text-primary font-bold text-sm uppercase tracking-widest mb-6">Perfect for
+                        Starters</span>
+                    <p class="text-4xl font-bold text-current mb-8">$45 <span class="text-xs text-current/50 font-normal">/
+                            Month</span></p>
+                    <ul class="text-current/60 text-sm space-y-4 mb-12 text-left w-full border-t border-black/10 dark:border-white/10 pt-8">
                         <li><i class="fas fa-check text-primary mr-2"></i> 3 Seasonal Cheeses</li>
                         <li><i class="fas fa-check text-primary mr-2"></i> Detailed Tasting Notes</li>
                         <li><i class="fas fa-check text-primary mr-2"></i> Artisanal Pairings (1-2)</li>
                     </ul>
-                    <button class="mt-auto border border-primary text-primary hover:bg-primary hover:text-white px-10 py-4 rounded-full font-bold transition-all w-full">Join Now</button>
+                    <button
+                        class="mt-auto border border-primary text-primary hover:bg-primary hover:text-white px-10 py-4 rounded-full font-bold transition-all w-full">Join
+                        Now</button>
                 </div>
 
                 <!-- Tier 2 -->
-                <div class="bg-primary p-12 rounded-[40px] flex flex-col items-center hover-lift shadow-2xl relative overflow-hidden h-full" data-aos="fade-up" data-aos-delay="200">
-                    <div class="absolute top-0 right-0 p-4 bg-white/20 text-[10px] font-bold uppercase tracking-widest text-white rotate-12 translate-x-4 -translate-y-2">Best Value</div>
+                <div class="bg-primary p-12 rounded-[40px] flex flex-col items-center hover-lift shadow-2xl relative overflow-hidden h-full"
+                    data-aos="fade-up" data-aos-delay="200">
+                    <div
+                        class="absolute top-0 right-0 p-4 bg-white/20 text-[10px] font-bold uppercase tracking-widest text-white rotate-12 translate-x-4 -translate-y-2">
+                        Best Value</div>
                     <h3 class="text-2xl font-serif font-bold mb-2 text-white">The Connoisseur</h3>
-                    <span class="text-white font-bold text-sm uppercase tracking-widest mb-6 opacity-70">Our Most Loved</span>
-                    <p class="text-5xl font-bold text-white mb-8">$75 <span class="text-xs text-white/50 font-normal">/ Month</span></p>
+                    <span class="text-white font-bold text-sm uppercase tracking-widest mb-6 opacity-70">Our Most
+                        Loved</span>
+                    <p class="text-5xl font-bold text-white mb-8">$75 <span class="text-xs text-white/50 font-normal">/
+                            Month</span></p>
                     <ul class="text-white text-sm space-y-4 mb-12 text-left w-full border-t border-white/20 pt-8">
                         <li><i class="fas fa-check text-white mr-2"></i> 5 Premium Rare Cheeses</li>
                         <li><i class="fas fa-check text-white mr-2"></i> Masterclass Access (Online)</li>
                         <li><i class="fas fa-check text-white mr-2"></i> Curated Wine Recommendation</li>
                         <li><i class="fas fa-check text-white mr-2"></i> Premium Wooden Gift Box</li>
                     </ul>
-                    <button class="mt-auto bg-white text-primary px-10 py-4 rounded-full font-bold transition-all w-full shadow-2xl">Start Tasting</button>
+                    <button
+                        class="mt-auto bg-white text-primary px-10 py-4 rounded-full font-bold transition-all w-full shadow-2xl">Start
+                        Tasting</button>
                 </div>
 
                 <!-- Tier 3 -->
-                <div class="glass p-12 rounded-[40px] flex flex-col items-center hover-lift border-white/10 h-full" data-aos="fade-up" data-aos-delay="300">
+                <div class="glass p-12 rounded-[40px] flex flex-col items-center hover-lift border-white/10 h-full"
+                    data-aos="fade-up" data-aos-delay="300">
                     <h3 class="text-2xl font-serif font-bold mb-2">The Sommelier</h3>
-                    <span class="text-primary font-bold text-sm uppercase tracking-widest mb-6 border-b border-primary/20">Private & Bespoke</span>
-                    <p class="text-4xl font-bold text-white mb-8">$120 <span class="text-xs text-gray-400 font-normal">/ Month</span></p>
-                    <ul class="text-gray-400 text-sm space-y-4 mb-12 text-left w-full border-t border-white/10 pt-8">
+                    <span
+                        class="text-primary font-bold text-sm uppercase tracking-widest mb-6 border-b border-primary/20">Private
+                        & Bespoke</span>
+                    <p class="text-4xl font-bold text-current mb-8">$120 <span class="text-xs text-current/50 font-normal">/
+                            Month</span></p>
+                    <ul class="text-current/60 text-sm space-y-4 mb-12 text-left w-full border-t border-black/10 dark:border-white/10 pt-8">
                         <li><i class="fas fa-check text-primary mr-2"></i> Total White-Glove Curation</li>
                         <li><i class="fas fa-check text-primary mr-2"></i> Exclusive 1-on-1 Consultation</li>
                         <li><i class="fas fa-check text-primary mr-2"></i> Early Access to New Arrivals</li>
                         <li><i class="fas fa-check text-primary mr-2"></i> Invitation to Private Events</li>
                     </ul>
-                    <button class="mt-auto border border-primary text-primary hover:bg-primary hover:text-white px-10 py-4 rounded-full font-bold transition-all w-full">Apply Now</button>
+                    <button
+                        class="mt-auto border border-primary text-primary hover:bg-primary hover:text-white px-10 py-4 rounded-full font-bold transition-all w-full">Apply
+                        Now</button>
                 </div>
             </div>
         </div>
     </section>
 
-                        <!-- Footer -->
+    <!-- Footer -->
     <footer class="py-10 border-t border-white/5">
         <div class="container mx-auto px-6">
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 lg:gap-16 mb-8 text-center lg:text-left items-stretch">
+            <div
+                class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 lg:gap-16 mb-8 text-center lg:text-left items-start">
                 <!-- Column 1: Brand & Desc -->
                 <div class="flex flex-col h-full">
-                    <div class="mb-8">
+                    <div class="mb-4">
                         <a href="index.html" class="flex items-center group justify-center lg:justify-start">
                             <img src="img/logo_primary.svg" alt="Fromage Logo" class="navbar-logo">
                             <span class="navbar-brand-name">Fromage</span>
                         </a>
                     </div>
-                    <p class="text-gray-400 text-sm leading-relaxed max-w-xs mx-auto lg:mx-0 mb-8">
-                        From the heart of the countryside to your doorstep. We deliver the finest artisanal cheeses from across the globe.
+                    <p class="text-gray-400 text-sm leading-relaxed max-w-xs mx-auto lg:mx-0 mb-4">
+                        From the heart of the countryside to your doorstep. We deliver the finest artisanal cheeses from
+                        across the globe.
                     </p>
-                    <div class="flex space-x-6 text-xl justify-center lg:justify-start mt-auto pt-4">
-                        <a href="#" class="text-gray-400 hover:text-primary transition-colors hover-lift"><i class="fab fa-instagram"></i></a>
-                        <a href="#" class="text-gray-400 hover:text-primary transition-colors hover-lift"><i class="fab fa-facebook-f"></i></a>
-                        <a href="#" class="text-gray-400 hover:text-primary transition-colors hover-lift"><i class="fab fa-pinterest-p"></i></a>
+                    <div class="flex space-x-6 text-xl justify-center lg:justify-start pt-4">
+                        <a href="#" class="text-gray-400 hover:text-primary transition-colors hover-lift"><i
+                                class="fab fa-instagram"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-primary transition-colors hover-lift"><i
+                                class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-primary transition-colors hover-lift"><i
+                                class="fab fa-pinterest-p"></i></a>
                     </div>
                 </div>
 
                 <!-- Column 2: Explore -->
-                <div class="flex flex-col h-full">
-                    <h4 class="font-bold uppercase tracking-widest mb-8 text-sm">Explore</h4>
+                <div class="flex flex-col">
+                    <h4 class="font-bold uppercase tracking-widest mb-4 text-sm">Explore</h4>
                     <ul class="space-y-4 text-gray-400 text-sm">
                         <li><a href="shop.html">Our Collection</a></li>
                         <li><a href="subscription.html">Cheese Club</a></li>
@@ -260,4 +320,5 @@
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="js/script.js"></script>
 </body>
+
 </html>

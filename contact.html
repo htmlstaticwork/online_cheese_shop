@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en" data-theme="dark" dir="ltr">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -32,33 +33,37 @@
     <link rel="icon" type="image/png" href="img/logo_primary.svg">
     <link rel="stylesheet" href="css/style.css">
 </head>
+
 <body class="transition-colors duration-300">
 
     <!-- Header Section -->
     <header class="fixed w-full z-50 glass transition-all duration-300">
-        <nav class="container mx-auto px-6 py-3 flex justify-between items-center">
+        <nav class="container mx-auto px-2 md:px-6 py-3 flex justify-between items-center">
             <!-- Logo -->
             <a href="index.html" class="flex items-center group">
-                                <img src="img/logo_primary.svg" alt="Fromage Logo" class="navbar-logo">
-                                <span class="navbar-brand-name">Fromage</span>
-                            </a>
+                <img src="img/logo_primary.svg" alt="Fromage Logo" class="navbar-logo">
+                <span class="navbar-brand-name">Fromage</span>
+            </a>
 
             <!-- Desktop Navigation -->
-            <ul id="desktop-nav" class="hidden lg:flex items-center space-x-8 text-sm font-medium uppercase tracking-widest">
+            <ul id="desktop-nav"
+                class="hidden lg:flex items-center space-x-8 text-sm font-medium uppercase tracking-widest">
                 <li><a href="index.html" class="hover:text-primary transition-colors">Home 1</a></li>
                 <li><a href="home2.html" class="hover:text-primary transition-colors">Home 2</a></li>
                 <li><a href="about.html" class="hover:text-primary transition-colors">About</a></li>
                 <li><a href="shop.html" class="hover:text-primary transition-colors">Shop</a></li>
                 <li><a href="subscription.html" class="hover:text-primary transition-colors">Subscription</a></li>
                 <li><a href="contact.html" class="nav-link-active hover:text-primary transition-colors">Contact</a></li>
-                <li><a href="dashboard.html" class="bg-primary text-white px-6 py-2 rounded-full font-bold hover:bg-primary-hover transition-all text-sm">Dashboard</a></li>
+                <li><a href="dashboard.html"
+                        class="bg-primary text-white px-6 py-2 rounded-full font-bold hover:bg-primary-hover transition-all text-sm">Dashboard</a>
+                </li>
             </ul>
 
             <!-- Icons/Toggles -->
-            <div class="flex items-center space-x-6">
+            <div class="flex items-center space-x-3 md:space-x-6">
                 <!-- RTL Toggle -->
                 <button id="rtl-toggle" class="rtl-switch" title="Toggle RTL"><i class="fas fa-right-left"></i></button>
-                
+
                 <!-- Theme Toggle -->
                 <button id="theme-toggle" class="text-xl hover:text-primary transition-colors">
                     <i class="fas fa-circle-half-stroke"></i>
@@ -67,11 +72,14 @@
                 <!-- Cart Icon -->
                 <a href="cart.html" class="relative group">
                     <i class="fas fa-shopping-bag text-xl"></i>
-                    <span class="absolute -top-2 -right-2 bg-primary text-white text-[10px] w-4 h-4 flex items-center justify-center rounded-full">3</span>
+                    <span
+                        class="absolute -top-2 -right-2 bg-primary text-white text-[10px] w-4 h-4 flex items-center justify-center rounded-full">3</span>
                 </a>
 
                 <!-- Sign Up Button -->
-                <a href="signup.html" class="hidden lg:block bg-primary text-white px-6 py-2 rounded-full font-bold hover:bg-primary-hover transition-all text-sm">Sign Up</a>
+                <a href="signup.html"
+                    class="hidden lg:block bg-primary text-white px-6 py-2 rounded-full font-bold hover:bg-primary-hover transition-all text-sm">Sign
+                    Up</a>
 
                 <!-- Hamburger Menu (Tablet & Mobile) -->
                 <button id="menu-btn" class="lg:hidden text-2xl">
@@ -81,40 +89,54 @@
         </nav>
 
         <!-- Mobile Menu (Drawer) -->
-        <div id="mobile-menu" class="hidden lg:hidden fixed inset-y-0 right-0 w-64 glass z-50 p-10 flex flex-col space-y-6">
-            <a href="index.html" class="text-lg font-medium hover:text-primary border-b border-white/10 pb-2">Home 1</a>
-            <a href="home2.html" class="text-lg font-medium hover:text-primary border-b border-white/10 pb-2">Home 2</a>
-            <a href="about.html" class="text-lg font-medium hover:text-primary border-b border-white/10 pb-2">About</a>
-            <a href="shop.html" class="text-lg font-medium hover:text-primary border-b border-white/10 pb-2">Shop</a>
-            <a href="subscription.html" class="text-lg font-medium hover:text-primary border-b border-white/10 pb-2">Subscription</a>
-            <a href="dashboard.html" class="text-lg font-medium hover:text-primary border-b border-white/10 pb-2">Dashboard</a>
-            <a href="contact.html" class="text-lg font-medium hover:text-primary border-b border-white/10 pb-2">Contact</a>
+        <div id="mobile-menu"
+            class="hidden lg:hidden fixed inset-y-0 right-0 w-64 bg-lightBg dark:bg-darkBg z-50 p-10 flex flex-col space-y-6 shadow-2xl transition-colors duration-300">
+            <a href="index.html"
+                class="text-lg font-medium hover:text-primary border-b border-black/10 dark:border-white/10 pb-2">Home
+                1</a>
+            <a href="home2.html"
+                class="text-lg font-medium hover:text-primary border-b border-black/10 dark:border-white/10 pb-2">Home
+                2</a>
+            <a href="about.html"
+                class="text-lg font-medium hover:text-primary border-b border-black/10 dark:border-white/10 pb-2">About</a>
+            <a href="shop.html"
+                class="text-lg font-medium hover:text-primary border-b border-black/10 dark:border-white/10 pb-2">Shop</a>
+            <a href="subscription.html"
+                class="text-lg font-medium hover:text-primary border-b border-black/10 dark:border-white/10 pb-2">Subscription</a>
+            <a href="dashboard.html"
+                class="text-lg font-medium hover:text-primary border-b border-black/10 dark:border-white/10 pb-2">Dashboard</a>
+            <a href="contact.html"
+                class="text-lg font-medium hover:text-primary border-b border-black/10 dark:border-white/10 pb-2">Contact</a>
         </div>
     </header>
 
     <!-- Hero Section -->
-    <section class="relative h-[100vh] flex items-center justify-center overflow-hidden">
+    <section class="relative min-h-screen flex items-center justify-center overflow-hidden pt-32 md:pt-0">
         <!-- Background Image with Overlay -->
         <div class="absolute inset-0 z-0">
-            <img src="https://images.unsplash.com/photo-1510812431401-41d2bd2722f3?q=80&w=2070" alt="Connect with Us" class="w-full h-full object-cover">
+            <img src="https://images.unsplash.com/photo-1510812431401-41d2bd2722f3?q=80&w=2070" alt="Connect with Us"
+                class="w-full h-full object-cover">
             <div class="absolute inset-0 bg-darkBg/60 z-10"></div>
             <div class="absolute inset-0 bg-gradient-to-b from-black/60 to-transparent z-20"></div>
         </div>
-        
+
         <div class="container mx-auto px-6 text-center relative z-10" data-aos="fade-up">
             <span class="text-primary uppercase tracking-[0.4em] font-bold mb-6 block text-sm">Get in Touch</span>
             <h1 class="text-6xl md:text-8xl font-serif font-bold mb-6 text-white leading-tight">Connect.</h1>
-            <p class="text-xl md:text-2xl text-gray-300 max-w-2xl mx-auto italic underline decoration-white/20 decoration-1 underline-offset-8 mb-6">
+            <p
+                class="text-xl md:text-2xl text-gray-300 max-w-2xl mx-auto italic underline decoration-white/20 decoration-1 underline-offset-8 mb-6">
                 Dedicated to artisanal perfection. We are here to assist with every request.
             </p>
             <div class="flex justify-center">
-                <a href="#contact-form" class="bg-primary hover:bg-primary-hover text-white px-12 py-4 rounded-full font-bold transition-all hover-lift shadow-2xl">Send Message</a>
+                <a href="#contact-form"
+                    class="bg-primary hover:bg-primary-hover text-white px-12 py-4 rounded-full font-bold transition-all hover-lift shadow-2xl">Send
+                    Message</a>
             </div>
         </div>
     </section>
 
     <!-- Contact Main Area -->
-    <section class="py-10">
+    <section id="contact-form" class="py-10">
         <div class="container mx-auto px-6">
             <div class="flex flex-col lg:flex-row gap-10">
                 <!-- Contact Form -->
@@ -123,17 +145,23 @@
                     <form class="space-y-6">
                         <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
                             <div>
-                                <label class="block text-xs uppercase tracking-widest text-primary font-bold mb-3">Full Name</label>
-                                <input type="text" placeholder="Gourmet Devotee" class="w-full bg-white/5 border border-white/10 rounded-xl px-6 py-4 outline-none focus:border-primary transition-colors">
+                                <label class="block text-xs uppercase tracking-widest text-primary font-bold mb-3">Full
+                                    Name</label>
+                                <input type="text" placeholder="Gourmet Devotee"
+                                    class="w-full bg-white/5 border border-white/10 rounded-xl px-6 py-4 outline-none focus:border-primary transition-colors">
                             </div>
                             <div>
-                                <label class="block text-xs uppercase tracking-widest text-primary font-bold mb-3">Email Address</label>
-                                <input type="email" placeholder="hello@luxebite.com" class="w-full bg-white/5 border border-white/10 rounded-xl px-6 py-4 outline-none focus:border-primary transition-colors">
+                                <label class="block text-xs uppercase tracking-widest text-primary font-bold mb-3">Email
+                                    Address</label>
+                                <input type="email" placeholder="hello@luxebite.com"
+                                    class="w-full bg-white/5 border border-white/10 rounded-xl px-6 py-4 outline-none focus:border-primary transition-colors">
                             </div>
                         </div>
                         <div>
-                            <label class="block text-xs uppercase tracking-widest text-primary font-bold mb-3">Inquiry Type</label>
-                            <select class="w-full bg-white/5 border border-white/10 rounded-xl px-6 py-4 outline-none focus:border-primary transition-colors appearance-none text-gray-400">
+                            <label class="block text-xs uppercase tracking-widest text-primary font-bold mb-3">Inquiry
+                                Type</label>
+                            <select
+                                class="w-full bg-white/5 border border-white/10 rounded-xl px-6 py-4 outline-none focus:border-primary transition-colors appearance-none text-gray-400">
                                 <option>Product Inquiry</option>
                                 <option>Subscription Membership</option>
                                 <option>Corporate Gifting</option>
@@ -141,10 +169,16 @@
                             </select>
                         </div>
                         <div>
-                            <label class="block text-xs uppercase tracking-widest text-primary font-bold mb-3">Message</label>
-                            <textarea rows="6" placeholder="Tell us how we can help..." class="w-full bg-white/5 border border-white/10 rounded-xl px-6 py-4 outline-none focus:border-primary transition-colors"></textarea>
+                            <label
+                                class="block text-xs uppercase tracking-widest text-primary font-bold mb-3">Message</label>
+                            <textarea rows="6" placeholder="Tell us how we can help..."
+                                class="w-full bg-white/5 border border-white/10 rounded-xl px-6 py-4 outline-none focus:border-primary transition-colors"></textarea>
                         </div>
-                        <button type="submit" class="bg-primary hover:bg-primary-hover text-white px-12 py-5 rounded-full font-bold transition-all hover-lift w-full md:w-auto">Submit Inquiry</button>
+                        <div class="flex justify-center pt-8">
+                            <button type="submit"
+                                class="bg-primary hover:bg-primary-hover text-white px-12 py-5 rounded-full font-bold transition-all hover-lift w-full md:w-auto">Submit
+                                Inquiry</button>
+                        </div>
                     </form>
                 </div>
 
@@ -152,19 +186,23 @@
                 <div class="w-full lg:w-2/5 space-y-8" data-aos="fade-left">
                     <div>
                         <h3 class="text-2xl font-serif font-bold mb-6">Our Flagship Cellar</h3>
-                        <p class="text-gray-500 leading-relaxed italic mb-8">Visit us in the heart of London for a private tasting session or to browse our weekly arrivals.</p>
+                        <p class="text-gray-500 leading-relaxed italic mb-8">Visit us in the heart of London for a
+                            private tasting session or to browse our weekly arrivals.</p>
                         <div class="space-y-6">
                             <div class="flex items-start space-x-6">
-                                <div class="w-12 h-12 rounded-xl bg-white/5 flex items-center justify-center text-primary border border-white/10">
+                                <div
+                                    class="w-12 h-12 rounded-xl bg-white/5 flex items-center justify-center text-primary border border-white/10">
                                     <i class="fas fa-location-dot"></i>
                                 </div>
                                 <div>
                                     <h4 class="font-bold text-white mb-1">Address</h4>
-                                    <p class="text-gray-500 text-sm">42 Marylebone High Street,<br>London W1U 5HG, UK</p>
+                                    <p class="text-gray-500 text-sm">42 Marylebone High Street,<br>London W1U 5HG, UK
+                                    </p>
                                 </div>
                             </div>
                             <div class="flex items-start space-x-6">
-                                <div class="w-12 h-12 rounded-xl bg-white/5 flex items-center justify-center text-primary border border-white/10">
+                                <div
+                                    class="w-12 h-12 rounded-xl bg-white/5 flex items-center justify-center text-primary border border-white/10">
                                     <i class="fas fa-phone"></i>
                                 </div>
                                 <div>
@@ -173,20 +211,24 @@
                                 </div>
                             </div>
                             <div class="flex items-start space-x-6">
-                                <div class="w-12 h-12 rounded-xl bg-white/5 flex items-center justify-center text-primary border border-white/10">
+                                <div
+                                    class="w-12 h-12 rounded-xl bg-white/5 flex items-center justify-center text-primary border border-white/10">
                                     <i class="fas fa-clock"></i>
                                 </div>
                                 <div>
                                     <h4 class="font-bold text-white mb-1">Opening Hours</h4>
-                                    <p class="text-gray-500 text-sm">Tue - Sat: 10:00 AM - 7:00 PM<br>Sun: 11:00 AM - 4:00 PM</p>
+                                    <p class="text-gray-500 text-sm">Tue - Sat: 10:00 AM - 7:00 PM<br>Sun: 11:00 AM -
+                                        4:00 PM</p>
                                 </div>
                             </div>
                         </div>
                     </div>
                     <div class="p-8 bg-primary/10 rounded-3xl border border-primary/20">
-                         <h4 class="font-bold text-primary mb-4">Gifting Concierge</h4>
-                         <p class="text-gray-400 text-sm mb-6">Looking for a custom corporate gift or event catering? Our specialists are available for consultation.</p>
-                         <a href="mailto:concierge@Fromage.com" class="text-white font-bold hover:underline">concierge@Fromage.com</a>
+                        <h4 class="font-bold text-primary mb-4">Gifting Concierge</h4>
+                        <p class="text-gray-400 text-sm mb-6">Looking for a custom corporate gift or event catering? Our
+                            specialists are available for consultation.</p>
+                        <a href="mailto:concierge@Fromage.com"
+                            class="text-white font-bold hover:underline">concierge@Fromage.com</a>
                     </div>
                 </div>
             </div>
@@ -194,43 +236,46 @@
     </section>
 
     <!-- Accessible Map -->
-    <section class="h-[600px] w-full grayscale contrast-125 opacity-80 hover:grayscale-0 hover:opacity-100 transition-all duration-1000" data-aos="zoom-out">
-        <iframe 
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2482.753303681427!2d-0.15423862348398453!3d51.51774307181467!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x48761ad0687702f3%3A0xe54d852a36b53a47!2s42%20Marylebone%20High%20St%2C%20London%20W1U%205HG!5e0!3m2!1sen!2suk!4v1711880000000!5m2!1sen!2suk" 
-            width="100%" 
-            height="100%" 
-            style="border:0;" 
-            allowfullscreen="" 
-            loading="lazy" 
+    <section
+        class="h-[600px] w-full grayscale contrast-125 opacity-80 hover:grayscale-0 hover:opacity-100 transition-all duration-1000"
+        data-aos="zoom-out">
+        <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2482.753303681427!2d-0.15423862348398453!3d51.51774307181467!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x48761ad0687702f3%3A0xe54d852a36b53a47!2s42%20Marylebone%20High%20St%2C%20London%20W1U%205HG!5e0!3m2!1sen!2suk!4v1711880000000!5m2!1sen!2suk"
+            width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"
             referrerpolicy="no-referrer-when-downgrade">
         </iframe>
     </section>
 
-                        <!-- Footer -->
+    <!-- Footer -->
     <footer class="py-10 border-t border-white/5">
         <div class="container mx-auto px-6">
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 lg:gap-16 mb-8 text-center lg:text-left items-stretch">
+            <div
+                class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 lg:gap-16 mb-8 text-center lg:text-left items-start">
                 <!-- Column 1: Brand & Desc -->
                 <div class="flex flex-col h-full">
-                    <div class="mb-8">
+                    <div class="mb-4">
                         <a href="index.html" class="flex items-center group justify-center lg:justify-start">
                             <img src="img/logo_primary.svg" alt="Fromage Logo" class="navbar-logo">
                             <span class="navbar-brand-name">Fromage</span>
                         </a>
                     </div>
-                    <p class="text-gray-400 text-sm leading-relaxed max-w-xs mx-auto lg:mx-0 mb-8">
-                        From the heart of the countryside to your doorstep. We deliver the finest artisanal cheeses from across the globe.
+                    <p class="text-gray-400 text-sm leading-relaxed max-w-xs mx-auto lg:mx-0 mb-4">
+                        From the heart of the countryside to your doorstep. We deliver the finest artisanal cheeses from
+                        across the globe.
                     </p>
-                    <div class="flex space-x-6 text-xl justify-center lg:justify-start mt-auto pt-4">
-                        <a href="#" class="text-gray-400 hover:text-primary transition-colors hover-lift"><i class="fab fa-instagram"></i></a>
-                        <a href="#" class="text-gray-400 hover:text-primary transition-colors hover-lift"><i class="fab fa-facebook-f"></i></a>
-                        <a href="#" class="text-gray-400 hover:text-primary transition-colors hover-lift"><i class="fab fa-pinterest-p"></i></a>
+                    <div class="flex space-x-6 text-xl justify-center lg:justify-start pt-4">
+                        <a href="#" class="text-gray-400 hover:text-primary transition-colors hover-lift"><i
+                                class="fab fa-instagram"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-primary transition-colors hover-lift"><i
+                                class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-primary transition-colors hover-lift"><i
+                                class="fab fa-pinterest-p"></i></a>
                     </div>
                 </div>
 
                 <!-- Column 2: Explore -->
-                <div class="flex flex-col h-full">
-                    <h4 class="font-bold uppercase tracking-widest mb-8 text-sm">Explore</h4>
+                <div class="flex flex-col">
+                    <h4 class="font-bold uppercase tracking-widest mb-4 text-sm">Explore</h4>
                     <ul class="space-y-4 text-gray-400 text-sm">
                         <li><a href="shop.html">Our Collection</a></li>
                         <li><a href="subscription.html">Cheese Club</a></li>
@@ -239,8 +284,8 @@
                 </div>
 
                 <!-- Column 3: Support -->
-                <div class="flex flex-col h-full">
-                    <h4 class="font-bold uppercase tracking-widest mb-8 text-sm">Support</h4>
+                <div class="flex flex-col">
+                    <h4 class="font-bold uppercase tracking-widest mb-4 text-sm">Support</h4>
                     <ul class="space-y-4 text-gray-400 text-sm">
                         <li><a href="contact.html">Contact Us</a></li>
                         <li><a href="contact.html#faq">FAQ</a></li>
@@ -250,12 +295,12 @@
                 </div>
 
                 <!-- Column 4: Visit Us -->
-                <div class="flex flex-col h-full">
-                    <h4 class="font-bold uppercase tracking-widest mb-8 text-sm">Visit Us</h4>
+                <div class="flex flex-col">
+                    <h4 class="font-bold uppercase tracking-widest mb-4 text-sm">Visit Us</h4>
                     <div class="space-y-4 text-gray-400 text-sm">
                         <p class="italic leading-relaxed">The Tasting Lab,<br>42 Artisanal Way, Gourmet Hills</p>
                     </div>
-                    <div class="mt-auto pt-4 space-y-2 text-sm">
+                    <div class="pt-4 space-y-2 text-sm">
                         <p class="text-primary font-bold">hello@Fromage.com</p>
                         <p class="text-gray-500 font-bold">+1 (555) 789 1234</p>
                     </div>
@@ -273,17 +318,5 @@
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="js/script.js"></script>
 </body>
+
 </html>
-
-
-
-
-
-
-
-
-
-
-
-
-

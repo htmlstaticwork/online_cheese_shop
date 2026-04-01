@@ -32,14 +32,14 @@
     <link rel="icon" type="image/png" href="img/logo_primary.svg">
     <link rel="stylesheet" href="css/style.css">
 </head>
-<body class="transition-colors duration-300 min-h-screen flex items-center justify-center bg-darkBg relative overflow-hidden">
+<body class="transition-colors duration-300 min-h-screen bg-lightBg dark:bg-darkBg text-current relative overflow-x-hidden py-10 flex items-start md:items-center justify-center">
 
     <!-- Decorative Elements -->
     <div class="absolute top-[-10%] right-[-5%] w-[40%] h-[40%] bg-primary/10 blur-[120px] rounded-full"></div>
     <div class="absolute bottom-[-10%] left-[-5%] w-[35%] h-[35%] bg-primary/5 blur-[100px] rounded-full"></div>
 
     <main class="w-full max-w-xl mx-auto px-6 py-8 relative z-10" data-aos="fade-up">
-        <div class="glass rounded-[40px] p-8 md:p-12 shadow-2xl border border-white/5">
+        <div class="bg-white dark:bg-white/5 rounded-[40px] p-8 md:p-12 shadow-2xl border border-black/5 dark:border-white/5">
             <!-- Brand Section -->
             <div class="text-center mb-6">
                 <a href="index.html" class="flex items-center justify-center group mb-6">
@@ -52,30 +52,38 @@
 
             <!-- Signup Form -->
             <form class="space-y-6">
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                    <div>
-                        <label class="block text-xs uppercase tracking-widest font-bold text-gray-400 mb-2 ml-4">First Name</label>
-                        <input type="text" required class="w-full bg-white/5 border border-white/10 rounded-full px-6 py-4 outline-none focus:border-primary transition-colors hover:bg-white/10" placeholder="Jean">
-                    </div>
-                    <div>
-                        <label class="block text-xs uppercase tracking-widest font-bold text-gray-400 mb-2 ml-4">Last Name</label>
-                        <input type="text" required class="w-full bg-white/5 border border-white/10 rounded-full px-6 py-4 outline-none focus:border-primary transition-colors hover:bg-white/10" placeholder="Dupont">
-                    </div>
+                <div>
+                    <label class="block text-xs uppercase tracking-widest font-bold text-gray-400 mb-2 ml-4">First Name</label>
+                    <input type="text" required class="w-full bg-black/5 dark:bg-white/5 border border-black/10 dark:border-white/10 rounded-full px-6 py-4 outline-none focus:border-primary transition-colors hover:bg-black/10 dark:hover:bg-white/10" placeholder="Jean">
+                </div>
+
+                <div>
+                    <label class="block text-xs uppercase tracking-widest font-bold text-gray-400 mb-2 ml-4">Last Name</label>
+                    <input type="text" required class="w-full bg-black/5 dark:bg-white/5 border border-black/10 dark:border-white/10 rounded-full px-6 py-4 outline-none focus:border-primary transition-colors hover:bg-black/10 dark:hover:bg-white/10" placeholder="Dupont">
                 </div>
 
                 <div>
                     <label class="block text-xs uppercase tracking-widest font-bold text-gray-400 mb-2 ml-4">Email Address</label>
-                    <input type="email" required class="w-full bg-white/5 border border-white/10 rounded-full px-6 py-4 outline-none focus:border-primary transition-colors hover:bg-white/10" placeholder="jean@fromage.com">
+                    <input type="email" required class="w-full bg-black/5 dark:bg-white/5 border border-black/10 dark:border-white/10 rounded-full px-6 py-4 outline-none focus:border-primary transition-colors hover:bg-black/10 dark:hover:bg-white/10" placeholder="jean@fromage.com">
                 </div>
 
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                    <div>
-                        <label class="block text-xs uppercase tracking-widest font-bold text-gray-400 mb-2 ml-4">Password</label>
-                        <input type="password" required class="w-full bg-white/5 border border-white/10 rounded-full px-6 py-4 outline-none focus:border-primary transition-colors hover:bg-white/10" placeholder="••••••••">
+                <div class="relative">
+                    <label class="block text-xs uppercase tracking-widest font-bold text-gray-400 mb-2 ml-4">Password</label>
+                    <div class="relative">
+                        <input type="password" id="signup-password" required class="w-full bg-black/5 dark:bg-white/5 border border-black/10 dark:border-white/10 rounded-full px-6 py-4 outline-none focus:border-primary transition-colors hover:bg-black/10 dark:hover:bg-white/10 pr-12" placeholder="••••••••">
+                        <button type="button" class="password-toggle absolute right-4 top-1/2 -translate-y-1/2 text-gray-500 hover:text-primary transition-colors" data-target="signup-password">
+                            <i class="fas fa-eye"></i>
+                        </button>
                     </div>
-                    <div>
-                        <label class="block text-xs uppercase tracking-widest font-bold text-gray-400 mb-2 ml-4">Confirm</label>
-                        <input type="password" required class="w-full bg-white/5 border border-white/10 rounded-full px-6 py-4 outline-none focus:border-primary transition-colors hover:bg-white/10" placeholder="••••••••">
+                </div>
+
+                <div class="relative">
+                    <label class="block text-xs uppercase tracking-widest font-bold text-gray-400 mb-2 ml-4">Confirm Password</label>
+                    <div class="relative">
+                        <input type="password" id="signup-confirm" required class="w-full bg-black/5 dark:bg-white/5 border border-black/10 dark:border-white/10 rounded-full px-6 py-4 outline-none focus:border-primary transition-colors hover:bg-black/10 dark:hover:bg-white/10 pr-12" placeholder="••••••••">
+                        <button type="button" class="password-toggle absolute right-4 top-1/2 -translate-y-1/2 text-gray-500 hover:text-primary transition-colors" data-target="signup-confirm">
+                            <i class="fas fa-eye"></i>
+                        </button>
                     </div>
                 </div>
 
@@ -95,14 +103,15 @@
                     <div class="flex-grow border-t border-white/10"></div>
                 </div>
 
-                <div class="grid grid-cols-2 gap-4">
-                    <button class="flex items-center justify-center space-x-3 bg-white/5 border border-white/10 hover:bg-white/10 py-4 rounded-full transition-all group">
-                        <i class="fab fa-google text-lg group-hover:text-primary transition-colors"></i>
-                        <span class="text-xs font-bold uppercase tracking-widest">Google</span>
+                <div class="flex justify-center space-x-4">
+                    <button class="w-12 h-12 rounded-full bg-white/5 border border-white/10 flex items-center justify-center hover:bg-primary/20 hover:border-primary/50 transition-all group">
+                        <i class="fab fa-google text-lg group-hover:text-primary"></i>
                     </button>
-                    <button class="flex items-center justify-center space-x-3 bg-white/5 border border-white/10 hover:bg-white/10 py-4 rounded-full transition-all group">
-                        <i class="fab fa-apple text-lg group-hover:text-primary transition-colors"></i>
-                        <span class="text-xs font-bold uppercase tracking-widest">Apple</span>
+                    <button class="w-12 h-12 rounded-full bg-white/5 border border-white/10 flex items-center justify-center hover:bg-primary/20 hover:border-primary/50 transition-all group">
+                        <i class="fab fa-apple text-lg group-hover:text-primary"></i>
+                    </button>
+                    <button class="w-12 h-12 rounded-full bg-white/5 border border-white/10 flex items-center justify-center hover:bg-primary/20 hover:border-primary/50 transition-all group">
+                        <i class="fab fa-facebook-f text-lg group-hover:text-primary"></i>
                     </button>
                 </div>
             </div>
@@ -113,10 +122,7 @@
             </div>
         </div>
 
-        <!-- Back to Home -->
-        <a href="index.html" class="flex items-center justify-center mt-10 text-gray-500 hover:text-primary transition-colors text-xs font-bold uppercase tracking-widest">
-            <i class="fas fa-arrow-left mr-2"></i> Return to Fromage Home
-        </a>
+
     </main>
 
     <!-- Scripts -->
@@ -125,6 +131,25 @@
         AOS.init({
             duration: 1000,
             once: true
+        });
+
+        // Password Toggle Logic
+        document.querySelectorAll('.password-toggle').forEach(button => {
+            button.addEventListener('click', () => {
+                const targetId = button.getAttribute('data-target');
+                const passwordInput = document.getElementById(targetId);
+                const icon = button.querySelector('i');
+
+                if (passwordInput.type === 'password') {
+                    passwordInput.type = 'text';
+                    icon.classList.remove('fa-eye');
+                    icon.classList.add('fa-eye-slash');
+                } else {
+                    passwordInput.type = 'password';
+                    icon.classList.remove('fa-eye-slash');
+                    icon.classList.add('fa-eye');
+                }
+            });
         });
     </script>
 </body>

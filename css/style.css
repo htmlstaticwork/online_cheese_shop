@@ -186,6 +186,16 @@ h1, h2, h3, h4, .font-serif {
     }
 }
 
+@media (max-width: 400px) {
+    .navbar-logo {
+        height: 32px;
+    }
+    .navbar-brand-name {
+        font-size: 1.1rem;
+        margin-left: 0.3rem;
+    }
+}
+
 .footer-logo {
     height: 80px;
 }

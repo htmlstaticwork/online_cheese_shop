@@ -39,7 +39,7 @@
 
     <!-- Header Section -->
     <header class="fixed w-full z-50 glass transition-all duration-300">
-        <nav class="container mx-auto px-6 py-3 flex justify-between items-center">
+        <nav class="container mx-auto px-2 md:px-6 py-3 flex justify-between items-center">
             <!-- Logo -->
             <a href="index.html" class="flex items-center group">
                                 <img src="img/logo_primary.svg" alt="Fromage Logo" class="navbar-logo">
@@ -61,7 +61,7 @@
             </ul>
 
             <!-- Icons/Toggles -->
-            <div class="flex items-center space-x-6">
+            <div class="flex items-center space-x-3 md:space-x-6">
                 <!-- RTL Toggle -->
                 <button id="rtl-toggle" class="rtl-switch" title="Toggle RTL"><i class="fas fa-right-left"></i></button>
 
@@ -89,22 +89,22 @@
 
         <!-- Mobile Menu (Drawer) -->
         <div id="mobile-menu"
-            class="hidden lg:hidden fixed inset-y-0 right-0 w-64 glass z-50 p-10 flex flex-col space-y-6">
-            <a href="index.html" class="text-lg font-medium hover:text-primary border-b border-white/10 pb-2">Home 1</a>
-            <a href="home2.html" class="text-lg font-medium hover:text-primary border-b border-white/10 pb-2">Home 2</a>
-            <a href="about.html" class="text-lg font-medium hover:text-primary border-b border-white/10 pb-2">About</a>
-            <a href="shop.html" class="text-lg font-medium hover:text-primary border-b border-white/10 pb-2">Shop</a>
+            class="hidden lg:hidden fixed inset-y-0 right-0 w-64 bg-lightBg dark:bg-darkBg z-50 p-10 flex flex-col space-y-6 shadow-2xl transition-colors duration-300">
+            <a href="index.html" class="text-lg font-medium hover:text-primary border-b border-black/10 dark:border-white/10 pb-2">Home 1</a>
+            <a href="home2.html" class="text-lg font-medium hover:text-primary border-b border-black/10 dark:border-white/10 pb-2">Home 2</a>
+            <a href="about.html" class="text-lg font-medium hover:text-primary border-b border-black/10 dark:border-white/10 pb-2">About</a>
+            <a href="shop.html" class="text-lg font-medium hover:text-primary border-b border-black/10 dark:border-white/10 pb-2">Shop</a>
             <a href="subscription.html"
-                class="text-lg font-medium hover:text-primary border-b border-white/10 pb-2">Subscription</a>
+                class="text-lg font-medium hover:text-primary border-b border-black/10 dark:border-white/10 pb-2">Subscription</a>
             <a href="dashboard.html"
-                class="text-lg font-medium hover:text-primary border-b border-white/10 pb-2">Dashboard</a>
+                class="text-lg font-medium hover:text-primary border-b border-black/10 dark:border-white/10 pb-2">Dashboard</a>
             <a href="contact.html"
-                class="text-lg font-medium hover:text-primary border-b border-white/10 pb-2">Contact</a>
+                class="text-lg font-medium hover:text-primary border-b border-black/10 dark:border-white/10 pb-2">Contact</a>
         </div>
     </header>
 
     <!-- Hero Section -->
-    <section class="relative h-[100vh] flex items-center justify-center overflow-hidden">
+    <section class="relative min-h-screen flex items-center justify-center overflow-hidden pt-32 md:pt-0">
         <!-- Background Image with Overlay -->
         <div class="absolute inset-0 z-0">
             <img src="https://images.unsplash.com/photo-1552767059-ce182ead6c1b?q=80&w=2070" alt="Limestone Cellars"
@@ -154,7 +154,7 @@
     </section>
 
     <!-- Mission & Vision -->
-    <section class="py-10 bg-white/5 border-y border-white/5">
+    <section class="py-10 bg-black/5 dark:bg-white/5 border-y border-white/5">
         <div class="container mx-auto px-6">
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12 text-center">
                 <div data-aos="fade-up" data-aos-delay="100">
@@ -180,7 +180,7 @@
     </section>
 
     <!-- The Tasting Lab Section -->
-    <section class="py-10 overflow-hidden bg-darkBg">
+    <section class="py-10 overflow-hidden bg-lightBg dark:bg-darkBg">
         <div class="container mx-auto px-6">
             <div class="flex flex-col lg:flex-row items-center gap-10">
                 <div class="w-full lg:w-1/2 order-2 lg:order-1" data-aos="fade-right">
@@ -231,31 +231,31 @@
     </section>
 
     <!-- Legendary Perspectives (Quotes) -->
-    <section class="py-10 bg-darkBg overflow-hidden border-t border-white/5">
+    <section class="py-10 bg-lightBg dark:bg-darkBg overflow-hidden border-t border-black/5 dark:border-white/5">
         <div class="container mx-auto px-6">
             <div class="text-center mb-12" data-aos="fade-up">
-                <span class="text-primary uppercase tracking-[0.4em] font-bold mb-4 block underline-offset-8">Legendary
-                    Perspectives</span>
-                <h2 class="text-4xl md:text-5xl font-serif font-bold">The Wisdom of the Wheel</h2>
+                <span class="text-primary uppercase tracking-[0.4em] font-bold mb-4 block underline-offset-8">Legendary Perspectives</span>
+                <h2 class="text-4xl md:text-5xl font-serif font-bold text-current">The Wisdom of the Wheel</h2>
             </div>
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
-                <div class="relative p-8 glass rounded-[40px] border-white/5" data-aos="fade-right">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-10 items-stretch">
+                <!-- Quote 1 -->
+                <div class="relative p-8 glass rounded-[40px] border-white/5 flex flex-col h-full" data-aos="fade-right">
                     <i class="fas fa-quote-left text-primary/20 text-8xl absolute -top-10 -left-6"></i>
-                    <p class="text-2xl md:text-3xl font-serif italic mb-8 relative z-10 leading-relaxed text-white/90">
+                    <p class="text-2xl md:text-3xl font-serif italic mb-8 relative z-10 leading-relaxed text-current/90 flex-grow">
                         "A meal without cheese is like a beautiful woman with only one eye."</p>
-                    <div class="flex items-center space-x-4 border-t border-white/10 pt-6">
+                    <div class="flex items-center space-x-4 border-t border-black/10 dark:border-white/10 pt-6 mt-auto">
                         <div>
-                            <p class="text-primary font-bold uppercase tracking-widest text-sm">Jean Anthelme
-                                Brillat-Savarin</p>
+                            <p class="text-primary font-bold uppercase tracking-widest text-sm">Jean Anthelme Brillat-Savarin</p>
                             <p class="text-gray-500 text-xs italic">The Physiology of Taste, 1825</p>
                         </div>
                     </div>
                 </div>
-                <div class="relative p-8 glass rounded-[40px] border-white/5 md:mt-24" data-aos="fade-left">
+                <!-- Quote 2 -->
+                <div class="relative p-8 glass rounded-[40px] border-white/5 flex flex-col h-full" data-aos="fade-left">
                     <i class="fas fa-quote-left text-primary/20 text-8xl absolute -top-10 -left-6"></i>
-                    <p class="text-2xl md:text-3xl font-serif italic mb-8 relative z-10 leading-relaxed text-white/90">
+                    <p class="text-2xl md:text-3xl font-serif italic mb-8 relative z-10 leading-relaxed text-current/90 flex-grow">
                         "How can you govern a country which has two hundred and forty-six varieties of cheese?"</p>
-                    <div class="flex items-center space-x-4 border-t border-white/10 pt-6">
+                    <div class="flex items-center space-x-4 border-t border-black/10 dark:border-white/10 pt-6 mt-auto">
                         <div>
                             <p class="text-primary font-bold uppercase tracking-widest text-sm">Charles de Gaulle</p>
                             <p class="text-gray-500 text-xs italic">Former President of France</p>
@@ -264,30 +264,28 @@
                 </div>
             </div>
             <div class="max-w-4xl mx-auto mt-20 text-center" data-aos="zoom-in">
-                <p class="text-gray-500 text-lg italic italic leading-relaxed">"At Fromage, we don't just agree with
-                    these legends—we live by their standards every day. Every wheel we source is a tribute to this rich,
-                    complex history."</p>
+                <p class="text-current/60 text-lg italic leading-relaxed">"At Fromage, we don't just agree with these legends—we live by their standards every day. Every wheel we source is a tribute to this rich, complex history."</p>
                 <div class="w-24 h-1 bg-primary mx-auto mt-10 rounded-full"></div>
             </div>
         </div>
     </section>
 
-                        <!-- Footer -->
+    <!-- Footer -->
     <footer class="py-10 border-t border-white/5">
         <div class="container mx-auto px-6">
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 lg:gap-16 mb-8 text-center lg:text-left items-stretch">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 lg:gap-16 mb-8 text-center lg:text-left items-start">
                 <!-- Column 1: Brand & Desc -->
                 <div class="flex flex-col h-full">
-                    <div class="mb-8">
+                    <div class="mb-4">
                         <a href="index.html" class="flex items-center group justify-center lg:justify-start">
                             <img src="img/logo_primary.svg" alt="Fromage Logo" class="navbar-logo">
                             <span class="navbar-brand-name">Fromage</span>
                         </a>
                     </div>
-                    <p class="text-gray-400 text-sm leading-relaxed max-w-xs mx-auto lg:mx-0 mb-8">
+                    <p class="text-gray-400 text-sm leading-relaxed max-w-xs mx-auto lg:mx-0 mb-4">
                         From the heart of the countryside to your doorstep. We deliver the finest artisanal cheeses from across the globe.
                     </p>
-                    <div class="flex space-x-6 text-xl justify-center lg:justify-start mt-auto pt-4">
+                    <div class="flex space-x-6 text-xl justify-center lg:justify-start pt-4">
                         <a href="#" class="text-gray-400 hover:text-primary transition-colors hover-lift"><i class="fab fa-instagram"></i></a>
                         <a href="#" class="text-gray-400 hover:text-primary transition-colors hover-lift"><i class="fab fa-facebook-f"></i></a>
                         <a href="#" class="text-gray-400 hover:text-primary transition-colors hover-lift"><i class="fab fa-pinterest-p"></i></a>
@@ -295,8 +293,8 @@
                 </div>
 
                 <!-- Column 2: Explore -->
-                <div class="flex flex-col h-full">
-                    <h4 class="font-bold uppercase tracking-widest mb-8 text-sm">Explore</h4>
+                <div class="flex flex-col">
+                    <h4 class="font-bold uppercase tracking-widest mb-4 text-sm">Explore</h4>
                     <ul class="space-y-4 text-gray-400 text-sm">
                         <li><a href="shop.html">Our Collection</a></li>
                         <li><a href="subscription.html">Cheese Club</a></li>
@@ -338,18 +336,12 @@
     <!-- Scripts -->
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="js/script.js"></script>
+    <script>
+        AOS.init({
+            duration: 1000,
+            once: true
+        });
+    </script>
 </body>
 
 </html>
-
-
-
-
-
-
-
-
-
-
-
-
