@@ -54,32 +54,31 @@
         <aside
             class="sidebar fixed inset-y-0 left-0 w-64 bg-lightBg dark:bg-darkBg shadow-2xl z-50 transform -translate-x-full lg:translate-x-0 transition-transform duration-300 p-6 flex flex-col">
             <div class="mb-10 pt-4">
+                <a href="index.html" class="flex items-center mb-6 group">
+                    <img src="img/logo_primary.svg" alt="Fromage Logo" class="h-10 w-auto mr-3">
+                    <span class="navbar-brand-name text-2xl">Fromage</span>
+                </a>
                 <h2 class="uppercase tracking-[0.3em] text-[10px] font-bold text-primary opacity-80">Member Dashboard</h2>
             </div>
 
             <nav class="flex-grow space-y-4">
-                <a href="index.html"
-                    class="flex items-center space-x-4 p-4 rounded-xl hover:bg-primary/10 transition-colors">
-                    <i class="fas fa-home opacity-50"></i><span>Back to Site</span>
-                </a>
-                <a href="dashboard.html"
-                    class="flex items-center space-x-4 p-4 rounded-xl bg-primary text-white font-bold shadow-lg">
+                <a href="#overview"
+                    class="flex items-center space-x-4 p-4 rounded-xl bg-primary text-white font-bold shadow-lg transition-all">
                     <i class="fas fa-chart-line"></i><span>Dashboard</span>
                 </a>
-                <a href="#" class="flex items-center space-x-4 p-4 rounded-xl hover:bg-primary/10 transition-colors">
-                    <i class="fas fa-history opacity-50"></i><span>Order History</span>
+                <a href="#order-history" class="flex items-center space-x-4 p-4 rounded-xl hover:bg-primary/10 transition-colors">
+                    <i class="fas fa-history"></i><span>Order History</span>
                 </a>
-                <a href="subscription.html"
-                    class="flex items-center space-x-4 p-4 rounded-xl hover:bg-primary/10 transition-colors">
-                    <i class="fas fa-box-open opacity-50"></i><span>Club Membership</span>
+                <a href="#club-membership" class="flex items-center space-x-4 p-4 rounded-xl hover:bg-primary/10 transition-colors">
+                    <i class="fas fa-box-open"></i><span>Club Membership</span>
                 </a>
-                <a href="#" class="flex items-center space-x-4 p-4 rounded-xl hover:bg-primary/10 transition-colors">
-                    <i class="fas fa-user-gear opacity-50"></i><span>Profile Settings</span>
+                <a href="#profile" class="flex items-center space-x-4 p-4 rounded-xl hover:bg-primary/10 transition-colors">
+                    <i class="fas fa-user-gear"></i><span>Profile Settings</span>
                 </a>
             </nav>
 
             <div class="mt-auto border-t border-primary/10 pt-8 space-y-6">
-                <a href="login.html"
+                <a href="index.html"
                     class="flex items-center space-x-4 p-4 rounded-xl hover:bg-red-500/10 text-red-500 transition-colors">
                     <i class="fas fa-sign-out-alt"></i><span>Logout</span>
                 </a>
@@ -91,13 +90,8 @@
             <div class="max-w-full overflow-x-hidden">
             <!-- Header -->
             <header class="flex justify-between items-center p-2 mb-4" data-aos="fade-down">
-                <!-- Mobile Logo/Brand (Hidden on Desktop) -->
-                <div class="lg:hidden flex items-center">
-                    <a href="index.html" class="flex items-center">
-                        <img src="img/logo_primary.svg" alt="Fromage Logo" class="h-8 w-auto mr-2">
-                        <span class="text-xl font-serif font-bold text-primary">Fromage</span>
-                    </a>
-                </div>
+                <!-- Mobile Logo/Brand (Hidden) -->
+                <div class="lg:hidden"></div>
                 <!-- Controls (Always right-aligned on mobile, full width on desktop) -->
                 <div class="flex items-center space-x-3 md:space-x-4 ml-auto">
                     <!-- RTL Toggle -->
@@ -116,7 +110,7 @@
             </header>
 
             <!-- Stats Overview -->
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-8" data-aos="fade-up">
+            <div id="overview" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-8" data-aos="fade-up">
                 <div class="glass p-6 md:p-8 rounded-3xl bg-primary/5">
                     <p class="text-[10px] md:text-xs uppercase tracking-widest text-primary font-bold mb-2">Club Status</p>
                     <h4 class="text-xl md:text-2xl font-bold">Active VIP</h4>
@@ -208,7 +202,7 @@
             </div>
 
             <!-- Order history -->
-            <div class="glass p-10 rounded-[40px] bg-primary/5" data-aos="fade-up">
+            <div id="order-history" class="glass p-10 rounded-[40px] bg-primary/5 scroll-mt-24" data-aos="fade-up">
                 <div class="flex justify-between items-center mb-10">
                     <h3 class="text-2xl font-serif font-bold">Past Deliveries</h3>
                     <a href="#" class="text-xs font-bold uppercase tracking-widest text-primary hover:underline">View
@@ -251,6 +245,56 @@
                             </tr>
                         </tbody>
                     </table>
+                </div>
+            </div>
+
+            <!-- Club Membership Details Section -->
+            <div id="club-membership" class="glass p-10 rounded-[40px] bg-primary/5 mt-8 scroll-mt-24" data-aos="fade-up">
+                <div class="flex justify-between items-center mb-10 text-current">
+                    <h3 class="text-3xl font-serif font-bold text-black dark:text-white">Your Membership</h3>
+                    <span class="bg-primary px-4 py-1 rounded-full text-white text-[10px] uppercase tracking-widest font-bold">Connoisseur Tier</span>
+                </div>
+                
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8 text-current">
+                    <!-- Current Plan -->
+                    <div class="bg-black/5 dark:bg-white/5 p-8 rounded-3xl border border-black/10 dark:border-white/10">
+                        <h4 class="text-primary uppercase tracking-widest text-xs font-bold mb-4">Current Subscription</h4>
+                        <div class="flex justify-between items-end mb-6">
+                            <div>
+                                <p class="text-2xl font-serif font-bold text-black dark:text-white">$75.00 <span class="text-xs font-normal opacity-60">/ month</span></p>
+                                <p class="text-sm text-black/40 dark:text-gray-400 italic">Billed monthly since Feb 2024</p>
+                            </div>
+                            <button class="text-primary hover:underline text-xs font-bold uppercase tracking-widest">Manage Billing</button>
+                        </div>
+                        <div class="space-y-3">
+                            <p class="text-xs flex items-center gap-2 text-black/60 dark:text-gray-300"><i class="fas fa-check text-primary"></i> 5 Premium Rare Cheeses Monthly</p>
+                            <p class="text-xs flex items-center gap-2 text-black/60 dark:text-gray-300"><i class="fas fa-check text-primary"></i> Exclusive Wine Pairings</p>
+                            <p class="text-xs flex items-center gap-2 text-black/60 dark:text-gray-300"><i class="fas fa-check text-primary"></i> Priority Shipping Included</p>
+                        </div>
+                    </div>
+
+                    <!-- Upgrade / Rewards -->
+                    <div class="bg-primary/10 p-8 rounded-3xl border border-primary/20 flex flex-col justify-between">
+                        <div>
+                            <h4 class="text-primary uppercase tracking-widest text-xs font-bold mb-2">Member Rewards</h4>
+                            <p class="text-sm text-black/40 dark:text-gray-500 mb-6 italic">You have earned 2,450 points this year.</p>
+                            <div class="flex items-center gap-2 mb-8">
+                                <div class="h-2 flex-grow bg-primary/20 rounded-full overflow-hidden">
+                                    <div class="h-full bg-primary" style="width: 75%;"></div>
+                                </div>
+                                <span class="text-[10px] font-bold text-primary">75% to next reward</span>
+                            </div>
+                        </div>
+                        <a href="subscription.html" class="bg-primary text-white text-center py-4 rounded-full font-bold hover:bg-primary-hover transition-all text-sm shadow-xl">Upgrade Your Tier</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Profile Settings -->
+            <div id="profile" class="glass p-10 rounded-[40px] bg-primary/5 mt-8 scroll-mt-24" data-aos="fade-up">
+                <h3 class="text-2xl font-serif font-bold mb-6">Profile Settings</h3>
+                <div class="bg-primary/5 p-6 rounded-3xl border border-primary/10 text-center">
+                    <p class="text-gray-400 italic">Settings management interface is currently in maintenance. Please check back soon.</p>
                 </div>
             </div>
             </div>

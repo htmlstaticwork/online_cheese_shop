@@ -32,6 +32,15 @@
     <!-- Favicon -->
     <link rel="icon" type="image/png" href="img/logo_primary.svg">
     <link rel="stylesheet" href="css/style.css">
+    <style>
+        html, body {
+            overflow-x: hidden;
+            width: 100%;
+        }
+        main {
+            overflow-x: hidden;
+        }
+    </style>
 </head>
 
 <body class="transition-colors duration-300">
@@ -46,7 +55,7 @@
             <!-- Logo -->
             <a href="index.html" class="flex items-center group">
                 <img src="img/logo_primary.svg" alt="Fromage Logo" class="navbar-logo">
-                <span class="navbar-brand-name hidden sm:block">Fromage</span>
+                <span class="navbar-brand-name">Fromage</span>
             </a>
 
             <!-- Desktop Navigation -->
@@ -118,13 +127,13 @@
         </div>
     </header>
 
-    <main class="pt-32 pb-12 min-h-screen bg-black/5 dark:bg-white/5">
-        <div class="container mx-auto px-6">
-            <h1 class="text-5xl font-serif font-bold mb-8" data-aos="fade-down">Your Selection</h1>
+    <main class="pt-32 pb-12 min-h-screen bg-black/5 dark:bg-white/5 overflow-x-hidden">
+        <div class="container mx-auto px-4 md:px-6">
+            <h1 class="text-3xl sm:text-4xl md:text-5xl font-serif font-bold mb-8 text-center lg:text-left" data-aos="fade-up">Your Selection</h1>
 
             <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
                 <!-- Cart Content -->
-                <div class="lg:col-span-2 space-y-4" data-aos="fade-right">
+                <div class="lg:col-span-2 space-y-4" data-aos="fade-up">
                     <!-- Item 1 -->
                     <div
                         class="flex flex-col md:flex-row md:items-center justify-between p-6 md:p-8 glass rounded-3xl group border-white/5 hover:border-primary/20 transition-all gap-6">
@@ -192,8 +201,8 @@
                     </div>
 
                     <!-- Upsell Section -->
-                    <div class="mt-8 p-10 bg-primary/5 rounded-[40px] border border-primary/20">
-                        <h4 class="text-sm uppercase tracking-widest font-bold text-primary mb-6">Complete the
+                    <div class="mt-8 p-6 md:p-10 bg-primary/5 rounded-[40px] border border-primary/20">
+                        <h4 class="text-sm uppercase tracking-widest font-bold text-primary mb-6 text-center md:text-left">Complete the
                             Experience
                         </h4>
                         <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
@@ -220,9 +229,9 @@
                 </div>
 
                 <!-- Order Summary -->
-                <div class="lg:col-span-1" data-aos="fade-left">
+                <div class="lg:col-span-1" data-aos="fade-up">
                     <div class="p-6 md:p-10 glass rounded-[40px] sticky top-32 border-white/5 shadow-2xl">
-                        <h2 class="text-2xl font-serif font-bold mb-8">Summary</h2>
+                        <h2 class="text-2xl font-serif font-bold mb-8 text-center lg:text-left">Summary</h2>
 
                         <div class="space-y-4 mb-8">
                             <div class="flex justify-between text-black/60 dark:text-gray-400">

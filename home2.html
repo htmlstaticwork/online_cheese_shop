@@ -44,7 +44,7 @@
         <nav class="container mx-auto px-2 md:px-6 py-3 flex justify-between items-center text-current">
             <a href="index.html" class="flex items-center group">
                 <img src="img/logo_primary.svg" alt="Fromage Logo" class="navbar-logo">
-                <span class="navbar-brand-name hidden sm:block">Fromage</span>
+                <span class="navbar-brand-name">Fromage</span>
             </a>
             <ul id="desktop-nav"
                 class="hidden xl:flex items-center space-x-8 text-sm font-medium uppercase tracking-widest">
@@ -231,6 +231,137 @@
                 </div>
             </div>
         </div>
+    </section>
+
+    <!-- Cheese Experience Journey Section -->
+    <section class="experience-journey py-24 relative overflow-hidden bg-[#111111] text-white">
+        <!-- Background Gradient Tones -->
+        <div class="absolute top-0 left-0 w-full h-full opacity-50 pointer-events-none">
+            <div class="absolute top-[-20%] left-[-10%] w-[600px] h-[600px] bg-primary/20 rounded-full blur-[150px]"></div>
+            <div class="absolute bottom-[-20%] right-[-10%] w-[600px] h-[600px] bg-secondary/10 rounded-full blur-[150px]"></div>
+        </div>
+
+        <div class="container mx-auto px-6 relative z-10">
+            <!-- Header -->
+            <div class="text-center mb-20" data-aos="fade-up">
+                <span class="text-accent uppercase tracking-[0.4em] font-bold mb-4 block text-sm">Our Process</span>
+                <h2 class="text-5xl md:text-7xl font-serif font-bold mb-6">From Farm to Flavor</h2>
+                <p class="text-gray-400 text-lg max-w-2xl mx-auto italic leading-relaxed">
+                    A story of heritage, patience, and the pursuit of the perfect bite. Follow the path of our artisanal creations from source to cellar.
+                </p>
+            </div>
+
+            <!-- Timeline Structure -->
+            <div class="relative">
+                <!-- Connecting Line (Desktop) -->
+                <div class="hidden lg:block absolute top-[110px] left-[10%] right-[10%] h-[2px] bg-gradient-to-r from-transparent via-primary/40 to-transparent transition-all duration-1000" data-aos="draw-line"></div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 lg:gap-8">
+                    <!-- Step 1 -->
+                    <div class="journey-step-card group relative" data-aos="fade-up" data-aos-delay="100">
+                        <div class="relative z-10 glass-card p-4 rounded-[2rem] border border-white/5 bg-white/5 backdrop-blur-xl shadow-2xl transition-all duration-500 group-hover:-translate-y-4 group-hover:shadow-primary/20">
+                            <div class="overflow-hidden rounded-2xl aspect-square mb-8">
+                                <img src="img/milk_collection.png" alt="Fresh Milk Collection" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+                            </div>
+                            <div class="text-center px-4 pb-4">
+                                <div class="w-12 h-12 bg-primary rounded-full flex items-center justify-center mx-auto mt-2 mb-6 border-4 border-[#111111] shadow-xl">
+                                    <span class="text-xl font-bold">1</span>
+                                </div>
+                                <h3 class="text-2xl font-bold mb-3">Fresh Milk Collection</h3>
+                                <p class="text-gray-400 text-sm italic leading-relaxed">Ethically sourced fresh milk from local emerald pastures.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Step 2 -->
+                    <div class="journey-step-card group relative" data-aos="fade-up" data-aos-delay="300">
+                        <div class="relative z-10 glass-card p-4 rounded-[2rem] border border-white/5 bg-white/5 backdrop-blur-xl shadow-2xl transition-all duration-500 group-hover:-translate-y-4 group-hover:shadow-primary/20">
+                            <div class="overflow-hidden rounded-2xl aspect-square mb-8">
+                                <img src="img/artisan_crafting.png" alt="Artisan Crafting" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+                            </div>
+                            <div class="text-center px-4 pb-4">
+                                <div class="w-12 h-12 bg-primary rounded-full flex items-center justify-center mx-auto mt-2 mb-6 border-4 border-[#111111] shadow-xl">
+                                    <span class="text-xl font-bold">2</span>
+                                </div>
+                                <h3 class="text-2xl font-bold mb-3">Artisan Crafting</h3>
+                                <p class="text-gray-400 text-sm italic leading-relaxed">Handcrafted by expert cheesemakers using centuries-old methods.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Step 3 -->
+                    <div class="journey-step-card group relative" data-aos="fade-up" data-aos-delay="500">
+                        <div class="relative z-10 glass-card p-4 rounded-[2rem] border border-white/5 bg-white/5 backdrop-blur-xl shadow-2xl transition-all duration-500 group-hover:-translate-y-4 group-hover:shadow-primary/20">
+                            <div class="overflow-hidden rounded-2xl aspect-square mb-8">
+                                <img src="img/aging_maturing.png" alt="Aging & Maturing" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+                            </div>
+                            <div class="text-center px-4 pb-4">
+                                <div class="w-12 h-12 bg-primary rounded-full flex items-center justify-center mx-auto mt-2 mb-6 border-4 border-[#111111] shadow-xl">
+                                    <span class="text-xl font-bold">3</span>
+                                </div>
+                                <h3 class="text-2xl font-bold mb-3">Aging & Maturing</h3>
+                                <p class="text-gray-400 text-sm italic leading-relaxed">Aged to perfection in stone cellars for deep, complex flavor profiles.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Step 4 -->
+                    <div class="journey-step-card group relative" data-aos="fade-up" data-aos-delay="700">
+                        <div class="relative z-10 glass-card p-4 rounded-[2rem] border border-white/5 bg-white/5 backdrop-blur-xl shadow-2xl transition-all duration-500 group-hover:-translate-y-4 group-hover:shadow-primary/20">
+                            <div class="overflow-hidden rounded-2xl aspect-square mb-8">
+                                <img src="img/delivered_to_you.png" alt="Delivered to You" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+                            </div>
+                            <div class="text-center px-4 pb-4">
+                                <div class="w-12 h-12 bg-primary rounded-full flex items-center justify-center mx-auto mt-2 mb-6 border-4 border-[#111111] shadow-xl">
+                                    <span class="text-xl font-bold">4</span>
+                                </div>
+                                <h3 class="text-2xl font-bold mb-3">Delivered to You</h3>
+                                <p class="text-gray-400 text-sm italic leading-relaxed">Carefully packed and delivered fresh to your doorstep.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- CTA Button -->
+            <div class="text-center mt-20" data-aos="fade-up">
+                <a href="shop.html" class="inline-block bg-gradient-to-r from-primary to-secondary text-white px-12 py-5 rounded-full font-bold transition-all hover-lift uppercase tracking-widest text-sm shadow-xl shadow-primary/20">
+                    Explore Our Cheeses
+                </a>
+            </div>
+        </div>
+
+        <!-- Custom Styling for this section only -->
+        <style>
+            .experience-journey {
+                background: radial-gradient(circle at 10% 20%, rgba(212, 163, 115, 0.05) 0%, transparent 50%),
+                            radial-gradient(circle at 90% 80%, rgba(244, 162, 97, 0.05) 0%, transparent 50%),
+                            #111111;
+            }
+            .glass-card {
+                box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+                backdrop-filter: blur(20px) saturate(180%);
+                -webkit-backdrop-filter: blur(20px) saturate(180%);
+            }
+            [data-aos="draw-line"] {
+                width: 0;
+                transition-property: width;
+            }
+            [data-aos="draw-line"].aos-animate {
+                width: 80%;
+            }
+            .journey-step-card:hover .glass-card {
+                background: rgba(255, 255, 255, 0.08);
+                border-color: rgba(212, 163, 115, 0.3);
+            }
+            .hover-lift {
+                transition: transform 0.3s ease, box-shadow 0.3s ease;
+            }
+            .hover-lift:hover {
+                transform: translateY(-8px);
+                box-shadow: 0 20px 40px rgba(212, 163, 115, 0.3);
+            }
+        </style>
     </section>
 
     <!-- Footer -->
