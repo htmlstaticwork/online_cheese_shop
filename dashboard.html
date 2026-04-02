@@ -137,7 +137,7 @@
                 <!-- Cheese of the Month Highlights -->
                 <div class="lg:col-span-2 glass p-6 md:p-10 rounded-[40px] border-white/5 shadow-2xl relative overflow-hidden"
                     data-aos="fade-right">
-                    <div class="flex flex-col md:flex-row items-center gap-10">
+                    <div class="flex flex-col md:flex-row items-center gap-6 md:gap-10">
                         <div class="w-full md:w-1/3">
                             <img src="img/hero3.png" alt="This Month Highlight"
                                 class="rounded-3xl shadow-xl border-4 border-primary/10">
@@ -166,7 +166,7 @@
                 </div>
 
                 <!-- Tasting Journey Card -->
-                <div class="glass p-10 rounded-[40px] bg-primary/5" data-aos="fade-left">
+                <div class="glass p-6 md:p-10 rounded-[40px] bg-primary/5" data-aos="fade-left">
                     <h3 class="text-xl font-bold mb-6 border-b border-primary/10 pb-4 uppercase tracking-widest">Your
                         Palate Map</h3>
                     <div class="space-y-6">
@@ -202,20 +202,19 @@
             </div>
 
             <!-- Order history -->
-            <div id="order-history" class="glass p-10 rounded-[40px] bg-primary/5 scroll-mt-24" data-aos="fade-up">
-                <div class="flex justify-between items-center mb-10">
-                    <h3 class="text-2xl font-serif font-bold">Past Deliveries</h3>
-                    <a href="#" class="text-xs font-bold uppercase tracking-widest text-primary hover:underline">View
-                        Full History</a>
+            <div id="order-history" class="glass p-6 md:p-10 rounded-[40px] bg-primary/5 scroll-mt-24" data-aos="fade-up">
+                <div class="flex flex-col md:flex-row justify-between items-start md:items-center gap-6 mb-10">
+                    <h3 class="text-2xl md:text-3xl font-serif font-bold text-black dark:text-white">Past Deliveries</h3>
+                    <a href="#" class="text-[10px] md:text-xs font-bold uppercase tracking-[0.2em] text-primary hover:underline bg-primary/10 px-4 py-2 rounded-full">View Full History</a>
                 </div>
-                <div class="overflow-x-auto">
-                    <table class="w-full text-left">
+                <div class="overflow-x-auto pb-4">
+                    <table class="w-full text-left min-w-[600px]">
                         <thead>
                             <tr class="border-b border-primary/10 text-xs uppercase tracking-widest text-gray-600">
-                                <th class="pb-6">Date</th>
-                                <th class="pb-6">Selection Box</th>
-                                <th class="pb-6">Status</th>
-                                <th class="pb-6">Detail</th>
+                                <th class="pb-6 pr-4 whitespace-nowrap">Date</th>
+                                <th class="pb-6 pr-4 whitespace-nowrap">Selection Box</th>
+                                <th class="pb-6 pr-4 whitespace-nowrap">Status</th>
+                                <th class="pb-6 pr-4 whitespace-nowrap">Detail</th>
                             </tr>
                         </thead>
                         <tbody class="text-sm">
@@ -249,22 +248,22 @@
             </div>
 
             <!-- Club Membership Details Section -->
-            <div id="club-membership" class="glass p-10 rounded-[40px] bg-primary/5 mt-8 scroll-mt-24" data-aos="fade-up">
-                <div class="flex justify-between items-center mb-10 text-current">
-                    <h3 class="text-3xl font-serif font-bold text-black dark:text-white">Your Membership</h3>
-                    <span class="bg-primary px-4 py-1 rounded-full text-white text-[10px] uppercase tracking-widest font-bold">Connoisseur Tier</span>
+            <div id="club-membership" class="glass p-5 md:p-10 rounded-[40px] bg-primary/5 mt-8 scroll-mt-24" data-aos="fade-up">
+                <div class="flex flex-col md:flex-row justify-between items-start md:items-center gap-6 mb-10 text-current">
+                    <h3 class="text-2xl md:text-3xl font-serif font-bold text-black dark:text-white">Your Membership</h3>
+                    <span class="bg-primary px-4 py-2 rounded-full text-white text-[10px] uppercase tracking-[0.2em] font-bold">Connoisseur Tier</span>
                 </div>
                 
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-8 text-current">
                     <!-- Current Plan -->
-                    <div class="bg-black/5 dark:bg-white/5 p-8 rounded-3xl border border-black/10 dark:border-white/10">
+                    <div class="bg-black/5 dark:bg-white/5 p-6 md:p-8 rounded-3xl border border-black/10 dark:border-white/10">
                         <h4 class="text-primary uppercase tracking-widest text-xs font-bold mb-4">Current Subscription</h4>
-                        <div class="flex justify-between items-end mb-6">
+                        <div class="flex flex-col sm:flex-row justify-between items-start sm:items-end gap-4 mb-6">
                             <div>
                                 <p class="text-2xl font-serif font-bold text-black dark:text-white">$75.00 <span class="text-xs font-normal opacity-60">/ month</span></p>
                                 <p class="text-sm text-black/40 dark:text-gray-400 italic">Billed monthly since Feb 2024</p>
                             </div>
-                            <button class="text-primary hover:underline text-xs font-bold uppercase tracking-widest">Manage Billing</button>
+                            <button class="text-primary hover:underline text-xs font-bold uppercase tracking-widest shrink-0">Manage Billing</button>
                         </div>
                         <div class="space-y-3">
                             <p class="text-xs flex items-center gap-2 text-black/60 dark:text-gray-300"><i class="fas fa-check text-primary"></i> 5 Premium Rare Cheeses Monthly</p>
@@ -274,7 +273,7 @@
                     </div>
 
                     <!-- Upgrade / Rewards -->
-                    <div class="bg-primary/10 p-8 rounded-3xl border border-primary/20 flex flex-col justify-between">
+                    <div class="bg-primary/10 p-6 md:p-8 rounded-3xl border border-primary/20 flex flex-col justify-between">
                         <div>
                             <h4 class="text-primary uppercase tracking-widest text-xs font-bold mb-2">Member Rewards</h4>
                             <p class="text-sm text-black/40 dark:text-gray-500 mb-6 italic">You have earned 2,450 points this year.</p>
@@ -291,7 +290,7 @@
             </div>
 
             <!-- Profile Settings -->
-            <div id="profile" class="glass p-10 rounded-[40px] bg-primary/5 mt-8 scroll-mt-24" data-aos="fade-up">
+            <div id="profile" class="glass p-6 md:p-10 rounded-[40px] bg-primary/5 mt-8 scroll-mt-24" data-aos="fade-up">
                 <h3 class="text-2xl font-serif font-bold mb-6">Profile Settings</h3>
                 <div class="bg-primary/5 p-6 rounded-3xl border border-primary/10 text-center">
                     <p class="text-gray-400 italic">Settings management interface is currently in maintenance. Please check back soon.</p>
