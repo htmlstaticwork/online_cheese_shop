@@ -59,7 +59,15 @@ document.addEventListener('DOMContentLoaded', () => {
     const toggleMenu = (isOpen) => {
         // Handle standard mobile menu (if exists)
         if (mobileMenu) {
-            mobileMenu.classList.toggle('hidden', !isOpen);
+            if (isOpen) {
+                mobileMenu.classList.remove('hidden');
+                // Small delay to allow 'hidden' removal before starting transition
+                setTimeout(() => mobileMenu.classList.add('active'), 10);
+            } else {
+                mobileMenu.classList.remove('active');
+                // Delay hiding until transition completes
+                setTimeout(() => mobileMenu.classList.add('hidden'), 400);
+            }
         }
         
         // Handle dashboard sidebar (if exists)

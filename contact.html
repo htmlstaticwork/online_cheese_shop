@@ -52,8 +52,7 @@
             <!-- Desktop Navigation -->
             <ul id="desktop-nav"
                 class="hidden xl:flex items-center space-x-8 text-sm font-medium uppercase tracking-widest">
-                <li><a href="index.html" class="hover:text-primary transition-colors">Home 1</a></li>
-                <li><a href="home2.html" class="hover:text-primary transition-colors">Home 2</a></li>
+                <li><a href="index.html" class="hover:text-primary transition-colors">Home</a></li>
                 <li><a href="about.html" class="hover:text-primary transition-colors">About</a></li>
                 <li><a href="shop.html" class="hover:text-primary transition-colors">Shop</a></li>
                 <li><a href="subscription.html" class="hover:text-primary transition-colors">Subscription</a></li>
@@ -75,7 +74,7 @@
                 </button>
 
                 <!-- Cart Icon -->
-                <a href="cart.html" class="relative group">
+                <a href="cart.html" class="hidden xl:relative xl:group">
                     <i class="fas fa-shopping-bag text-xl"></i>
                     <span
                         class="absolute -top-2 -right-2 bg-primary text-white text-[10px] w-4 h-4 flex items-center justify-center rounded-full">3</span>
@@ -95,26 +94,22 @@
 
         <!-- Mobile Menu (Drawer) -->
         <div id="mobile-menu"
-            class="hidden xl:hidden fixed inset-y-0 right-0 w-64 bg-lightBg dark:bg-darkBg z-50 p-10 flex flex-col space-y-6 shadow-2xl transition-colors duration-300">
-            <a href="index.html"
-                class="text-lg font-medium hover:text-primary border-b border-black/10 dark:border-white/10 pb-2">Home
-                1</a>
-            <a href="home2.html"
-                class="text-lg font-medium hover:text-primary border-b border-black/10 dark:border-white/10 pb-2">Home
-                2</a>
-            <a href="about.html"
-                class="text-lg font-medium hover:text-primary border-b border-black/10 dark:border-white/10 pb-2">About</a>
-            <a href="shop.html"
-                class="text-lg font-medium hover:text-primary border-b border-black/10 dark:border-white/10 pb-2">Shop</a>
-            <a href="subscription.html"
-                class="text-lg font-medium hover:text-primary border-b border-black/10 dark:border-white/10 pb-2">Subscription</a>
-            <a href="dashboard.html"
-                class="text-lg font-medium hover:text-primary border-b border-black/10 dark:border-white/10 pb-2">Dashboard</a>
-            <a href="contact.html"
-                class="text-lg font-medium hover:text-primary border-b border-black/10 dark:border-white/10 pb-2">Contact</a>
+            class="hidden xl:hidden fixed inset-y-0 right-0 w-64 bg-lightBg dark:bg-darkBg z-50 p-10 flex flex-col items-center justify-center space-y-8 shadow-2xl transition-colors duration-300">
+            <a href="index.html" class="text-xl font-serif hover:text-primary transition-all">Home</a>
+            <a href="home2.html" class="text-xl font-serif hover:text-primary transition-all">Home 2</a>
+            <a href="about.html" class="text-xl font-serif hover:text-primary transition-all">About</a>
+            <a href="shop.html" class="text-xl font-serif hover:text-primary transition-all">Shop</a>
+            <a href="subscription.html" class="text-xl font-serif hover:text-primary transition-all">Subscription</a>
+            <a href="contact.html" class="text-xl font-serif text-primary transition-all">Contact</a>
+            
+            <div class="w-full h-px bg-black/10 dark:bg-white/10 my-4"></div>
+            
+            <a href="cart.html" class="relative group hover:text-primary transition-all">
+                <i class="fas fa-shopping-bag text-2xl"></i>
+                <span class="absolute -top-2 -right-2 bg-primary text-white text-[10px] w-4 h-4 flex items-center justify-center rounded-full">3</span>
+            </a>
             <a href="signup.html"
-                class="bg-primary text-white text-center rounded-full py-3 px-8 font-bold hover:bg-primary-hover transition-all shadow-lg shadow-primary/20 mt-6 block">Sign
-                Up</a>
+                class="bg-primary text-white text-center rounded-full py-3 px-8 font-bold hover:bg-primary-hover transition-all shadow-lg shadow-primary/20 mt-4 block w-full">Sign Up</a>
         </div>
     </header>
 
@@ -130,7 +125,7 @@
 
         <div class="container mx-auto px-6 text-center relative z-10" data-aos="fade-up">
             <span class="text-primary uppercase tracking-[0.4em] font-bold mb-6 block text-sm">Get in Touch</span>
-            <h1 class="text-6xl md:text-8xl font-serif font-bold mb-6 text-white leading-tight">Connect.</h1>
+            <h1 class="text-3xl md:text-5xl font-serif mb-6 text-white leading-tight">Connect With Us.</h1>
             <p
                 class="text-xl md:text-2xl text-gray-300 max-w-2xl mx-auto italic underline decoration-white/20 decoration-1 underline-offset-8 mb-6">
                 Dedicated to artisanal perfection. We are here to assist with every request.
@@ -169,7 +164,7 @@
                             <label class="block text-xs uppercase tracking-widest text-primary font-bold mb-3">Inquiry
                                 Type</label>
                             <select
-                                class="w-full bg-white dark:bg-white/5 border border-black/10 dark:border-white/10 rounded-xl px-6 py-4 outline-none focus:border-primary transition-colors appearance-none text-black/60 dark:text-gray-400">
+                                class="w-full bg-white dark:bg-white/5 border border-black/10 dark:border-white/10 rounded-xl px-6 py-4 outline-none focus:border-primary transition-colors appearance-none text-black/60 dark:text-gray-600 dark:text-gray-400">
                                 <option>Product Inquiry</option>
                                 <option>Subscription Membership</option>
                                 <option>Corporate Gifting</option>
@@ -193,8 +188,8 @@
                 <!-- Contact Details -->
                 <div class="w-full lg:w-2/5 space-y-8" data-aos="fade-left">
                     <div>
-                        <h3 class="text-2xl font-serif font-bold mb-6 text-black dark:text-white">Our Flagship Cellar</h3>
-                        <p class="text-black/60 dark:text-gray-400 leading-relaxed italic mb-8">Visit us in the heart of London for a
+                        <h2 class="text-2xl md:text-3xl font-serif mb-6 text-black dark:text-white">Our Tasting Room</h2>
+                        <p class="text-black/60 dark:text-gray-600 dark:text-gray-400 leading-relaxed italic mb-8">Visit us in the heart of London for a
                             private tasting session or to browse our weekly arrivals.</p>
                         <div class="space-y-6">
                             <div class="flex items-start space-x-6">
@@ -204,7 +199,7 @@
                                 </div>
                                 <div>
                                     <h4 class="font-bold text-black dark:text-white mb-1">Address</h4>
-                                    <p class="text-black/60 dark:text-gray-400 text-sm">42 Marylebone High Street,<br>London W1U 5HG, UK
+                                    <p class="text-black/60 dark:text-gray-600 dark:text-gray-400 text-sm">42 Marylebone High Street,<br>London W1U 5HG, UK
                                     </p>
                                 </div>
                             </div>
@@ -215,7 +210,7 @@
                                 </div>
                                 <div>
                                     <h4 class="font-bold text-black dark:text-white mb-1">Inquiries</h4>
-                                    <p class="text-black/60 dark:text-gray-400 text-sm">+44 20 7123 4567<br>hello@Fromage.com</p>
+                                    <p class="text-black/60 dark:text-gray-600 dark:text-gray-400 text-sm">+44 20 7123 4567<br>hello@Fromage.com</p>
                                 </div>
                             </div>
                             <div class="flex items-start space-x-6">
@@ -225,7 +220,7 @@
                                 </div>
                                 <div>
                                     <h4 class="font-bold text-black dark:text-white mb-1">Opening Hours</h4>
-                                    <p class="text-black/60 dark:text-gray-400 text-sm">Tue - Sat: 10:00 AM - 7:00 PM<br>Sun: 11:00 AM -
+                                    <p class="text-black/60 dark:text-gray-600 dark:text-gray-400 text-sm">Tue - Sat: 10:00 AM - 7:00 PM<br>Sun: 11:00 AM -
                                         4:00 PM</p>
                                 </div>
                             </div>
@@ -233,7 +228,7 @@
                     </div>
                     <div class="p-8 bg-primary/10 rounded-3xl border border-primary/20">
                         <h4 class="font-bold text-primary mb-4">Gifting Concierge</h4>
-                        <p class="text-black/70 dark:text-gray-400 text-sm mb-6">Looking for a custom corporate gift or event catering? Our
+                        <p class="text-black/70 dark:text-gray-600 dark:text-gray-400 text-sm mb-6">Looking for a custom corporate gift or event catering? Our
                             specialists are available for consultation.</p>
                         <a href="mailto:concierge@Fromage.com"
                             class="text-primary dark:text-white font-bold hover:underline">concierge@Fromage.com</a>
@@ -266,17 +261,17 @@
                             <span class="navbar-brand-name">Fromage</span>
                         </a>
                     </div>
-                    <p class="text-black/60 dark:text-gray-400 text-sm leading-relaxed max-w-xs mx-auto lg:mx-0">
+                    <p class="text-black/80 dark:text-gray-400 text-sm leading-relaxed max-w-xs mx-auto lg:mx-0">
                         From the heart of the countryside to your table. We celebrate the ancient art of cheesemaking with every curated selection.
                     </p>
                     <div class="flex space-x-4 justify-center lg:justify-start mt-auto">
-                        <a href="#" class="w-10 h-10 rounded-full flex items-center justify-center bg-black/5 dark:bg-white/5 text-black/60 dark:text-gray-400 hover:bg-primary hover:text-white transition-all hover-lift">
+                        <a href="#" class="w-10 h-10 rounded-full flex items-center justify-center bg-black/5 dark:bg-white/5 text-black/80 dark:text-gray-400 hover:bg-primary hover:text-white transition-all hover-lift">
                             <i class="fab fa-instagram"></i>
                         </a>
-                        <a href="#" class="w-10 h-10 rounded-full flex items-center justify-center bg-black/5 dark:bg-white/5 text-black/60 dark:text-gray-400 hover:bg-primary hover:text-white transition-all hover-lift">
+                        <a href="#" class="w-10 h-10 rounded-full flex items-center justify-center bg-black/5 dark:bg-white/5 text-black/80 dark:text-gray-400 hover:bg-primary hover:text-white transition-all hover-lift">
                             <i class="fab fa-facebook-f"></i>
                         </a>
-                        <a href="#" class="w-10 h-10 rounded-full flex items-center justify-center bg-black/5 dark:bg-white/5 text-black/60 dark:text-gray-400 hover:bg-primary hover:text-white transition-all hover-lift">
+                        <a href="#" class="w-10 h-10 rounded-full flex items-center justify-center bg-black/5 dark:bg-white/5 text-black/80 dark:text-gray-400 hover:bg-primary hover:text-white transition-all hover-lift">
                             <i class="fab fa-pinterest-p"></i>
                         </a>
                     </div>
@@ -285,7 +280,7 @@
                 <!-- Column 2: Explore -->
                 <div class="flex flex-col h-full space-y-8">
                     <h4 class="font-bold uppercase tracking-widest text-xs text-primary border-b border-black/5 dark:border-white/10 pb-4">Explore</h4>
-                    <ul class="space-y-4 text-black/60 dark:text-gray-400 text-sm mt-auto">
+                    <ul class="space-y-4 text-black/80 dark:text-gray-400 text-sm mt-auto">
                         <li><a href="shop.html" class="hover:text-primary transition-colors hover:translate-x-1 inline-block">Our Collection</a></li>
                         <li><a href="subscription.html" class="hover:text-primary transition-colors hover:translate-x-1 inline-block">The Cheese Club</a></li>
                         <li><a href="about.html" class="hover:text-primary transition-colors hover:translate-x-1 inline-block">Our Heritage</a></li>
@@ -296,7 +291,7 @@
                 <!-- Column 3: Contact & Tasting -->
                 <div class="flex flex-col h-full space-y-8">
                     <h4 class="font-bold uppercase tracking-widest text-xs text-primary border-b border-black/5 dark:border-white/10 pb-4">Connect</h4>
-                    <div class="flex flex-col items-start w-fit mx-auto lg:mx-0 space-y-6 text-black/60 dark:text-gray-400 text-sm mt-auto">
+                    <div class="flex flex-col items-start w-fit mx-auto lg:mx-0 space-y-6 text-black/80 dark:text-gray-400 text-sm mt-auto">
                         <div class="flex items-start space-x-4">
                             <i class="fas fa-map-marker-alt text-primary mt-1 w-5 text-center"></i>
                             <p class="italic">The Tasting Lab,<br>42 Artisanal Way, Gourmet Hills</p>
@@ -307,7 +302,7 @@
                         </div>
                         <div class="flex items-center space-x-4">
                             <i class="fas fa-phone text-primary w-5 text-center"></i>
-                            <p class="font-bold text-black/40 dark:text-gray-500">+1 (555) 789 1234</p>
+                            <p class="font-bold text-black/60 dark:text-gray-500">+1 (555) 789 1234</p>
                         </div>
                     </div>
                 </div>
@@ -315,7 +310,7 @@
                 <!-- Column 4: Newsletter -->
                 <div class="flex flex-col h-full space-y-8">
                     <h4 class="font-bold uppercase tracking-widest text-xs text-primary border-b border-black/5 dark:border-white/10 pb-4">Savor the Story</h4>
-                    <p class="text-black/60 dark:text-gray-400 text-sm italic">Join our circle for exclusive pairings and early access to rare wheels.</p>
+                    <p class="text-black/80 dark:text-gray-400 text-sm italic">Join our circle for exclusive pairings and early access to rare wheels.</p>
                     <form class="space-y-4 mt-auto">
                         <div class="relative">
                             <input type="email" placeholder="Email Address" 
@@ -329,7 +324,7 @@
             </div>
 
             <!-- Bottom Legal Bar -->
-            <div class="border-t border-black/5 dark:border-white/5 pt-10 flex justify-center items-center text-[10px] text-black/40 dark:text-gray-500 uppercase tracking-widest">
+            <div class="border-t border-black/5 dark:border-white/5 pt-10 flex justify-center items-center text-[10px] text-black/60 dark:text-gray-500 uppercase tracking-widest">
                 <p>&copy; 2026 Fromage Artisanal Cheesemongers. All Rights Reserved.</p>
             </div>
         </div>

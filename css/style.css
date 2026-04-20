@@ -26,16 +26,23 @@
     --text-current: var(--text-light);
 }
 
+html, body {
+    overflow-x: hidden;
+    width: 100%;
+    position: relative;
+    scroll-behavior: smooth;
+}
+
 body {
     font-family: 'Inter', sans-serif;
     background-color: var(--bg-current);
     color: var(--text-current);
     transition: var(--transition);
-    overflow-x: hidden;
 }
 
-h1, h2, h3, h4, .font-serif {
+h1, h2, h3, h4, h5, h6, .font-serif {
     font-family: 'Playfair Display', serif;
+    font-weight: 600 !important;
 }
 
 /* Glassmorphism Classes */
@@ -132,16 +139,26 @@ header.header-scrolled {
     }
 
     #mobile-menu {
-        background-color: var(--bg-current) !important;
-        box-shadow: -10px 0 30px rgba(0, 0, 0, 0.4);
-        border-left: 1px solid rgba(212, 163, 115, 0.1);
-        padding: 1.5rem 1rem !important; /* Smaller padding */
-        z-index: 9999;
+        position: fixed;
+        top: 0;
+        right: 0;
+        bottom: 0;
         width: 280px !important;
+        background-color: var(--bg-current) !important;
+        box-shadow: -10px 0 30px rgba(0, 0, 0, 0.2);
+        border-left: 1px solid rgba(212, 163, 115, 0.1);
+        padding: 6rem 1.5rem 2rem !important; /* Proper top padding for close btn space */
+        z-index: 9999;
         height: 100vh !important;
-        overflow-y: auto; /* Enable scrolling */
-        scrollbar-width: thin;
-        scrollbar-color: var(--primary) transparent;
+        overflow-y: auto;
+        transform: translateX(100%);
+        transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        display: flex !important; /* Override 'hidden' if misused */
+        flex-direction: column;
+    }
+
+    #mobile-menu.active {
+        transform: translateX(0);
     }
 
     #mobile-menu a {

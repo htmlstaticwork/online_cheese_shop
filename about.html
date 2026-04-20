@@ -53,14 +53,13 @@
             <!-- Desktop Navigation -->
             <ul id="desktop-nav"
                 class="hidden xl:flex items-center space-x-8 text-sm font-medium uppercase tracking-widest">
-                <li><a href="index.html" class="hover:text-primary transition-colors">Home 1</a></li>
-                <li><a href="home2.html" class="hover:text-primary transition-colors">Home 2</a></li>
+                <li><a href="index.html" class="hover:text-primary transition-colors">Home</a></li>
                 <li><a href="about.html" class="nav-link-active hover:text-primary transition-colors">About</a></li>
                 <li><a href="shop.html" class="hover:text-primary transition-colors">Shop</a></li>
                 <li><a href="subscription.html" class="hover:text-primary transition-colors">Subscription</a></li>
                 <li><a href="contact.html" class="hover:text-primary transition-colors">Contact</a></li>
                 <li><a href="dashboard.html"
-                        class="bg-primary text-white px-6 py-2 rounded-full font-bold hover:bg-primary-hover transition-all">Dashboard</a>
+                        class="bg-primary text-white px-6 py-2 rounded-full font-bold hover:bg-primary-hover transition-all text-sm">Dashboard</a>
                 </li>
             </ul>
 
@@ -76,7 +75,7 @@
                 </button>
 
                 <!-- Cart Icon -->
-                <a href="cart.html" class="relative group">
+                <a href="cart.html" class="hidden xl:relative xl:group">
                     <i class="fas fa-shopping-bag text-xl"></i>
                     <span
                         class="absolute -top-2 -right-2 bg-primary text-white text-[10px] w-4 h-4 flex items-center justify-center rounded-full">3</span>
@@ -94,19 +93,22 @@
 
         <!-- Mobile Menu (Drawer) -->
         <div id="mobile-menu"
-            class="hidden xl:hidden fixed inset-y-0 right-0 w-64 bg-lightBg dark:bg-darkBg z-50 p-10 flex flex-col space-y-6 shadow-2xl transition-colors duration-300">
-            <a href="index.html" class="text-lg font-medium hover:text-primary border-b border-black/10 dark:border-white/10 pb-2">Home 1</a>
-            <a href="home2.html" class="text-lg font-medium hover:text-primary border-b border-black/10 dark:border-white/10 pb-2">Home 2</a>
-            <a href="about.html" class="text-lg font-medium hover:text-primary border-b border-black/10 dark:border-white/10 pb-2">About</a>
-            <a href="shop.html" class="text-lg font-medium hover:text-primary border-b border-black/10 dark:border-white/10 pb-2">Shop</a>
-            <a href="subscription.html"
-                class="text-lg font-medium hover:text-primary border-b border-black/10 dark:border-white/10 pb-2">Subscription</a>
-            <a href="dashboard.html"
-                class="text-lg font-medium hover:text-primary border-b border-black/10 dark:border-white/10 pb-2">Dashboard</a>
-            <a href="contact.html"
-                class="text-lg font-medium hover:text-primary border-b border-black/10 dark:border-white/10 pb-2">Contact</a>
+            class="hidden xl:hidden fixed inset-y-0 right-0 w-64 bg-lightBg dark:bg-darkBg z-50 p-10 flex flex-col items-center justify-center space-y-8 shadow-2xl transition-colors duration-300">
+            <a href="index.html" class="text-xl font-serif hover:text-primary transition-all">Home</a>
+            <a href="home2.html" class="text-xl font-serif hover:text-primary transition-all">Home 2</a>
+            <a href="about.html" class="text-xl font-serif text-primary transition-all">About</a>
+            <a href="shop.html" class="text-xl font-serif hover:text-primary transition-all">Shop</a>
+            <a href="subscription.html" class="text-xl font-serif hover:text-primary transition-all">Subscription</a>
+            <a href="contact.html" class="text-xl font-serif hover:text-primary transition-all">Contact</a>
+            
+            <div class="w-full h-px bg-black/10 dark:bg-white/10 my-4"></div>
+            
+            <a href="cart.html" class="relative group hover:text-primary transition-all">
+                <i class="fas fa-shopping-bag text-2xl"></i>
+                <span class="absolute -top-2 -right-2 bg-primary text-white text-[10px] w-4 h-4 flex items-center justify-center rounded-full">3</span>
+            </a>
             <a href="signup.html"
-                class="bg-primary text-white text-center rounded-full py-3 px-8 font-bold hover:bg-primary-hover transition-all shadow-lg shadow-primary/20 mt-6 block">Sign Up</a>
+                class="bg-primary text-white text-center rounded-full py-3 px-8 font-bold hover:bg-primary-hover transition-all shadow-lg shadow-primary/20 mt-4 block w-full">Sign Up</a>
         </div>
     </header>
 
@@ -122,7 +124,7 @@
 
         <div class="container mx-auto px-6 text-center relative z-10" data-aos="fade-up">
             <span class="text-primary uppercase tracking-[0.4em] font-bold mb-6 block text-sm">A Century of Craft</span>
-            <h1 class="text-6xl md:text-8xl font-serif font-bold mb-8 text-white leading-tight">Our Legacy.</h1>
+            <h1 class="text-4xl md:text-6xl font-serif font-bold mb-8 text-white leading-tight">Our Legacy.</h1>
             <p class="text-xl md:text-2xl text-gray-300 max-w-2xl mx-auto italic border-y border-white/10 py-6 mb-8">
                 Preserving the whispered secrets of the mountain pastures and the limestone cellars of Europe.
             </p>
@@ -139,15 +141,15 @@
         <div class="container mx-auto px-6">
             <div class="grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
                 <div data-aos="fade-right">
-                    <h2 class="text-3xl font-serif font-bold mb-4 text-black dark:text-white">The Art of Cheesemaking</h2>
-                    <p class="text-black/70 dark:text-gray-400 mb-6 leading-relaxed">Fromage was born from a passion for authentic flavors
+                    <h2 class="text-3xl font-serif mb-4 text-black dark:text-white">The Art of Cheesemaking</h2>
+                    <p class="text-black/80 dark:text-gray-400 mb-6 leading-relaxed">Fromage was born from a passion for authentic flavors
                         and traditional craftsmanship. We travel to the most remote villages in France, Italy, and
                         beyond to find masters who have preserved their techniques for generations.</p>
-                    <p class="text-black/70 dark:text-gray-400 mb-6 leading-relaxed">Every piece of cheese in our collection represents a
+                    <p class="text-black/80 dark:text-gray-400 mb-6 leading-relaxed">Every piece of cheese in our collection represents a
                         legacy of time, patience, and meticulous attention to detail. We believe that the best cheese
                         isn't just made; it is nurtured. From the first morning milking to the final month of affinage
                         in our limestone cellars, we respect the natural rhythms of the seasons.</p>
-                    <p class="text-black/70 dark:text-gray-400 mb-8 leading-relaxed">By partnering exclusively with family-owned farms, we
+                    <p class="text-black/80 dark:text-gray-400 mb-8 leading-relaxed">By partnering exclusively with family-owned farms, we
                         ensure that every wheel supports the preservation of biodiversity and the survival of ancient
                         methods that the modern world has nearly forgotten. This is our promise: a taste of the earth,
                         delivered with integrity.</p>
@@ -167,19 +169,19 @@
                 <div data-aos="fade-up" data-aos-delay="100">
                     <div class="text-4xl text-primary mb-6"><i class="fas fa-hand-holding-heart"></i></div>
                     <h4 class="text-xl font-bold mb-4 text-black dark:text-white">Ethical Sourcing</h4>
-                    <p class="text-gray-500 text-sm leading-relaxed">We directly partner with small-scale family farms
+                    <p class="text-gray-700 dark:text-gray-500 text-sm leading-relaxed">We directly partner with small-scale family farms
                         that prioritize the well-being of their herds and the health of their land.</p>
                 </div>
                 <div data-aos="fade-up" data-aos-delay="200">
                     <div class="text-4xl text-primary mb-6"><i class="fas fa-microscope"></i></div>
                     <h4 class="text-xl font-bold mb-4 text-black dark:text-white">Quality Assurance</h4>
-                    <p class="text-gray-500 text-sm leading-relaxed">Each wheel is rigorously tested in our Tasting Lab
+                    <p class="text-gray-700 dark:text-gray-500 text-sm leading-relaxed">Each wheel is rigorously tested in our Tasting Lab
                         for aroma, texture, and flavor profile before ever reaching your table.</p>
                 </div>
-                <div data-aos="fade-up" data-aos-delay="300">
+                <div class="md:col-span-2 lg:col-span-1" data-aos="fade-up" data-aos-delay="300">
                     <div class="text-4xl text-primary mb-6"><i class="fas fa-globe-europe"></i></div>
                     <h4 class="text-xl font-bold mb-4 text-black dark:text-white">Heritage Preservation</h4>
-                    <p class="text-gray-500 text-sm leading-relaxed">By choosing Fromage, you are directly supporting
+                    <p class="text-gray-700 dark:text-gray-500 text-sm leading-relaxed">By choosing Fromage, you are directly supporting
                         the preservation of ancient cheesemaking traditions worldwide.</p>
                 </div>
             </div>
@@ -196,19 +198,19 @@
                 </div>
                 <div class="w-full lg:w-1/2 order-1 lg:order-2" data-aos="fade-left">
                     <span class="text-primary uppercase tracking-[0.4em] font-bold mb-4 block">Expertise</span>
-                    <h2 class="text-4xl md:text-6xl font-serif font-bold mb-8 text-black dark:text-white">Science Meets Pure Passion.</h2>
-                    <p class="text-gray-400 text-lg mb-10 leading-relaxed italic">"Affining is a delicate dance between
+                    <h2 class="text-3xl md:text-5xl font-serif mb-8 text-black dark:text-white">Science Meets Pure Passion.</h2>
+                    <p class="text-gray-600 dark:text-gray-400 text-lg mb-10 leading-relaxed italic">"Affining is a delicate dance between
                         micro-biology and instinct. We don't just sell cheese; we curate moments of perfection."</p>
                     <div class="space-y-6">
                         <div class="flex items-start space-x-4">
                             <i class="fas fa-check-circle text-primary mt-1 text-xl"></i>
-                            <p class="text-black/60 dark:text-gray-500"><span class="text-black dark:text-white font-bold">Climate Controlled
+                            <p class="text-black/80 dark:text-gray-500"><span class="text-black dark:text-white font-bold">Climate Controlled
                                     Cellars:</span> Maintaining the exact levels of humidity and temperature required
                                 for optimal aging.</p>
                         </div>
                         <div class="flex items-start space-x-4">
                             <i class="fas fa-check-circle text-primary mt-1 text-xl"></i>
-                            <p class="text-black/60 dark:text-gray-500"><span class="text-black dark:text-white font-bold">Flavor Profiling:</span> Each
+                            <p class="text-black/80 dark:text-gray-500"><span class="text-black dark:text-white font-bold">Flavor Profiling:</span> Each
                                 selection is assigned a detailed sensory map, helping you find your perfect match.</p>
                         </div>
                     </div>
@@ -220,7 +222,7 @@
     <!-- Our Partner Farms -->
     <section class="py-10 text-center">
         <div class="container mx-auto px-6">
-            <h2 class="text-4xl font-serif font-bold mb-4 text-black dark:text-white" data-aos="fade-up">Trusted Partner Farms</h2>
+            <h2 class="text-3xl font-serif mb-4 text-black dark:text-white" data-aos="fade-up">Trusted Partner Farms</h2>
             <p class="text-gray-400 mb-8" data-aos="fade-up" data-aos-delay="100">Across the continents, our partners
                 share our unwavering commitment to excellence.</p>
             <div class="grid grid-cols-2 md:grid-cols-4 gap-8 opacity-40 grayscale hover:grayscale-0 transition-all duration-700 text-black dark:text-white"
@@ -242,7 +244,7 @@
         <div class="container mx-auto px-6">
             <div class="text-center mb-12" data-aos="fade-up">
                 <span class="text-primary uppercase tracking-[0.4em] font-bold mb-4 block underline-offset-8">Legendary Perspectives</span>
-                <h2 class="text-4xl md:text-5xl font-serif font-bold text-black dark:text-white">The Wisdom of the Wheel</h2>
+                <h2 class="text-3xl md:text-4xl font-serif text-black dark:text-white">The Wisdom of the Wheel</h2>
             </div>
             <div class="grid grid-cols-1 md:grid-cols-2 gap-10 items-stretch">
                 <!-- Quote 1 -->
@@ -253,7 +255,7 @@
                     <div class="flex flex-col items-center text-center border-t border-black/10 dark:border-white/10 pt-6 mt-auto w-full">
                         <div>
                             <p class="text-primary font-bold uppercase tracking-widest text-sm">Jean Anthelme Brillat-Savarin</p>
-                            <p class="text-gray-500 text-xs italic">The Physiology of Taste, 1825</p>
+                            <p class="text-gray-700 dark:text-gray-500 text-xs italic">The Physiology of Taste, 1825</p>
                         </div>
                     </div>
                 </div>
@@ -265,13 +267,13 @@
                     <div class="flex flex-col items-center text-center border-t border-black/10 dark:border-white/10 pt-6 mt-auto w-full">
                         <div>
                             <p class="text-primary font-bold uppercase tracking-widest text-sm">Charles de Gaulle</p>
-                            <p class="text-gray-500 text-xs italic">Former President of France</p>
+                            <p class="text-gray-700 dark:text-gray-500 text-xs italic">Former President of France</p>
                         </div>
                     </div>
                 </div>
             </div>
             <div class="max-w-4xl mx-auto mt-20 text-center" data-aos="zoom-in">
-                <p class="text-black/60 dark:text-white/60 text-lg italic leading-relaxed">"At Fromage, we don't just agree with these legends—we live by their standards every day. Every wheel we source is a tribute to this rich, complex history."</p>
+                <p class="text-black/80 dark:text-white/60 text-lg italic leading-relaxed">"At Fromage, we don't just agree with these legends—we live by their standards every day. Every wheel we source is a tribute to this rich, complex history."</p>
                 <div class="w-24 h-1 bg-primary mx-auto mt-10 rounded-full"></div>
             </div>
         </div>
@@ -307,7 +309,7 @@
 
                 <!-- Column 2: Explore -->
                 <div class="flex flex-col h-full space-y-8">
-                    <h4 class="font-bold uppercase tracking-widest text-xs text-primary border-b border-black/5 dark:border-white/10 pb-4">Explore</h4>
+                    <h4 class="uppercase tracking-widest text-xs text-primary border-b border-black/5 dark:border-white/10 pb-4">Explore</h4>
                     <ul class="space-y-4 text-black/60 dark:text-gray-400 text-sm mt-auto">
                         <li><a href="shop.html" class="hover:text-primary transition-colors hover:translate-x-1 inline-block">Our Collection</a></li>
                         <li><a href="subscription.html" class="hover:text-primary transition-colors hover:translate-x-1 inline-block">The Cheese Club</a></li>
@@ -318,7 +320,7 @@
 
                 <!-- Column 3: Contact & Tasting -->
                 <div class="flex flex-col h-full space-y-8">
-                    <h4 class="font-bold uppercase tracking-widest text-xs text-primary border-b border-black/5 dark:border-white/10 pb-4">Connect</h4>
+                    <h4 class="uppercase tracking-widest text-xs text-primary border-b border-black/5 dark:border-white/10 pb-4">Connect</h4>
                     <div class="flex flex-col items-start w-fit mx-auto lg:mx-0 space-y-6 text-black/60 dark:text-gray-400 text-sm mt-auto">
                         <div class="flex items-start space-x-4">
                             <i class="fas fa-map-marker-alt text-primary mt-1 w-5 text-center"></i>
@@ -337,7 +339,7 @@
 
                 <!-- Column 4: Newsletter -->
                 <div class="flex flex-col h-full space-y-8">
-                    <h4 class="font-bold uppercase tracking-widest text-xs text-primary border-b border-black/5 dark:border-white/10 pb-4">Savor the Story</h4>
+                    <h4 class="uppercase tracking-widest text-xs text-primary border-b border-black/5 dark:border-white/10 pb-4">Savor the Story</h4>
                     <p class="text-black/60 dark:text-gray-400 text-sm italic">Join our circle for exclusive pairings and early access to rare wheels.</p>
                     <form class="space-y-4 mt-auto">
                         <div class="relative">
