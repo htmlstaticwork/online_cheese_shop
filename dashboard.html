@@ -107,18 +107,9 @@
         <main class="flex-grow lg:ml-64 p-4 md:p-8 min-h-screen w-full max-w-full overflow-hidden">
             <div class="max-w-full overflow-x-hidden">
             <!-- Header -->
-            <header class="flex justify-between items-center p-4 mb-8" data-aos="fade-down">
-                <!-- Welcome Message -->
-                <div class="hidden md:block">
-                    <h1 class="text-xl md:text-2xl font-serif text-black dark:text-white">Welcome back, Jean!</h1>
-                    <p class="text-xs text-black/60 dark:text-gray-400 mt-1 italic">Your April Connoisseur Curation is almost ready.</p>
-                </div>
-                <!-- Mobile Logo/Brand (Visible only on mobile header) -->
-                <div class="lg:hidden md:hidden">
-                    <h1 class="text-xl font-serif font-bold text-primary">Dashboard</h1>
-                </div>
-                <!-- Controls -->
-                <div class="flex items-center space-x-3 md:space-x-4 ml-auto">
+            <header class="flex flex-col md:flex-row justify-between items-center p-4 mb-8" data-aos="fade-down">
+                <!-- Controls (Top Right on Mobile) -->
+                <div class="flex items-center space-x-3 md:space-x-4 ml-auto md:order-2 mb-6 md:mb-0">
                     <!-- RTL Toggle -->
                     <button id="rtl-toggle" class="w-10 h-10 md:w-12 md:h-12 glass rounded-full flex items-center justify-center hover:border-primary transition-all flex-shrink-0" title="Toggle RTL">
                         <i class="fas fa-right-left"></i>
@@ -131,6 +122,12 @@
                     <button id="menu-btn" class="lg:hidden w-10 h-10 md:w-12 md:h-12 glass rounded-full flex items-center justify-center flex-shrink-0" title="Menu">
                         <i class="fas fa-bars"></i>
                     </button>
+                </div>
+
+                <!-- Welcome Message (Below Controls on Mobile, Centered) -->
+                <div class="w-full md:w-auto text-center md:text-left md:order-1">
+                    <h1 class="text-xl md:text-2xl font-serif text-black dark:text-white">Welcome back, Jean!</h1>
+                    <p class="text-[10px] md:text-sm text-black/60 dark:text-gray-400 mt-1 italic">Your April Connoisseur Curation is almost ready.</p>
                 </div>
             </header>
 
